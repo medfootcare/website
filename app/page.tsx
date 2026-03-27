@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { FORM_URL, LINE_URL } from "@/constants/links";
 
 export default function Home() {
   return (
@@ -49,12 +50,13 @@ export default function Home() {
           {/* 下段：ボタンを中央横並び */}
           <div className="bg-surface-container-low">
             <div className="max-content-width px-6 py-6 flex flex-col sm:flex-row justify-center gap-16 relative z-10">
-              <a className="btn-primary-k text-base px-12 py-4 justify-center" href="http://localhost:3000/medifootcare.web/facility">
-                施設向けご案内 ›
-              </a>
-              <a className="btn-primary-k text-base px-12 py-4 justify-center" href="http://localhost:3000/medifootcare.web/personal">
+              {/* 個人ユーザーが多数のため個人を左（先）に配置 */}
+              <Link className="btn-primary-k text-base px-12 py-4 justify-center" href="/personal">
                 個人向けご案内 ›
-              </a>
+              </Link>
+              <Link className="btn-primary-k text-base px-12 py-4 justify-center" href="/facility">
+                施設向けご案内 ›
+              </Link>
             </div>
           </div>
         </section>
@@ -501,7 +503,7 @@ export default function Home() {
 
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <a
-                    href="#"
+                    href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary-k text-base px-10 py-4 justify-center w-64"
@@ -509,7 +511,7 @@ export default function Home() {
                     フォームで相談する（無料）
                   </a>
                   <a
-                    href="#"
+                    href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-line-k text-base px-10 py-4 justify-center w-64"

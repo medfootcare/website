@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FORM_URL } from "@/constants/links";
 
 export default function Header() {
   return (
@@ -33,7 +34,7 @@ export default function Header() {
         {/* CTAボタン */}
         <a
           className="btn-primary-k"
-          href="https://docs.google.com/forms/d/e/DUMMY_FORM_ID/viewform"
+          href={FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
         >

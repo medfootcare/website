@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { FORM_URL, LINE_URL } from "@/constants/links";
 
 export const metadata: Metadata = {
   title: "施設向けご案内 | メディフットケア",
@@ -15,7 +16,7 @@ function FacilityCTA({ label }: { label: string }) {
       <p className="text-on-surface-variant font-medium">{label}</p>
       <div className="flex flex-col sm:flex-row justify-center gap-4">
         <a
-          href="#"
+          href={FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary-k text-base px-10 py-4 justify-center w-64"
@@ -23,7 +24,7 @@ function FacilityCTA({ label }: { label: string }) {
           フォームで相談する（無料）
         </a>
         <a
-          href="#"
+          href={LINE_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-line-k text-base px-10 py-4 justify-center w-64"
@@ -56,6 +57,11 @@ export default function FacilityPage() {
                 <br />
                 まずは体験会からお気軽にどうぞ。
               </p>
+              {/* 施設担当者が最初に確認する最低人数条件を明示 */}
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-6 py-3 text-primary font-bold">
+                <span className="material-symbols-outlined text-xl">group</span>
+                5名以上の施設から受け付けています
+              </div>
             </div>
           </div>
         </section>

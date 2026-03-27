@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FORM_URL } from "@/constants/links";
 
 export default function Footer() {
   return (
@@ -57,7 +58,7 @@ export default function Footer() {
                 </Link>
                 <a
                   className="hover:text-primary"
-                  href="#"
+                  href={FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

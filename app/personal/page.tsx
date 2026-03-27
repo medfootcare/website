@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { FORM_URL, LINE_URL } from "@/constants/links";
 
 export const metadata: Metadata = {
   title: "個人向けご案内 | メディフットケア",
@@ -15,7 +16,7 @@ function PersonalCTA({ label }: { label: string }) {
       <p className="text-on-surface-variant font-medium">{label}</p>
       <div className="flex flex-col sm:flex-row justify-center gap-4">
         <a
-          href="#"
+          href={FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary-k text-base px-10 py-4 justify-center w-64"
@@ -23,7 +24,7 @@ function PersonalCTA({ label }: { label: string }) {
           フォームで相談する（無料）
         </a>
         <a
-          href="#"
+          href={LINE_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-line-k text-base px-10 py-4 justify-center w-64"
