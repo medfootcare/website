@@ -41,6 +41,7 @@ medifootcare/
 |---|---|---|
 | `images/logo.png` | サービスロゴ | - |
 | `images/看護師.png` | フットケアスタッフイラスト | [看護師イラスト素材](https://kango.mynavi.jp/contents/nurseplus/illustration/) |
+| `images/area-map.svg` | 千葉県マップ | [千葉県マップ for PowerPoint](https://power-point-design.com/ppt-design/chiba-for-powerpoint/) |
 
 ## 使用技術
 

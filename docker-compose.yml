@@ -1,0 +1,23 @@
+services:
+  # 開発サーバー（ホットリロードあり）
+  dev:
+    build:
+      context: .
+      target: builder
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+
+  # 本番確認（nginx で静的ファイル配信）
+  prod:
+    build:
+      context: .
+      target: runner
+    ports:
+      - "8080:80"
