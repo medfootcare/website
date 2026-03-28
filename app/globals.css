@@ -140,15 +140,6 @@ body {
   line-height: 1.5;
 }
 
-.section-heading::before {
-  content: '✦';
-  display: block;
-  font-size: 9px;
-  color: #f9a8b4;
-  letter-spacing: 8px;
-  margin-bottom: 6px;
-}
-
 .section-heading::after {
   content: '';
   display: block;
