@@ -52,7 +52,7 @@ export default function Home() {
             <div className="flex flex-col gap-4 py-4 sm:flex-row sm:justify-center">
               {/* 個人ユーザーが多数のため個人を左（先）に配置 */}
               <Link className="btn-primary-k min-w-[200px]" href="/personal">
-                利用者様・ご家族様 ›
+                ご利用者様・ご家族様 ›
               </Link>
               <Link className="btn-outline-k min-w-[200px]" href="/facility">
                 施設スタッフ様 ›
@@ -148,7 +148,8 @@ export default function Home() {
                     <span className="text-[24px] font-medium">医師・看護師による<br />チームケア</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    医師の監修のもと、看護師資格を持つスタッフが施術を行います。安心・安全なケアをお届けします。
+                    医師の監修のもと、<br />
+                    看護師資格を持つスタッフが施術を行います。安心・安全なケアをお届けします。
                   </p>
                 </div>
                 {/* 特徴2 */}
@@ -157,7 +158,9 @@ export default function Home() {
                     <span className="text-[24px] font-medium">ベッド・車椅子でも<br />施術可能</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    外出が難しい方も安心。ベッドや車椅子に座ったままの状態で、ご自宅や施設でケアを受けられます。
+                    外出が難しい方も安心。<br />
+                    ベッドや車椅子に座ったままの状態で、<br />
+                    ご自宅や施設でケアを受けられます。
                   </p>
                 </div>
                 {/* 特徴3 */}
@@ -166,7 +169,9 @@ export default function Home() {
                     <span className="text-[24px] font-medium">毎回ケアごとに<br />報告書を作成</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    施術内容や爪の状態を毎回記録し、ご家族や施設スタッフへご報告。継続的なケアの質を維持します。
+                    施術内容や爪の状態を毎回記録し、<br />
+                    ご家族や施設スタッフへご報告。<br />
+                    継続的なケアの質を維持します。
                   </p>
                 </div>
               </div>
@@ -178,7 +183,8 @@ export default function Home() {
                     <span className="text-[24px] font-medium">巻き爪・分厚い爪など、<br />幅広い爪トラブルに対応</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    巻き爪・肥厚爪・変形爪など、さまざまな爪のお悩みに対応。専門的な知識と技術で丁寧にケアします。
+                    巻き爪・肥厚爪・変形爪など、さまざまな爪のお悩みに対応。<br />
+                    専門的な知識と技術で丁寧にケアします。
                   </p>
                 </div>
                 {/* 特徴5 */}
@@ -187,7 +193,8 @@ export default function Home() {
                     <span className="text-[24px] font-medium">専用機器を使用した、<br />痛みの少ないケア</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。痛みが怖い方でも安心してご利用いただけます。
+                    専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。<br />
+                    痛みが怖い方でも安心してご利用いただけます。
                   </p>
                 </div>
               </div>
@@ -206,7 +213,7 @@ export default function Home() {
                 <div className="section-heading-bar"></div>
               </div>
               {/* ===== ケースカードグリッド ===== */}
-              <div className="space-y-6">
+              <div className="space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
 
                 {/* --- 変形爪カード --- */}
                 <div className="surface-card overflow-hidden">
@@ -311,17 +318,17 @@ export default function Home() {
                   {
                     icon: "medical_information",
                     title: "看護師資格保有",
-                    desc: "担当スタッフは看護師資格を保有。医学的根拠に基づいた安全なケアを提供します。",
+                    desc: <>担当スタッフは看護師資格を保有。<br />医学的根拠に基づいた安全なケアを提供します。</>,
                   },
                   {
                     icon: "sanitizer",
                     title: "感染対策の徹底",
-                    desc: "使用する器具はすべて消毒・滅菌処理済み。グローブ着用など感染対策を徹底しています。",
+                    desc: <>使用する器具はすべて消毒・滅菌処理済み。<br />グローブ着用など感染対策を徹底しています。</>,
                   },
                   {
                     icon: "support_agent",
                     title: "施術後のフォロー",
-                    desc: "気になることがあれば施術後もLINEや電話でご相談いただけます。",
+                    desc: <>気になることがあれば施術後も<br />メールやLINEでご相談いただけます。</>,
                   },
                 ].map((item) => (
                   <div
@@ -347,8 +354,8 @@ export default function Home() {
                 </h2>
                 <div className="section-heading-bar mb-4"></div>
               </div>
-              <div className="space-y-0">
-                <div className="price-card">
+              <div className="space-y-0 max-w-2xl mx-auto">
+                <div className="price-card text-left">
                   <div className="space-y-0">
                     {/* 料金行1 */}
                     <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">

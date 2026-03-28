@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { FORM_URL, LINE_URL } from "@/constants/links";
 
 export const metadata: Metadata = {
-  title: "施設向けご案内 | メディフットケア",
+  title: "施設スタッフ様へ | メディフットケア",
   description: "有料老人ホーム・特養・サ高住への訪問フットケアサービス。体験会から始められます。",
 };
 

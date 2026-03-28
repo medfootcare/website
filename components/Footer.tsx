@@ -34,10 +34,10 @@ export default function Footer() {
               <h4 className="text-sm font-medium tracking-wider text-on-surface">メニュー</h4>
               <nav className="flex flex-col gap-3">
                 <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/personal">
-                  個人向けご案内
+                  ご利用者様・ご家族様へ
                 </Link>
                 <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/facility">
-                  施設向けご案内
+                  施設スタッフ様へ
                 </Link>
                 <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/service">
                   料金

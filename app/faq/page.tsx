@@ -133,7 +133,7 @@ export default function FaqPage() {
                   }`}
                   onClick={() => setTab("personal")}
                 >
-                  個人の方向け
+                  ご利用者様・ご家族様向け
                 </button>
                 <button
                   className={`flex-1 py-3 text-sm font-medium text-center transition-colors border-b-2 -mb-px ${
@@ -143,7 +143,7 @@ export default function FaqPage() {
                   }`}
                   onClick={() => setTab("facility")}
                 >
-                  施設の方向け
+                  施設スタッフ様向け
                 </button>
               </div>
 
