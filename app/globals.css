@@ -162,10 +162,11 @@ body {
 /* ページヘッダー用アクセントバー */
 .header-accent-bar {
   display: block;
-  width: 40px;
+  width: 64px;
   height: 2px;
   margin: 0 auto;
-  background: #3aada8;
+  background: none;
+  border-top: 2px dashed #3aada8;
 }
 
 /* 許容する微細な影（cases等で使用） */
