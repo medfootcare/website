@@ -51,7 +51,7 @@ export default function FacilityPage() {
                 <br />
                 訪問フットケアサービス
               </h1>
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <div className="header-accent-bar" />
               <p className="text-base leading-loose text-on-surface-variant">
                 有料老人ホーム・特養・サ高住など、施設への定期訪問に対応しています。
                 <br />

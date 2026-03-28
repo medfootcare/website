@@ -51,7 +51,7 @@ export default function PersonalPage() {
                 <br />
                 訪問フットケア
               </h1>
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <div className="header-accent-bar" />
               <p className="text-base leading-loose text-on-surface-variant">
                 看護師が直接ご自宅へ伺い、安心・丁寧なフットケアをお届けします。
               </p>

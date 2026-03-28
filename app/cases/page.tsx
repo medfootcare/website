@@ -79,7 +79,7 @@ export default function CasesPage() {
               <h1 className="text-[28px] font-medium text-on-surface">
                 症例・お悩み
               </h1>
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <div className="header-accent-bar" />
               <p className="text-base text-on-surface-variant leading-relaxed">
                 「これは自分のことだ」と感じたら、お気軽にご相談ください。
               </p>

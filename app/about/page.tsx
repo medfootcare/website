@@ -20,7 +20,7 @@ export default function AboutPage() {
               <h1 className="text-[28px] font-medium text-on-surface">
                 メディフットケアとは？
               </h1>
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <div className="header-accent-bar" />
               <p className="text-base text-on-surface-variant leading-relaxed">
                 医師・看護師による訪問フットケアサービスについてご紹介します。
               </p>

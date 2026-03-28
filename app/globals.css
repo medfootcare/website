@@ -140,13 +140,23 @@ body {
   line-height: 1.5;
 }
 
+.section-heading::before {
+  content: '✦';
+  display: block;
+  font-size: 9px;
+  color: #f9a8b4;
+  letter-spacing: 8px;
+  margin-bottom: 6px;
+}
+
 .section-heading::after {
   content: '';
   display: block;
-  width: 32px;
-  height: 2px;
-  margin: 10px auto 0;
-  background: #3aada8;
+  width: 40px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: linear-gradient(to right, #3aada8, #f9a8b4);
+  border-radius: 9999px;
   transition: width 0.3s ease;
 }
 
@@ -156,6 +166,16 @@ body {
 
 .section-heading-bar {
   display: none;
+}
+
+/* ページヘッダー用グラデーションバー */
+.header-accent-bar {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #3aada8, #f9a8b4);
+  border-radius: 9999px;
 }
 
 /* 許容する微細な影（cases等で使用） */

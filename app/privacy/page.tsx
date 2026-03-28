@@ -21,7 +21,7 @@ export default function PrivacyPage() {
                 PRIVACY POLICY
               </p>
               <h1 className="text-[28px] font-medium text-on-surface">プライバシーポリシー</h1>
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <div className="header-accent-bar" />
             </div>
           </div>
         </section>
