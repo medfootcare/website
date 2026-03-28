@@ -48,6 +48,9 @@ export default function Footer() {
                 <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/faq">
                   よくある質問
                 </Link>
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/about">
+                  メディフットケアとは？
+                </Link>
               </nav>
             </div>
             <div className="space-y-4">

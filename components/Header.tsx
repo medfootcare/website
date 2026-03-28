@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/service",  label: "料金" },
   { href: "/cases",    label: "症例" },
   { href: "/faq",      label: "よくある質問" },
+  { href: "/about",    label: "メディフットケアとは？" },
 ];
 
 export default function Header() {
