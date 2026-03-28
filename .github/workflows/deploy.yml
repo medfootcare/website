@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages へデプロイ
 
 on:
   push:
@@ -10,20 +10,23 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: リポジトリをチェックアウト
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Node.js のセットアップ
+      - name: Node.js セットアップ
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
-      - name: 依存関係のインストール
+      - name: 依存関係インストール
         run: npm ci
 
       - name: ビルド
@@ -32,11 +35,11 @@ jobs:
       - name: Pages 用アーティファクトをアップロード
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   deploy:
-    runs-on: ubuntu-latest
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

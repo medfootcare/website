@@ -164,9 +164,8 @@ body {
   display: block;
   width: 64px;
   height: 2px;
-  margin: 0 auto;
-  background: none;
-  border-top: 2px dashed #3aada8;
+  margin: -1rem auto 0;
+  background: #3aada8;
 }
 
 /* 許容する微細な影（cases等で使用） */

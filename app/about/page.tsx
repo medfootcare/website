@@ -61,16 +61,15 @@ export default function AboutPage() {
               <h2 className="section-heading">企業情報</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-sm mx-auto">
               <table className="w-full border-collapse">
                 <tbody>
                   {[
                     { label: "サービス名", value: "メディフットケア" },
-                    { label: "所在地", value: "〒XXX-XXXX 千葉県佐倉市〇〇〇〇" },
+                    { label: "所在地", value: "千葉県八千代市" },
                     { label: "電話番号", value: "XXX-XXXX-XXXX" },
-                    { label: "設立", value: "XXXX年XX月" },
-                    { label: "代表者", value: "〇〇 〇〇" },
-                    { label: "対応エリア", value: "千葉県佐倉市・八千代市・四街道市・印西市ほか近隣" },
+                    { label: "設立", value: "2025年5月" },
+                    { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-[#e5eaea]">
                       <th className="py-4 pr-8 text-left text-sm font-medium text-on-surface w-36 align-top">
@@ -94,11 +93,11 @@ export default function AboutPage() {
               <h2 className="section-heading">沿革</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-3xl mx-auto space-y-0">
+            <div className="max-w-sm mx-auto space-y-0">
               {[
-                { year: "XXXX年XX月", event: "メディフットケア設立" },
-                { year: "XXXX年XX月", event: "訪問フットケアサービス開始" },
-                { year: "XXXX年XX月", event: "施設向けサービス開始" },
+                { year: "2026年3月", event: "訪問フットケアサービス開始" },
+                { year: "2025年5月", event: "メディフットケア設立" },
+                { year: "2025年8月", event: "施設向けサービス開始" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-8 items-start border-b border-[#e5eaea] py-5">
                   <span className="text-sm font-medium text-primary w-36 shrink-0">{item.year}</span>
