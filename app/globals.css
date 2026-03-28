@@ -155,7 +155,7 @@ body {
   width: 40px;
   height: 3px;
   margin: 12px auto 0;
-  background: linear-gradient(to right, #3aada8, #f9a8b4);
+  background: linear-gradient(to right, #f9a8b4, #fbd4b4);
   border-radius: 9999px;
   transition: width 0.3s ease;
 }
@@ -174,7 +174,7 @@ body {
   width: 40px;
   height: 3px;
   margin: 0 auto;
-  background: linear-gradient(to right, #3aada8, #f9a8b4);
+  background: linear-gradient(to right, #f9a8b4, #fbd4b4);
   border-radius: 9999px;
 }
 
