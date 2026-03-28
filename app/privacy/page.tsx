@@ -14,14 +14,14 @@ export default function PrivacyPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea]">
+        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-3 text-center">
+            <div className="space-y-6 py-10 text-center">
               <p className="text-xs tracking-[0.3em] text-on-surface-variant font-medium">
                 PRIVACY POLICY
               </p>
-              <h1 className="text-[24px] font-medium text-on-surface">プライバシーポリシー</h1>
-              <div className="mx-auto h-0.5 w-8 bg-primary" />
+              <h1 className="text-[28px] font-medium text-on-surface">プライバシーポリシー</h1>
+              <div className="mx-auto h-px w-10 bg-primary" />
             </div>
           </div>
         </section>

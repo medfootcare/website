@@ -73,13 +73,13 @@ export default function CasesPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea]">
+        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-3 text-center">
-              <h1 className="text-[24px] font-medium text-on-surface">
+            <div className="space-y-6 py-10 text-center">
+              <h1 className="text-[28px] font-medium text-on-surface">
                 症例・お悩み
               </h1>
-              <div className="mx-auto h-0.5 w-8 bg-primary" />
+              <div className="mx-auto h-px w-10 bg-primary" />
               <p className="text-base text-on-surface-variant leading-relaxed">
                 「これは自分のことだ」と感じたら、お気軽にご相談ください。
               </p>

@@ -43,10 +43,10 @@ export default function FacilityPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea]">
+        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="section-panel-hero space-y-4 py-5 text-center">
-              <h1 className="text-[24px] font-medium leading-[1.75] text-on-surface">
+            <div className="section-panel-hero space-y-6 py-10 text-center">
+              <h1 className="text-[28px] font-medium leading-[1.75] text-on-surface">
                 施設への
                 <br />
                 訪問フットケアサービス
@@ -57,7 +57,6 @@ export default function FacilityPage() {
                 <br />
                 まずは体験会からお気軽にどうぞ。
               </p>
-              {/* 施設担当者が最初に確認する最低人数条件を明示 */}
             </div>
           </div>
         </section>
