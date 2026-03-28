@@ -21,7 +21,7 @@ function PersonalCTA({ label }: { label: string }) {
           rel="noopener noreferrer"
           className="btn-primary-k"
         >
-          フォームで相談する（無料）
+          フォームで相談する
         </a>
         <a
           href={LINE_URL}
@@ -99,7 +99,7 @@ export default function PersonalPage() {
                 <h2 className="section-heading">ご利用の流れ</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+              <div className="space-y-4 max-w-lg mx-auto">
                 {[
                   {
                     step: "01",
@@ -154,27 +154,28 @@ export default function PersonalPage() {
                 <h2 className="section-heading">ご家族の方へ</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4">
-                <div className="surface-card">
-                  <h3 className="mb-3 flex items-center gap-3 text-base font-medium text-primary">
-                    <span className="material-symbols-outlined fill-icon">family_restroom</span>
-                    立ち会いについて
-                  </h3>
-                  <p className="text-sm leading-loose text-on-surface-variant">
-                    立ち会いは任意です。ご本人の意思確認ができれば、ご家族の立ち会いがなくても<br />
-                    施術を行います。初回は立ち会っていただくと安心です。
-                  </p>
-                </div>
-                <div className="surface-card">
-                  <h3 className="mb-3 flex items-center gap-3 text-base font-medium text-primary">
-                    <span className="material-symbols-outlined fill-icon">phone_in_talk</span>
-                    代わりに申し込みできますか？
-                  </h3>
-                  <p className="text-sm leading-loose text-on-surface-variant">
-                    はい、ご家族からのお申し込みも承っております。<br />
-                    「親の爪が心配で…」といったご相談もお気軽にどうぞ。
-                  </p>
-                </div>
+              <div className="mx-auto max-w-2xl space-y-4 text-left">
+                {[
+                  {
+                    q: "立ち会いは必要ですか？",
+                    a: "立ち会いは任意です。ご本人の意思確認ができれば、ご家族の立ち会いがなくても施術を行います。初回は立ち会っていただくと安心です。",
+                  },
+                  {
+                    q: "家族の代わりに申し込みできますか？",
+                    a: "はい、ご家族からのお申し込みも承っております。「親の爪が心配で…」といったご相談もお気軽にどうぞ。",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="qa-card">
+                    <p className="mb-2 flex items-start gap-3 text-sm font-medium text-on-surface">
+                      <span className="shrink-0 text-sm font-medium text-primary">Q.</span>
+                      <span className="flex-1 min-w-0">{item.q}</span>
+                    </p>
+                    <p className="flex items-start gap-3 text-base leading-relaxed text-on-surface-variant">
+                      <span className="shrink-0 text-base font-medium text-on-surface-variant">A.</span>
+                      <span className="flex-1 min-w-0">{item.a}</span>
+                    </p>
+                  </div>
+                ))}
               </div>
               <div className="mt-6">
                 <Link className="text-link-inline group" href="/faq">
@@ -196,39 +197,41 @@ export default function PersonalPage() {
                 <h2 className="section-heading">料金案内</h2>
                 <div className="section-heading-bar mb-4"></div>
               </div>
-              <div className="price-card">
-                <div className="space-y-0">
-                  {/* 料金行1 */}
-                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
-                    <div className="space-y-1">
-                      <h4 className="text-base font-medium text-on-surface">ご施設ケア</h4>
-                      <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
+              <div className="space-y-0 max-w-2xl mx-auto">
+                <div className="price-card text-left">
+                  <div className="space-y-0">
+                    {/* 料金行1 */}
+                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                      <div className="space-y-1">
+                        <h4 className="text-base font-medium text-on-surface">ご施設ケア</h4>
+                        <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
+                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                      </div>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    {/* 料金行2 */}
+                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                      <div className="space-y-1">
+                        <h4 className="text-base font-medium text-on-surface">ご施設しっかりケア</h4>
+                        <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
+                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                      </div>
                     </div>
-                  </div>
-                  {/* 料金行2 */}
-                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
-                    <div className="space-y-1">
-                      <h4 className="text-base font-medium text-on-surface">ご施設しっかりケア</h4>
-                      <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
-                    </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
-                    </div>
-                  </div>
-                  {/* 料金行3 */}
-                  <div className="flex items-start justify-between gap-6 py-5">
-                    <div className="space-y-1">
-                      <h4 className="text-base font-medium text-on-surface">個人宅訪問ケア</h4>
-                      <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
-                    </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    {/* 料金行3 */}
+                    <div className="flex items-start justify-between gap-6 py-5">
+                      <div className="space-y-1">
+                        <h4 className="text-base font-medium text-on-surface">個人宅訪問ケア</h4>
+                        <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
+                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -246,39 +249,38 @@ export default function PersonalPage() {
         </section>
 
         {/* ===== 末尾CTA ===== */}
-        <section className="page-section bg-white">
+        <section className="page-section bg-[#f8fafa]">
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
                 <h2 className="section-heading">お問い合わせ・お申し込み</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 py-5">
-                <h3 className="text-[24px] font-medium text-on-surface">はじめての方もお気軽にどうぞ</h3>
-                <p className="text-sm leading-loose text-on-surface-variant">
-                  いきなり予約しなくても大丈夫です。<br />
-                  「こんな状態でも大丈夫？」「どんなことをするの？」<br />
-                  そんな疑問だけでも、まずはご相談ください。
-                </p>
-                <p className="text-base font-medium text-on-surface">
-                  ご本人・ご家族どちらからのご連絡も歓迎しています。
-                </p>
-              </div>
-              <div className="space-y-4">
+              <div className="mx-auto max-w-xl rounded-2xl bg-[#e8f5f3] px-8 py-8 text-center space-y-6">
+                <div className="space-y-3">
+                  <h3 className="text-[20px] font-medium text-on-surface">はじめての方もお気軽にどうぞ</h3>
+                  <p className="text-sm leading-loose text-on-surface-variant">
+                    「こんな状態でも大丈夫？」「どんなことをするの？」<br />
+                    そんな疑問だけでも、まずはご相談ください。
+                  </p>
+                  <p className="text-sm font-medium text-on-surface">
+                    ご本人・ご家族どちらからのご連絡も歓迎しています。
+                  </p>
+                </div>
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                   <a
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k"
+                    className="btn-primary-k w-[200px] flex-col leading-tight"
                   >
-                    フォームで相談する（無料）
+                    <span>フォームで相談する</span>
                   </a>
                   <a
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k"
+                    className="btn-line-k w-[200px] flex-col leading-tight"
                   >
                     LINEで相談する
                   </a>

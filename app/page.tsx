@@ -176,7 +176,7 @@ export default function Home() {
                 </div>
               </div>
               {/* 下段 2つ */}
-              <div className="space-y-4 pt-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+              <div className="space-y-4 pt-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
                 {/* 特徴4 */}
                 <div className="surface-card space-y-4">
                   <h3 className="break-keep text-primary">
@@ -318,7 +318,7 @@ export default function Home() {
                   {
                     icon: "medical_information",
                     title: "看護師資格保有",
-                    desc: <>担当スタッフは看護師資格を保有。<br />医学的根拠に基づいた安全なケアを提供します。</>,
+                    desc: <>担当スタッフは看護師資格を保有。<br />医学的根拠に基づく安全なケアを提供。</>,
                   },
                   {
                     icon: "sanitizer",
@@ -431,7 +431,7 @@ export default function Home() {
                 <h2 className="section-heading">よくある質問</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4">
+              <div className="mx-auto max-w-2xl space-y-4 text-left">
                 {[
                   {
                     q: "どんな方が対象ですか？",
@@ -447,12 +447,13 @@ export default function Home() {
                   },
                 ].map((item, i) => (
                   <div key={i} className="qa-card">
-                    <p className="mb-2 flex items-start gap-3 text-base font-medium text-on-surface">
-                      <span className="shrink-0 text-base font-medium text-primary">Q.</span>
-                      {item.q}
+                    <p className="mb-2 flex items-start gap-3 text-sm font-medium text-on-surface">
+                      <span className="shrink-0 text-sm font-medium text-primary">Q.</span>
+                      <span className="flex-1 min-w-0">{item.q}</span>
                     </p>
-                    <p className="pl-7 text-sm leading-loose text-on-surface-variant">
-                      {item.a}
+                    <p className="flex items-start gap-3 text-base leading-relaxed text-on-surface-variant">
+                      <span className="shrink-0 text-base font-medium text-on-surface-variant">A.</span>
+                      <span className="flex-1 min-w-0">{item.a}</span>
                     </p>
                   </div>
                 ))}
@@ -473,44 +474,48 @@ export default function Home() {
         <section className="page-section bg-white" id="area">
           <div className="max-content-width">
             <div className="section-panel">
-              <div className="space-y-4 py-5">
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined fill-icon text-[24px] text-primary">
-                    location_on
-                  </span>
-                  <h2 className="text-[24px] font-medium text-on-surface">
-                    訪問対応エリア
-                  </h2>
-                </div>
-                <p className="text-base text-on-surface-variant">
-                  千葉県佐倉市を中心に以下の地域へお伺いしております。
-                </p>
-                <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
-                  {["八千代市", "佐倉市", "四街道市", "印西市"].map((city) => (
-                    <span
-                      key={city}
-                      className="text-base font-medium text-primary py-2"
-                    >
-                      {city}
+              <div className="mx-auto max-w-3xl flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
+                {/* 左：テキスト */}
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="material-symbols-outlined fill-icon text-[24px] text-primary">
+                      location_on
                     </span>
-                  ))}
-                </div>
-                <div className="flex items-center gap-3 pt-2 text-on-surface-variant">
-                  <span className="material-symbols-outlined text-[24px]">
-                    info
-                  </span>
-                  <p className="text-sm">
-                    上記以外のエリア（近隣市区町村）もお気軽にご相談ください。
+                    <h2 className="text-[24px] font-medium text-on-surface">
+                      訪問対応エリア
+                    </h2>
+                  </div>
+                  <p className="text-base text-on-surface-variant text-left">
+                    千葉県佐倉市を中心に以下の地域へお伺いしております。
                   </p>
+                  <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
+                    {["八千代市", "佐倉市", "四街道市", "印西市"].map((city) => (
+                      <span
+                        key={city}
+                        className="text-base font-medium text-primary py-2"
+                      >
+                        {city}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-3 pt-6 text-on-surface-variant">
+                    <span className="material-symbols-outlined shrink-0 text-[24px]">
+                      info
+                    </span>
+                    <p className="text-sm whitespace-nowrap">
+                      上記以外のエリア（近隣市区町村）もお気軽にご相談ください。
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="py-5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/medifootcare.web/images/area-map.png"
-                  alt="訪問対応エリアマップ"
-                  className="h-auto w-full max-w-[360px]"
-                />
+                {/* 右：地図 */}
+                <div className="flex shrink-0 justify-center md:justify-end">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/medifootcare.web/images/area-map.png"
+                    alt="訪問対応エリアマップ"
+                    className="h-auto w-full max-w-[320px]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -532,15 +537,15 @@ export default function Home() {
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k"
+                    className="btn-primary-k w-[200px] flex-col leading-tight"
                   >
-                    フォームで相談する（無料）
+                    <span>フォームで相談する</span>
                   </a>
                   <a
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k"
+                    className="btn-line-k w-[200px] flex-col leading-tight"
                   >
                     LINEで相談する
                   </a>

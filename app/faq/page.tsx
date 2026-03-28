@@ -16,7 +16,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
       >
         <p className="font-medium text-on-surface flex items-start gap-3 flex-1">
           <span className="text-primary font-medium text-base shrink-0">Q.</span>
-          {q}
+          <span className="break-keep">{q}</span>
         </p>
         <span
           className="material-symbols-outlined text-primary shrink-0 mt-0.5 transition-transform duration-300"
@@ -26,8 +26,11 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       {open && (
-        <div className="px-6 pb-5">
-          <p className="text-sm text-on-surface-variant leading-relaxed pl-7">{a}</p>
+        <div className="px-6 py-4">
+          <p className="text-base text-on-surface-variant leading-relaxed flex items-start gap-3">
+            <span className="text-base font-medium text-on-surface-variant shrink-0">A.</span>
+            <span className="flex-1 min-w-0 break-keep">{a}</span>
+          </p>
         </div>
       )}
     </div>
@@ -148,7 +151,7 @@ export default function FaqPage() {
               </div>
 
               {/* FAQ一覧 */}
-              <div className="space-y-3 text-center">
+              <div className="space-y-3 text-left">
                 {(tab === "personal" ? personalFaqs : facilityFaqs).map((item, i) => (
                   <AccordionItem key={i} q={item.q} a={item.a} />
                 ))}

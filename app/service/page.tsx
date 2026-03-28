@@ -32,50 +32,47 @@ export default function ServicePage() {
               <h2 className="section-heading">料金一覧</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-4xl mx-auto space-y-4">
-              {[
-                {
-                  name: "ご施設ケア",
-                  desc: "爪ケア・角質ケア・保湿を含む、基本のフットケア",
-                  duration: "約30分",
-                  price: "¥5,000",
-                  note: "税込",
-                },
-                {
-                  name: "ご施設しっかりケア",
-                  desc: "巻き爪ケアを含む、より丁寧な個別ケア",
-                  duration: "約60分",
-                  price: "¥10,000",
-                  note: "税込",
-                },
-                {
-                  name: "個人宅訪問ケア",
-                  desc: "爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア",
-                  duration: "約60分",
-                  price: "¥12,000",
-                  note: "税込",
-                },
-              ].map((item) => (
-                <div
-                  key={item.name}
-                  className="price-card flex flex-col md:flex-row md:items-center gap-6"
-                >
-                  <div className="flex-1">
-                    <div className="mb-1">
-                      <h3 className="text-base font-medium text-on-surface">{item.name}</h3>
+            <div className="space-y-0 max-w-2xl mx-auto">
+              <div className="price-card text-left">
+                <div className="space-y-0">
+                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="space-y-1">
+                      <h3 className="text-base font-medium text-on-surface">ご施設ケア</h3>
+                      <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
+                      <p className="text-sm text-on-surface-variant">目安：約30分</p>
                     </div>
-                    <p className="text-sm text-on-surface-variant">{item.desc}</p>
-                    <p className="text-sm text-on-surface-variant mt-1">目安：{item.duration}</p>
+                    <div className="shrink-0 text-right">
+                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
+                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    </div>
                   </div>
-                  <div className="text-right shrink-0">
-                    <p className="text-[24px] font-medium text-primary">{item.price}</p>
-                    <p className="text-sm text-on-surface-variant">{item.note}</p>
+                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="space-y-1">
+                      <h3 className="text-base font-medium text-on-surface">ご施設しっかりケア</h3>
+                      <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
+                      <p className="text-sm text-on-surface-variant">目安：約60分</p>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
+                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start justify-between gap-6 py-5">
+                    <div className="space-y-1">
+                      <h3 className="text-base font-medium text-on-surface">個人宅訪問ケア</h3>
+                      <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
+                      <p className="text-sm text-on-surface-variant">目安：約60分</p>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
+                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    </div>
                   </div>
                 </div>
-              ))}
-              <div className="mt-8 space-y-2 text-sm text-on-surface-variant">
+              </div>
+              <div className="pt-10 space-y-2 text-sm text-on-surface-variant">
                 <p>※ご施設ケア・ご施設しっかりケアは、複数名のご依頼があるご施設様向けの料金です。</p>
-                <p>※巻き爪ケアは、ご施設しっかりケア・個人宅訪問ケアで対応します。1趾まで料金内、2趾目からは+6,000円（税込）です。</p>
+                <p>※巻き爪ケアは、ご施設しっかりケア・個人宅訪問ケアで対応します。<br />　1趾まで料金内、2趾目からは+6,000円（税込）です。</p>
               </div>
             </div>
           </div>
