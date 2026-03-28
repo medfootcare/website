@@ -175,25 +175,25 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              {/* 下段 2つ */}
-              <div className="space-y-4 pt-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
+              {/* 下段 2つ - 上段の間に中央揃えで配置 */}
+              <div className="space-y-4 pt-4 md:flex md:justify-center md:gap-6 md:space-y-0">
                 {/* 特徴4 */}
-                <div className="surface-card space-y-4">
+                <div className="surface-card space-y-4 md:w-1/3">
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">巻き爪・分厚い爪など、<br />幅広い爪トラブルに対応</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    巻き爪・肥厚爪・変形爪など、さまざまな爪のお悩みに対応。<br />
+                    巻き爪・肥厚爪・変形爪など、<br />さまざまな爪のお悩みに対応。<br />
                     専門的な知識と技術で丁寧にケアします。
                   </p>
                 </div>
                 {/* 特徴5 */}
-                <div className="surface-card space-y-4">
+                <div className="surface-card space-y-4 md:w-1/3">
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">専用機器を使用した、<br />痛みの少ないケア</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
-                    専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。<br />
+                    専用マシンや器具を使用し、<br />振動や刺激を最小限に抑えた施術。<br />
                     痛みが怖い方でも安心してご利用いただけます。
                   </p>
                 </div>
