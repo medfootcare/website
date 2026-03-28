@@ -159,14 +159,13 @@ body {
   display: none;
 }
 
-/* ページヘッダー用グラデーションバー */
+/* ページヘッダー用アクセントバー */
 .header-accent-bar {
   display: block;
   width: 40px;
-  height: 3px;
+  height: 2px;
   margin: 0 auto;
-  background: linear-gradient(to right, #f9a8b4, #fbd4b4);
-  border-radius: 9999px;
+  background: #3aada8;
 }
 
 /* 許容する微細な影（cases等で使用） */

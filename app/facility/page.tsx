@@ -269,7 +269,7 @@ export default function FacilityPage() {
                     導入の流れや費用感をご説明します。
                   </p>
                   <p className="text-sm font-medium text-on-surface">
-                    施設スタッフ様・利用者様・ご家族にご確認いただける機会として活用ください。
+                    ぜひ導入のご検討にお役立てください。
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
