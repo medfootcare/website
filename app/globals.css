@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background-color: #faf6f2;
-  color: #353535;
+  background: #ffffff;
 }
 
-/* Material Symbols のフォントバリエーション設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1a2b2b;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
@@ -21,155 +27,161 @@ body {
 
 /* コンテンツ最大幅 */
 .max-content-width {
-  max-width: 1200px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* グラスモーフィズム ヘッダー */
+/* ヘッダー：クリーンな白ベース */
 .glass-header {
-  background-color: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5eaea;
 }
 
-/* 特徴セクションの大きな背景番号 */
-.num-bg {
-  font-size: 10rem;
-  line-height: 1;
-  opacity: 0.05;
-  font-weight: 900;
-  position: absolute;
-  top: -2rem;
-  left: -1rem;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* ナビリンク：ホバー時にアンダーラインがスライドインするアニメーション */
+/* ナビリンク：休止時グレー → ホバーで濃色 */
 .nav-link {
   position: relative;
+  color: #666666;
+  font-size: 14px;
+  transition: color 0.15s ease;
 }
+
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
   left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #5dc5bc;
-  transition: width 0.25s ease;
-}
-.nav-link:hover::after {
+  bottom: -4px;
   width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transition: background-color 0.15s ease;
 }
 
-/* プライマリCTAボタン（k-mesen.jp スタイル：ほぼ四角） */
-.btn-primary-k {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background-color: #5dc5bc;
-  color: #ffffff;
-  padding: 1rem 2.5rem;
-  border-radius: 2px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn-primary-k:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(65, 185, 175, 0.4);
+.nav-link:hover {
+  color: #1a2b2b;
 }
 
-/* アウトラインCTAボタン（k-mesen.jp スタイル） */
-.btn-outline-k {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background-color: #ffffff;
-  color: #5dc5bc;
-  border: 2px solid #5dc5bc;
-  padding: 1rem 2.5rem;
-  border-radius: 2px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-.btn-outline-k:hover {
-  transform: scale(1.05);
-  background-color: #5dc5bc;
-  color: #ffffff;
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  background-color: #3aada8;
 }
 
-/* セクション見出し（k-mesen.jp スタイル：ライトウェイト） */
-.section-heading {
-  font-size: 2.25rem;
-  font-weight: 300;
-  color: #353535;
-  text-align: center;
-  display: inline-block;
-}
-
-/* 見出し直下にテキスト幅より少し短いアニメーションバーを描く */
-.section-heading::after {
-  content: '';
-  display: block;
-  width: 95%;
-  height: 3px;
-  background: linear-gradient(90deg, #5dc5bc, #7eb8e8, #a78fd4, #5dc5bc);
-  background-size: 300% 100%;
-  border-radius: 9999px;
-  margin: 0.75rem auto 0;
-  transform-origin: center;
-  animation: barEntrance 0.6s ease forwards, colorFlow 4s ease-in-out 0.6s infinite;
-}
-
-/* ホバー時：中央から再度広がる */
-.section-heading:hover::after {
-  animation: barHover 0.5s ease forwards, colorFlow 4s ease-in-out 0.5s infinite;
-}
-
-/* 既存のバー div は非表示 */
-.section-heading-bar {
-  display: none;
-}
-
-/* LINE CTAボタン */
+/* ボタン共通：角丸12px・単一スタイル */
+.btn-primary-k,
+.btn-outline-k,
 .btn-line-k {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #ffffff;
-  color: #06C755;
-  border: 2px solid #06C755;
-  padding: 1rem 2.5rem;
-  border-radius: 2px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: background-color 0.15s ease;
+  border: none;
 }
-.btn-line-k:hover {
-  transform: scale(1.05);
-  background-color: #06C755;
+
+.btn-primary-k {
+  background: #3aada8;
+  color: #ffffff;
+  border: 1px solid #3aada8;
+}
+
+.btn-primary-k:hover {
+  background: #319b96;
   color: #ffffff;
 }
 
-@keyframes barEntrance {
-  from { transform: scaleX(0); opacity: 0; }
-  to   { transform: scaleX(1); opacity: 1; }
+.btn-outline-k,
+.btn-line-k {
+  background: #ffffff;
+  color: #3aada8;
+  border: 1px solid #3aada8;
 }
 
-@keyframes barHover {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+.btn-outline-k:hover,
+.btn-line-k:hover {
+  background: #e8f5f4;
+  color: #3aada8;
 }
 
-@keyframes colorFlow {
-  0%   { background-position: 0%   50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0%   50%; }
+.btn-primary-k:focus-visible,
+.btn-outline-k:focus-visible,
+.btn-line-k:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid rgba(58, 173, 168, 0.35);
+  outline-offset: 2px;
+}
+
+/* セクション見出し：中央揃え・短いティールバー */
+.section-heading {
+  font-size: 24px;
+  font-weight: 500;
+  color: #1a2b2b;
+  text-align: center;
+  display: block;
+  line-height: 1.5;
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin: 10px auto 0;
+  background: #3aada8;
+}
+
+.section-heading-bar {
+  display: none;
+}
+
+/* 許容する微細な影（cases等で使用） */
+.shadow-card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+@layer components {
+  /* セクション余白：PC基準 px-12(48px) py-20(80px) */
+  .page-section {
+    @apply px-12 py-20;
+  }
+
+  .section-panel {
+    @apply px-0 py-0 text-center;
+  }
+
+  .section-panel-hero {
+    @apply px-0 py-0 text-center;
+  }
+
+  /* カード：白背景・薄ボーダー・角丸12px */
+  .surface-card,
+  .surface-card-soft {
+    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-6;
+  }
+
+  .step-card {
+    @apply bg-white px-6 py-5;
+  }
+
+  .qa-card {
+    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-5;
+  }
+
+  .price-card {
+    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-6;
+  }
+
+  /* バッジ：ティール薄背景 */
+  .soft-badge {
+    @apply inline-flex items-center gap-2 bg-[#e8f5f4] border border-primary px-4 py-2 text-sm font-medium text-primary rounded-xl;
+  }
+
+  .text-link-inline {
+    @apply inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-75;
+  }
 }

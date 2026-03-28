@@ -8,14 +8,14 @@ import Footer from "@/components/Footer";
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-white border border-surface-container overflow-hidden">
+    <div className="bg-white border border-[#e5eaea] rounded-xl overflow-hidden">
       <button
-        className="w-full text-left p-8 flex items-start justify-between gap-4 hover:bg-surface-container-low transition-colors"
+        className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 hover:bg-[#f8fafa] transition-colors"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
-        <p className="font-bold text-on-surface flex items-start gap-3 flex-1">
-          <span className="text-primary font-black text-lg shrink-0">Q.</span>
+        <p className="font-medium text-on-surface flex items-start gap-3 flex-1">
+          <span className="text-primary font-medium text-base shrink-0">Q.</span>
           {q}
         </p>
         <span
@@ -26,8 +26,8 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       {open && (
-        <div className="px-8 pb-8">
-          <p className="text-on-surface-variant leading-relaxed pl-7">{a}</p>
+        <div className="px-6 pb-5">
+          <p className="text-sm text-on-surface-variant leading-relaxed pl-7">{a}</p>
         </div>
       )}
     </div>
@@ -100,19 +100,19 @@ export default function FaqPage() {
   const [tab, setTab] = useState<"personal" | "facility">("personal");
 
   return (
-    <div className="bg-surface text-on-surface">
+    <div className="bg-white text-on-surface">
       <Header />
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="py-20 px-6 bg-surface-container-low border-b border-surface-container">
+        <section className="page-section border-b border-[#e5eaea]">
           <div className="max-content-width">
-            <div className="bg-white border border-surface-container shadow-sm p-10 md:p-16 text-center space-y-4">
-              <h1 className="text-4xl md:text-5xl font-thin text-on-surface leading-[1.2] tracking-tight">
+            <div className="space-y-3 text-center">
+              <h1 className="text-[24px] font-medium text-on-surface">
                 よくある質問
               </h1>
-              <div className="h-0.5 w-full bg-primary" />
-              <p className="text-base text-on-surface-variant font-normal leading-relaxed">
+              <div className="mx-auto h-0.5 w-8 bg-primary" />
+              <p className="text-base text-on-surface-variant leading-relaxed">
                 ご不明な点を解消して、安心してご利用ください。
               </p>
             </div>
@@ -120,40 +120,38 @@ export default function FaqPage() {
         </section>
 
         {/* ===== タブ + FAQ ===== */}
-        <section className="py-32 px-6 bg-white">
+        <section className="page-section bg-white">
           <div className="max-content-width">
-            <div className="bg-surface-container-low border border-surface-container shadow-sm p-10 md:p-16">
-              <div className="max-w-3xl mx-auto">
-                {/* タブ切替 */}
-                <div className="flex overflow-hidden border border-surface-container mb-12">
-                  <button
-                    className={`flex-1 py-4 font-bold text-center transition-colors ${
-                      tab === "personal"
-                        ? "bg-primary text-white"
-                        : "bg-white text-on-surface-variant hover:bg-surface-container-low"
-                    }`}
-                    onClick={() => setTab("personal")}
-                  >
-                    個人の方向け
-                  </button>
-                  <button
-                    className={`flex-1 py-4 font-bold text-center transition-colors ${
-                      tab === "facility"
-                        ? "bg-secondary text-white"
-                        : "bg-white text-on-surface-variant hover:bg-surface-container-low"
-                    }`}
-                    onClick={() => setTab("facility")}
-                  >
-                    施設の方向け
-                  </button>
-                </div>
+            <div className="max-w-3xl mx-auto">
+              {/* アンダーライン型タブ切替 */}
+              <div className="flex mb-8 border-b border-[#e5eaea]">
+                <button
+                  className={`flex-1 py-3 text-sm font-medium text-center transition-colors border-b-2 -mb-px ${
+                    tab === "personal"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-on-surface-variant hover:text-on-surface"
+                  }`}
+                  onClick={() => setTab("personal")}
+                >
+                  個人の方向け
+                </button>
+                <button
+                  className={`flex-1 py-3 text-sm font-medium text-center transition-colors border-b-2 -mb-px ${
+                    tab === "facility"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-on-surface-variant hover:text-on-surface"
+                  }`}
+                  onClick={() => setTab("facility")}
+                >
+                  施設の方向け
+                </button>
+              </div>
 
-                {/* FAQ一覧 */}
-                <div className="space-y-4">
-                  {(tab === "personal" ? personalFaqs : facilityFaqs).map((item, i) => (
-                    <AccordionItem key={i} q={item.q} a={item.a} />
-                  ))}
-                </div>
+              {/* FAQ一覧 */}
+              <div className="space-y-3 text-center">
+                {(tab === "personal" ? personalFaqs : facilityFaqs).map((item, i) => (
+                  <AccordionItem key={i} q={item.q} a={item.a} />
+                ))}
               </div>
             </div>
           </div>

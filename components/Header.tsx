@@ -3,42 +3,38 @@ import { FORM_URL } from "@/constants/links";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 glass-header border-b border-surface-container">
-      <div className="max-content-width px-6 py-4 flex justify-between items-center">
+    <header className="fixed top-0 z-50 w-full glass-header">
+      <div className="max-content-width flex items-center justify-between gap-8 px-12 py-4">
         {/* ロゴ */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/medifootcare.web/images/logo.png"
             alt="メディフットケア"
-            className="h-10 w-auto"
+            className="h-9 w-auto"
           />
-          <span className="text-xl font-bold text-on-surface tracking-tight">
+          <span className="text-base font-medium tracking-tight text-on-surface">
             メディフットケア
           </span>
         </Link>
 
-        {/* ナビゲーション */}
-        <nav className="hidden md:flex items-center gap-10 font-medium text-on-surface-variant">
-          <Link className="nav-link hover:text-primary transition-colors" href="/">
-            ホーム
-          </Link>
-          <Link className="nav-link hover:text-primary transition-colors" href="/personal">
-            個人向け
-          </Link>
-          <Link className="nav-link hover:text-primary transition-colors" href="/facility">
-            施設向け
-          </Link>
+        {/* PCナビゲーション */}
+        <nav className="hidden md:flex items-center gap-6">
+          <Link className="nav-link" href="/personal">個人の方へ</Link>
+          <Link className="nav-link" href="/facility">施設の方へ</Link>
+          <Link className="nav-link" href="/service">料金</Link>
+          <Link className="nav-link" href="/cases">症例</Link>
+          <Link className="nav-link" href="/faq">よくある質問</Link>
         </nav>
 
         {/* CTAボタン */}
         <a
-          className="btn-primary-k"
+          className="btn-primary-k shrink-0"
           href={FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
         >
-          お問い合わせ ›
+          お問い合わせ
         </a>
       </div>
     </header>

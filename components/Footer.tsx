@@ -3,23 +3,23 @@ import { FORM_URL } from "@/constants/links";
 
 export default function Footer() {
   return (
-    <footer className="bg-white pt-24 pb-12 border-t border-surface-container">
-      <div className="max-content-width px-6">
-        <div className="grid md:grid-cols-2 gap-16 mb-20">
+    <footer className="bg-white border-t border-[#e5eaea] pt-16 pb-12">
+      <div className="max-content-width px-12">
+        <div className="mb-10 grid grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start gap-16">
           {/* ブランド */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/medifootcare.web/images/logo.png"
                 alt="メディフットケア"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
-              <span className="text-2xl font-bold text-on-surface tracking-tight">
+              <span className="text-base font-medium tracking-tight text-on-surface">
                 メディフットケア
               </span>
             </Link>
-            <p className="text-on-surface-variant leading-loose max-w-sm">
+            <p className="max-w-sm text-sm leading-loose text-on-surface-variant">
               爪の変形や足のお悩みに対して、
               <br />
               医師・看護師のみで構成されたチームで、
@@ -29,35 +29,35 @@ export default function Footer() {
           </div>
 
           {/* リンク */}
-          <div className="grid grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h4 className="font-bold text-on-surface tracking-wider">メニュー</h4>
-              <nav className="flex flex-col gap-4 font-medium text-on-surface-variant">
-                <Link className="hover:text-primary" href="/personal">
+          <div className="grid grid-cols-2 gap-10">
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium tracking-wider text-on-surface">メニュー</h4>
+              <nav className="flex flex-col gap-3">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/personal">
                   個人向けご案内
                 </Link>
-                <Link className="hover:text-primary" href="/facility">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/facility">
                   施設向けご案内
                 </Link>
-                <Link className="hover:text-primary" href="/service">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/service">
                   料金
                 </Link>
-                <Link className="hover:text-primary" href="/cases">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/cases">
                   症例・お悩み
                 </Link>
-                <Link className="hover:text-primary" href="/faq">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/faq">
                   よくある質問
                 </Link>
               </nav>
             </div>
-            <div className="space-y-6">
-              <h4 className="font-bold text-on-surface tracking-wider">サポート</h4>
-              <nav className="flex flex-col gap-4 font-medium text-on-surface-variant">
-                <Link className="hover:text-primary" href="/privacy">
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium tracking-wider text-on-surface">サポート</h4>
+              <nav className="flex flex-col gap-3">
+                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors" href="/privacy">
                   個人情報保護方針
                 </Link>
                 <a
-                  className="hover:text-primary"
+                  className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors"
                   href={FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,8 +70,8 @@ export default function Footer() {
         </div>
 
         {/* コピーライト */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-surface-container gap-6">
-          <p className="text-on-surface-variant text-sm">
+        <div className="border-t border-[#e5eaea] pt-6">
+          <p className="text-sm text-on-surface-variant">
             © 2026 メディフットケア. All rights reserved.
           </p>
         </div>
