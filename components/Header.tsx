@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FORM_URL } from "@/constants/links";
+import { FORM_URL, LINE_URL } from "@/constants/links";
 
 const NAV_LINKS = [
   { href: "/personal", label: "ご利用者様・ご家族様へ" },
@@ -59,33 +59,51 @@ export default function Header() {
         </button>
       </div>
 
-      {/* ドロップダウンメニュー */}
+      {/* 背景オーバーレイ：クリックで閉じる */}
       {open && (
-        <nav className="glass-header border-t border-gray-200/30">
-          <div className="max-content-width px-12 py-4 flex flex-col gap-1">
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* ドロップダウン小窓 */}
+      {open && (
+        <div className="absolute right-6 top-full mt-2 w-56 rounded-2xl border border-gray-200/60 bg-white/95 backdrop-blur-md shadow-lg z-50">
+          <nav className="flex flex-col gap-1 px-4 py-3">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="nav-link py-3 border-b border-gray-200/20 last:border-b-0"
+                className="nav-link py-2.5 border-b border-gray-100 last:border-b-0 text-sm"
                 onClick={() => setOpen(false)}
               >
                 {label}
               </Link>
             ))}
-            <div className="pt-4">
-              <a
-                className="btn-primary-k w-full text-center block"
-                href={FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setOpen(false)}
-              >
-                お問い合わせ
-              </a>
-            </div>
+          </nav>
+          <div className="flex flex-col gap-2 px-4 pb-4">
+            <a
+              className="btn-primary-k w-full text-center text-sm py-2.5"
+              href={FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              お問い合わせ
+            </a>
+            <a
+              className="btn-line-k w-full text-center text-sm py-2.5"
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+            >
+              LINEで相談する
+            </a>
           </div>
-        </nav>
+        </div>
       )}
     </header>
   );

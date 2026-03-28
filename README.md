@@ -4,7 +4,7 @@
 
 ## URL
 
-https://xiaosenai8.github.io/medifootcare/
+https://xiaosenai8.github.io/medifootcare.web/
 
 ## フォルダ構成
 
