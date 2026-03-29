@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHeroTitle from "@/components/PageHeroTitle";
 import { FORM_URL, LINE_URL } from "@/constants/links";
 
 export default function Home() {
@@ -10,32 +11,25 @@ export default function Home() {
 
       <main className="pt-24">
         {/* ===== ヒーローセクション ===== */}
-        <section className="page-section">
+        <section className="page-section !py-0">
           {/* 上段：テキストエリア＋画像 */}
           <div className="section-panel-hero max-content-width md:grid md:grid-cols-2 md:items-center md:gap-10">
 
             {/* テキストエリア */}
             <div className="space-y-4 py-5">
               {/* メインキャッチコピー */}
-              <h1 className="text-[24px] font-medium leading-[1.75] text-on-surface">
-                大切な足元に
-                <br />
-                やさしさと安心を
-              </h1>
-
-              {/* 区切り線：左揃え */}
-              <div className="mx-auto h-px w-10 bg-primary" />
+              <PageHeroTitle lines={["大切な足元に", "やさしさと安心を"]} textSize="text-[36px]" />
 
               {/* サービス名・サブテキスト */}
               <div className="space-y-3">
-                <p className="text-base font-normal tracking-normal text-on-surface-variant">
+                <p className="text-lg font-normal tracking-normal text-on-surface-variant">
                   医師・看護師による訪問フットケアサービス
                 </p>
               </div>
             </div>
 
             {/* ヒーロー画像 */}
-            <div className="py-5">
+            <div>
               <div className="w-full max-w-[480px] md:max-w-full">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -48,8 +42,8 @@ export default function Home() {
           </div>
 
           {/* 下段：CTAボタン */}
-          <div className="max-content-width pt-6">
-            <div className="flex flex-col gap-4 py-4 sm:flex-row sm:justify-center">
+          <div className="max-content-width">
+            <div className="flex flex-col gap-4 pb-10 sm:flex-row sm:justify-center">
               {/* 個人ユーザーが多数のため個人を左（先）に配置 */}
               <Link className="btn-primary-k min-w-[200px]" href="/personal">
                 ご利用者様・ご家族様 ›
@@ -69,29 +63,44 @@ export default function Home() {
                 <h2 className="section-heading">こんなお悩みありませんか？</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
-                {/* お悩み1 */}
-                <div className="surface-card-soft">
-                  <p className="text-base font-normal leading-loose text-on-surface">
-                    爪が分厚くなって
-                    <br />自分では切れない
-                  </p>
-                </div>
 
-                {/* お悩み2 */}
-                <div className="surface-card-soft">
-                  <p className="text-base font-normal leading-loose text-on-surface">
-                    歩くと爪があたって
-                    <br />痛い
-                  </p>
-                </div>
+              {/* チェックリスト + イラスト */}
+              <div className="flex flex-col items-center gap-4">
+                {/* チェックリスト */}
+                <ul className="space-y-4 text-left">
+                  {[
+                    "爪が分厚くなって自分では切れない",
+                    "歩くと爪があたって痛い",
+                    "靴下や布団に爪が引っかかる",
+                  ].map((text) => (
+                    <li key={text} className="flex items-center gap-3">
+                      <span
+                        className="flex shrink-0 items-center justify-center w-6 h-6 border-2 border-on-surface bg-white rounded-sm"
+                        aria-hidden="true"
+                      >
+                        <span className="material-symbols-outlined text-[18px] text-on-surface" style={{ fontVariationSettings: "'FILL' 0, 'wght' 600" }}>
+                          check
+                        </span>
+                      </span>
+                      <span
+                        className="text-[18px] font-medium text-on-surface break-keep"
+                        style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}
+                      >
+                        {text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
-                {/* お悩み3 */}
-                <div className="surface-card-soft">
-                  <p className="text-base font-normal leading-loose text-on-surface">
-                    靴下や布団に
-                    <br />爪が引っかかる
-                  </p>
+                {/* イラスト：PNG内の上下余白をクリップ */}
+                <div className="w-80 overflow-hidden" style={{ height: "220px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/medifootcare.web/images/nayami-illustration.png"
+                    alt="お悩みのある方のイラスト"
+                    className="w-full"
+                    style={{ marginTop: "-12%", marginBottom: "-20%" }}
+                  />
                 </div>
               </div>
             </div>
@@ -144,6 +153,13 @@ export default function Home() {
               <div className="space-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
                 {/* 特徴1 */}
                 <div className="surface-card space-y-4">
+                  {/* アイコン2個 */}
+                  <div className="flex justify-center gap-3">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/medifootcare.web/images/アイコン/アイコン_医師.png" alt="医師" className="w-20 h-20 object-contain" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/medifootcare.web/images/アイコン/アイコン_看護師.png" alt="看護師" className="w-20 h-20 object-contain" />
+                  </div>
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">医師・看護師による<br />チームケア</span>
                   </h3>
@@ -154,6 +170,8 @@ export default function Home() {
                 </div>
                 {/* 特徴2 */}
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_車椅子.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">ベッド・車椅子でも<br />施術可能</span>
                   </h3>
@@ -165,6 +183,8 @@ export default function Home() {
                 </div>
                 {/* 特徴3 */}
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_報告書.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">毎回ケアごとに<br />報告書を作成</span>
                   </h3>
@@ -179,6 +199,8 @@ export default function Home() {
               <div className="space-y-4 pt-4 md:flex md:justify-center md:gap-6 md:space-y-0">
                 {/* 特徴4 */}
                 <div className="surface-card space-y-4 md:w-1/3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_幅広い爪トラブル.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">巻き爪・分厚い爪など、<br />幅広い爪トラブルに対応</span>
                   </h3>
@@ -189,6 +211,8 @@ export default function Home() {
                 </div>
                 {/* 特徴5 */}
                 <div className="surface-card space-y-4 md:w-1/3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_専用機器.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">専用機器を使用した、<br />痛みの少ないケア</span>
                   </h3>
@@ -322,13 +346,13 @@ export default function Home() {
                   },
                   {
                     icon: "sanitizer",
-                    title: "感染対策の徹底",
-                    desc: <>使用する器具はすべて消毒・滅菌処理済み。<br />グローブ着用など感染対策を徹底しています。</>,
+                    title: "衛生対策の徹底",
+                    desc: <>使用する器具はすべて消毒・滅菌処理済み。<br />グローブ着用など衛生対策を徹底しています。<br />施術時に発生する粉塵対策として、<br />専用集塵機を使用しています。</>,
                   },
                   {
-                    icon: "support_agent",
-                    title: "施術後のフォロー",
-                    desc: <>気になることがあれば施術後も<br />メールやLINEでご相談いただけます。</>,
+                    icon: "security",
+                    title: "賠償責任保険加入",
+                    desc: <>万が一の際も安心。<br />賠償責任保険に加入しており、<br />安全な施術環境を整えています。</>,
                   },
                 ].map((item) => (
                   <div
@@ -339,6 +363,15 @@ export default function Home() {
                     <p className="text-sm leading-loose text-on-surface-variant">{item.desc}</p>
                   </div>
                 ))}
+              </div>
+              {/* イラスト */}
+              <div className="mt-8 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/medifootcare.web/images/看護師.png"
+                  alt="看護師のイラスト"
+                  className="w-48"
+                />
               </div>
             </div>
           </div>
@@ -439,7 +472,7 @@ export default function Home() {
                   },
                   {
                     q: "自宅にも来てもらえますか？",
-                    a: "対応エリア内（佐倉市・八千代市・四街道市・印西市ほか近隣）であれば、ご自宅への訪問が可能です。",
+                    a: "対応エリア内（佐倉市・八千代市・四街道市・印西市・千葉市ほか近隣）であれば、ご自宅への訪問が可能です。",
                   },
                   {
                     q: "1回だけでも依頼できますか？",
@@ -489,7 +522,7 @@ export default function Home() {
                     千葉県佐倉市を中心に以下の地域へお伺いしております。
                   </p>
                   <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
-                    {["八千代市", "佐倉市", "四街道市", "印西市"].map((city) => (
+                    {["八千代市", "佐倉市", "四街道市", "印西市", "千葉市"].map((city) => (
                       <span
                         key={city}
                         className="text-base font-medium text-primary py-2"

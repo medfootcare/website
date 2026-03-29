@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import PageHeroTitle from "@/components/PageHeroTitle";
 
 export const metadata: Metadata = {
   title: "料金 | メディフットケア",
@@ -16,11 +17,8 @@ export default function ServicePage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-6 py-10 text-center">
-              <h1 className="text-[28px] font-medium text-on-surface">
-                料金
-              </h1>
-              <div className="header-accent-bar" />
+            <div className="py-10 flex justify-center">
+              <PageHeroTitle lines="料金" />
             </div>
           </div>
         </section>

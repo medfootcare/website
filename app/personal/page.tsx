@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FORM_URL, LINE_URL } from "@/constants/links";
+import PageHeroTitle from "@/components/PageHeroTitle";
 
 export const metadata: Metadata = {
   title: "ご利用者様・ご家族様へ | メディフットケア",
@@ -45,13 +46,8 @@ export default function PersonalPage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="section-panel-hero space-y-6 py-10 text-center">
-              <h1 className="text-[28px] font-medium leading-[1.75] text-on-surface">
-                ご自宅・ご本人への
-                <br />
-                訪問フットケア
-              </h1>
-              <div className="header-accent-bar" />
+            <div className="section-panel-hero space-y-6 py-10 text-center flex flex-col items-center">
+              <PageHeroTitle lines={["ご自宅・ご本人への", "訪問フットケア"]} />
               <p className="text-base leading-loose text-on-surface-variant">
                 看護師が直接ご自宅へ伺い、安心・丁寧なフットケアをお届けします。
               </p>
@@ -67,7 +63,7 @@ export default function PersonalPage() {
                 <h2 className="section-heading">こんな方にご利用いただいています</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
+              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 max-w-5xl mx-auto">
                 {[
                   "親の爪が分厚くなって、切り方が分からなくなった",
                   "自分では爪が切れなくなってきた",
@@ -87,6 +83,16 @@ export default function PersonalPage() {
                   </div>
                 ))}
               </div>
+              {/* イラスト */}
+              <div className="mt-8 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/medifootcare.web/images/23520983.png"
+                  alt=""
+                  className="w-64 h-auto object-contain"
+                  aria-hidden="true"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -104,13 +110,13 @@ export default function PersonalPage() {
                   {
                     step: "01",
                     title: "お問い合わせ",
-                    desc: "フォームまたはLINEでお気軽にご連絡ください。2営業日以内にご返信します。",
+                    desc: <>フォームまたはLINEでお気軽にご連絡ください。<br />2営業日以内にご返信します。</>,
                     icon: "mail",
                   },
                   {
                     step: "02",
                     title: "ヒアリング",
-                    desc: "足の状態やご要望、ご自宅の環境などをお伺いします。不安なことも何でもお聞かせください。",
+                    desc: <>足の状態やご要望、ご自宅の環境などをお伺いします。<br />不安なことも何でもお聞かせください。</>,
                     icon: "record_voice_over",
                   },
                   {
@@ -134,7 +140,7 @@ export default function PersonalPage() {
                 ].map((item) => (
                   <div
                     key={item.step}
-                    className="step-card border-l-2 border-primary pl-4"
+                    className="step-card border-l-2 border-primary pl-4 transition-transform duration-200 hover:translate-x-1"
                   >
                     <p className="mb-1 text-sm font-medium tracking-wide text-primary">STEP {item.step}</p>
                     <h3 className="mb-2 text-base font-medium text-on-surface">{item.title}</h3>
@@ -249,7 +255,7 @@ export default function PersonalPage() {
         </section>
 
         {/* ===== 末尾CTA ===== */}
-        <section className="page-section bg-[#f8fafa]">
+        <section className="page-section bg-white">
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">

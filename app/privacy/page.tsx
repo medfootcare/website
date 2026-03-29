@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
+import PageHeroTitle from "@/components/PageHeroTitle";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー | メディフットケア",
@@ -16,12 +17,8 @@ export default function PrivacyPage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-6 py-10 text-center">
-              <p className="text-xs tracking-[0.3em] text-on-surface-variant font-medium">
-                PRIVACY POLICY
-              </p>
-              <h1 className="text-[28px] font-medium text-on-surface">プライバシーポリシー</h1>
-              <div className="header-accent-bar" />
+            <div className="py-10 flex justify-center">
+              <PageHeroTitle lines="プライバシーポリシー" />
             </div>
           </div>
         </section>

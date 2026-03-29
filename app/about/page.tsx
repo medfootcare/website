@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHeroTitle from "@/components/PageHeroTitle";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,14 +17,8 @@ export default function AboutPage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-6 py-10 text-center">
-              <h1 className="text-[28px] font-medium text-on-surface">
-                メディフットケアとは？
-              </h1>
-              <div className="header-accent-bar" />
-              <p className="text-base text-on-surface-variant leading-relaxed">
-                医師・看護師による訪問フットケアサービスについてご紹介します。
-              </p>
+            <div className="py-10 flex justify-center w-full">
+              <PageHeroTitle lines="メディフットケアとは？" />
             </div>
           </div>
         </section>
@@ -31,7 +26,7 @@ export default function AboutPage() {
         {/* ===== 概要 ===== */}
         <section className="page-section bg-white">
           <div className="max-content-width">
-            <div className="mb-8">
+            <div className="mb-8 text-center">
               <h2 className="section-heading">概要</h2>
               <div className="section-heading-bar"></div>
             </div>
@@ -46,10 +41,6 @@ export default function AboutPage() {
                 巻き爪・肥厚爪などのトラブルを抱える方に、<br />
                 専門的かつ安心・安全なケアをお届けします。
               </p>
-              <p>
-                千葉県佐倉市を拠点に、<br />
-                八千代市・四街道市・印西市などの近隣エリアへ訪問対応しています。
-              </p>
             </div>
           </div>
         </section>
@@ -57,7 +48,7 @@ export default function AboutPage() {
         {/* ===== 企業情報 ===== */}
         <section className="page-section bg-[#f8fafa]">
           <div className="max-content-width">
-            <div className="mb-8">
+            <div className="mb-8 text-center">
               <h2 className="section-heading">企業情報</h2>
               <div className="section-heading-bar"></div>
             </div>
@@ -67,7 +58,6 @@ export default function AboutPage() {
                   {[
                     { label: "サービス名", value: "メディフットケア" },
                     { label: "所在地", value: "千葉県八千代市" },
-                    { label: "電話番号", value: "XXX-XXXX-XXXX" },
                     { label: "設立", value: "2025年5月" },
                     { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
@@ -89,15 +79,15 @@ export default function AboutPage() {
         {/* ===== 沿革 ===== */}
         <section className="page-section bg-white">
           <div className="max-content-width">
-            <div className="mb-8">
+            <div className="mb-8 text-center">
               <h2 className="section-heading">沿革</h2>
               <div className="section-heading-bar"></div>
             </div>
             <div className="max-w-sm mx-auto space-y-0">
               {[
-                { year: "2026年3月", event: "訪問フットケアサービス開始" },
                 { year: "2025年5月", event: "メディフットケア設立" },
                 { year: "2025年8月", event: "施設向けサービス開始" },
+                { year: "2026年3月", event: "訪問フットケアサービス開始" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-8 items-start border-b border-[#e5eaea] py-5">
                   <span className="text-sm font-medium text-primary w-36 shrink-0">{item.year}</span>

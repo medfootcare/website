@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHeroTitle from "@/components/PageHeroTitle";
 
 /** アコーディオンアイテム */
 function AccordionItem({ q, a }: { q: string; a: string }) {
@@ -44,7 +45,7 @@ const personalFaqs = [
   },
   {
     q: "自宅にも来てもらえますか？",
-    a: "対応エリア（佐倉市・八千代市・四街道市・印西市ほか近隣）内であれば、ご自宅への訪問が可能です。",
+    a: "対応エリア（佐倉市・八千代市・四街道市・印西市・千葉市ほか近隣）内であれば、ご自宅への訪問が可能です。",
   },
   {
     q: "1回だけでも依頼できますか？",
@@ -110,14 +111,8 @@ export default function FaqPage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="space-y-6 py-10 text-center">
-              <h1 className="text-[28px] font-medium text-on-surface">
-                よくある質問
-              </h1>
-              <div className="header-accent-bar" />
-              <p className="text-base text-on-surface-variant leading-relaxed">
-                ご不明な点を解消して、安心してご利用ください。
-              </p>
+            <div className="py-10 flex justify-center">
+              <PageHeroTitle lines="よくある質問" />
             </div>
           </div>
         </section>

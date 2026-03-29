@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FORM_URL, LINE_URL } from "@/constants/links";
+import PageHeroTitle from "@/components/PageHeroTitle";
 
 export const metadata: Metadata = {
   title: "施設スタッフ様へ | メディフットケア",
@@ -45,13 +46,8 @@ export default function FacilityPage() {
         {/* ===== ページヘッダー ===== */}
         <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
           <div className="max-content-width">
-            <div className="section-panel-hero space-y-6 py-10 text-center">
-              <h1 className="text-[28px] font-medium leading-[1.75] text-on-surface">
-                施設への
-                <br />
-                訪問フットケアサービス
-              </h1>
-              <div className="header-accent-bar" />
+            <div className="section-panel-hero space-y-6 py-10 text-center flex flex-col items-center">
+              <PageHeroTitle lines={["施設への", "訪問フットケアサービス"]} />
               <p className="text-base leading-loose text-on-surface-variant">
                 有料老人ホーム・特養・サ高住など、施設への定期訪問に対応しています。
                 <br />
@@ -71,6 +67,8 @@ export default function FacilityPage() {
               </div>
               <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">利用者様の満足度向上</span>
                   </h3>
@@ -79,6 +77,8 @@ export default function FacilityPage() {
                   </p>
                 </div>
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">スタッフの負担軽減</span>
                   </h3>
@@ -87,6 +87,8 @@ export default function FacilityPage() {
                   </p>
                 </div>
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">安全・安心の記録提供</span>
                   </h3>
@@ -95,6 +97,8 @@ export default function FacilityPage() {
                   </p>
                 </div>
                 <div className="surface-card space-y-4">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">定期訪問で継続ケア</span>
                   </h3>
@@ -102,6 +106,15 @@ export default function FacilityPage() {
                     月1回など、ご希望の頻度で定期訪問します。<br />曜日・時間帯は施設のスケジュールに合わせて調整できます。
                   </p>
                 </div>
+              </div>
+              {/* イラスト */}
+              <div className="mt-8 flex justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/medifootcare.web/images/患者さん.png"
+                  alt="スタッフと患者さんのイラスト"
+                  className="w-72"
+                />
               </div>
             </div>
           </div>
@@ -144,7 +157,7 @@ export default function FacilityPage() {
                 ].map((item) => (
                   <div
                     key={item.step}
-                    className="step-card border-l-2 border-primary pl-4"
+                    className="step-card border-l-2 border-primary pl-4 transition-transform duration-200 hover:translate-x-1"
                   >
                     <p className="mb-1 text-sm font-medium tracking-wide text-primary">STEP {item.step}</p>
                     <h3 className="mb-2 text-base font-medium text-on-surface">{item.title}</h3>
@@ -254,7 +267,7 @@ export default function FacilityPage() {
         </section>
 
         {/* ===== 末尾CTA ===== */}
-        <section className="page-section bg-[#f8fafa]">
+        <section className="page-section bg-white">
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
