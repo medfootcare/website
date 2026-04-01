@@ -17,7 +17,7 @@ interface PageHeroTitleProps {
 }
 
 /** ページヒーロー用タイトル：最終行テキスト幅に合わせたマーカーライン付き */
-export default function PageHeroTitle({ lines, textSize = "text-[22px]" }: PageHeroTitleProps) {
+export default function PageHeroTitle({ lines, textSize = "text-[20px] md:text-[22px]" }: PageHeroTitleProps) {
   const lineArray = Array.isArray(lines) ? lines : [lines];
   const lastLine = lineArray[lineArray.length - 1];
   const precedingLines = lineArray.slice(0, -1);

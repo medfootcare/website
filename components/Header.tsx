@@ -18,16 +18,16 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-50 w-full glass-header">
-      <div className="max-content-width flex items-center justify-between gap-8 px-12 py-4">
+      <div className="max-content-width flex items-center justify-between gap-4 px-4 py-4 md:gap-8 md:px-12">
         {/* ロゴ */}
-        <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex min-w-0 items-center gap-2 shrink-0 md:gap-3" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/medifootcare.web/images/logo.png"
             alt="メディフットケア"
-            className="h-9 w-auto"
+            className="h-8 w-auto md:h-9"
           />
-          <span className="text-base font-medium tracking-tight text-on-surface">
+          <span className="truncate text-sm font-medium tracking-tight text-on-surface md:text-base">
             メディフットケア
           </span>
         </Link>
@@ -71,7 +71,7 @@ export default function Header() {
 
       {/* ドロップダウン小窓 */}
       {open && (
-        <div className="absolute right-6 top-full mt-2 w-56 rounded-2xl border border-gray-200/60 bg-white/95 backdrop-blur-md shadow-lg z-50">
+        <div className="absolute right-4 top-full z-50 mt-2 w-[calc(100vw-2rem)] max-w-56 rounded-2xl border border-gray-200/60 bg-white/95 shadow-lg backdrop-blur-md md:right-6">
           <nav className="flex flex-col gap-1 px-4 py-3">
             {NAV_LINKS.map(({ href, label }) => (
               <Link

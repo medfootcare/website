@@ -68,7 +68,7 @@ export default function FacilityPage() {
               <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">利用者様の満足度向上</span>
                   </h3>
@@ -78,7 +78,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">スタッフの負担軽減</span>
                   </h3>
@@ -88,7 +88,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">安全・安心の記録提供</span>
                   </h3>
@@ -98,7 +98,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/medifootcare.web/images/アイコン/アイコン_ハート.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">定期訪問で継続ケア</span>
                   </h3>
@@ -111,9 +111,9 @@ export default function FacilityPage() {
               <div className="mt-8 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/medifootcare.web/images/患者さん.png"
+                  src="/medifootcare.web/images/facility-patient-team.png"
                   alt="スタッフと患者さんのイラスト"
-                  className="w-72"
+                  className="w-full max-w-72"
                 />
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function FacilityPage() {
                 <div className="price-card text-left">
                   <div className="space-y-0">
                     {/* 料金行1 */}
-                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">ご施設ケア</h4>
                         <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
@@ -232,7 +232,7 @@ export default function FacilityPage() {
                       </div>
                     </div>
                     {/* 料金行2 */}
-                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">ご施設しっかりケア</h4>
                         <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
@@ -243,7 +243,7 @@ export default function FacilityPage() {
                       </div>
                     </div>
                     {/* 料金行3 */}
-                    <div className="flex items-start justify-between gap-6 py-5">
+                    <div className="flex flex-col gap-3 py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">個人宅訪問ケア</h4>
                         <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
@@ -274,9 +274,9 @@ export default function FacilityPage() {
                 <h2 className="section-heading">お問い合わせ・お申し込み</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="mx-auto max-w-xl rounded-2xl bg-[#e8f5f3] px-8 py-8 text-center space-y-6">
+              <div className="mx-auto max-w-xl space-y-6 rounded-2xl bg-[#e8f5f3] px-5 py-6 text-center sm:px-8 sm:py-8">
                 <div className="space-y-3">
-                  <h3 className="text-[20px] font-medium text-on-surface">無料体験会も実施することができます。</h3>
+                  <h3 className="text-lg font-medium text-on-surface sm:text-[20px]">無料体験会も実施できます。</h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
                     体験会では実際の施術を数名の利用者様にご体験いただきながら、<br />
                     導入の流れや費用感をご説明します。
@@ -290,7 +290,7 @@ export default function FacilityPage() {
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k w-[200px] flex-col leading-tight"
+                    className="btn-primary-k w-full sm:w-[200px] flex-col leading-tight"
                   >
                     <span>フォームで相談する</span>
                   </a>
@@ -298,7 +298,7 @@ export default function FacilityPage() {
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k w-[200px] flex-col leading-tight"
+                    className="btn-line-k w-full sm:w-[200px] flex-col leading-tight"
                   >
                     LINEで相談する
                   </a>

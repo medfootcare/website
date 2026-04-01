@@ -33,7 +33,7 @@ export default function ServicePage() {
             <div className="space-y-0 max-w-2xl mx-auto">
               <div className="price-card text-left">
                 <div className="space-y-0">
-                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                  <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                     <div className="space-y-1">
                       <h3 className="text-base font-medium text-on-surface">ご施設ケア</h3>
                       <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
@@ -44,7 +44,7 @@ export default function ServicePage() {
                       <span className="text-sm font-normal text-on-surface-variant">税込</span>
                     </div>
                   </div>
-                  <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                  <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                     <div className="space-y-1">
                       <h3 className="text-base font-medium text-on-surface">ご施設しっかりケア</h3>
                       <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
@@ -55,7 +55,7 @@ export default function ServicePage() {
                       <span className="text-sm font-normal text-on-surface-variant">税込</span>
                     </div>
                   </div>
-                  <div className="flex items-start justify-between gap-6 py-5">
+                  <div className="flex flex-col gap-3 py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                     <div className="space-y-1">
                       <h3 className="text-base font-medium text-on-surface">個人宅訪問ケア</h3>
                       <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>

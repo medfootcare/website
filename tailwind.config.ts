@@ -28,6 +28,9 @@ const config: Config = {
         xl: "24px",
         full: "9999px",
       },
+      animation: {
+        "fade-in-up": "fadeInUp 0.5s ease-out both",
+      },
     },
   },
   plugins: [],

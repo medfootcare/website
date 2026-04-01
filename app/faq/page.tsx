@@ -9,15 +9,15 @@ import PageHeroTitle from "@/components/PageHeroTitle";
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="bg-white border border-[#e5eaea] rounded-xl overflow-hidden">
+        <div className="overflow-hidden rounded-xl border border-[#e5eaea] bg-white">
       <button
-        className="w-full text-left px-6 py-5 flex items-start justify-between gap-4 hover:bg-[#f8fafa] transition-colors"
+        className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-[#f8fafa] sm:gap-4 sm:px-6 sm:py-5"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
         <p className="font-medium text-on-surface flex items-start gap-3 flex-1">
           <span className="text-primary font-medium text-base shrink-0">Q.</span>
-          <span className="break-keep">{q}</span>
+          <span>{q}</span>
         </p>
         <span
           className="material-symbols-outlined text-primary shrink-0 mt-0.5 transition-transform duration-300"
@@ -27,10 +27,10 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       {open && (
-        <div className="px-6 py-4">
+        <div className="px-4 py-4 sm:px-6">
           <p className="text-base text-on-surface-variant leading-relaxed flex items-start gap-3">
             <span className="text-base font-medium text-on-surface-variant shrink-0">A.</span>
-            <span className="flex-1 min-w-0 break-keep">{a}</span>
+            <span className="flex-1 min-w-0">{a}</span>
           </p>
         </div>
       )}
@@ -72,7 +72,7 @@ const personalFaqs = [
 const facilityFaqs = [
   {
     q: "何名から依頼できますか？",
-    a: "5名以上から対応可能です。まずはご相談ください。",
+    a: "3名以上から対応可能です。まずはご相談ください。",
   },
   {
     q: "体験会はできますか？",
@@ -122,9 +122,9 @@ export default function FaqPage() {
           <div className="max-content-width">
             <div className="max-w-3xl mx-auto">
               {/* アンダーライン型タブ切替 */}
-              <div className="flex mb-8 border-b border-[#e5eaea]">
+              <div className="mb-8 flex border-b border-[#e5eaea]">
                 <button
-                  className={`flex-1 py-3 text-sm font-medium text-center transition-colors border-b-2 -mb-px ${
+                  className={`-mb-px flex-1 px-2 py-3 text-center text-xs font-medium transition-colors border-b-2 sm:text-sm ${
                     tab === "personal"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"
@@ -134,7 +134,7 @@ export default function FaqPage() {
                   ご利用者様・ご家族様向け
                 </button>
                 <button
-                  className={`flex-1 py-3 text-sm font-medium text-center transition-colors border-b-2 -mb-px ${
+                  className={`-mb-px flex-1 px-2 py-3 text-center text-xs font-medium transition-colors border-b-2 sm:text-sm ${
                     tab === "facility"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"

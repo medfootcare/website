@@ -87,9 +87,9 @@ export default function PersonalPage() {
               <div className="mt-8 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/medifootcare.web/images/23520983.png"
+                  src="/medifootcare.web/images/personal-home-visit.png"
                   alt=""
-                  className="w-64 h-auto object-contain"
+                  className="h-auto w-full max-w-64 object-contain"
                   aria-hidden="true"
                 />
               </div>
@@ -207,7 +207,7 @@ export default function PersonalPage() {
                 <div className="price-card text-left">
                   <div className="space-y-0">
                     {/* 料金行1 */}
-                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">ご施設ケア</h4>
                         <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
@@ -218,7 +218,7 @@ export default function PersonalPage() {
                       </div>
                     </div>
                     {/* 料金行2 */}
-                    <div className="flex items-start justify-between gap-6 py-5 border-b border-[#e5eaea]">
+                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">ご施設しっかりケア</h4>
                         <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
@@ -229,7 +229,7 @@ export default function PersonalPage() {
                       </div>
                     </div>
                     {/* 料金行3 */}
-                    <div className="flex items-start justify-between gap-6 py-5">
+                    <div className="flex flex-col gap-3 py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                       <div className="space-y-1">
                         <h4 className="text-base font-medium text-on-surface">個人宅訪問ケア</h4>
                         <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
@@ -262,9 +262,9 @@ export default function PersonalPage() {
                 <h2 className="section-heading">お問い合わせ・お申し込み</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="mx-auto max-w-xl rounded-2xl bg-[#e8f5f3] px-8 py-8 text-center space-y-6">
+              <div className="mx-auto max-w-xl space-y-6 rounded-2xl bg-[#e8f5f3] px-5 py-6 text-center sm:px-8 sm:py-8">
                 <div className="space-y-3">
-                  <h3 className="text-[20px] font-medium text-on-surface">はじめての方もお気軽にどうぞ</h3>
+                  <h3 className="text-lg font-medium text-on-surface sm:text-[20px]">はじめての方もお気軽にどうぞ</h3>
                   <p className="text-sm leading-loose text-on-surface-variant">
                     「こんな状態でも大丈夫？」「どんなことをするの？」<br />
                     そんな疑問だけでも、まずはご相談ください。
@@ -278,7 +278,7 @@ export default function PersonalPage() {
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k w-[200px] flex-col leading-tight"
+                    className="btn-primary-k w-full sm:w-[200px] flex-col leading-tight"
                   >
                     <span>フォームで相談する</span>
                   </a>
@@ -286,7 +286,7 @@ export default function PersonalPage() {
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k w-[200px] flex-col leading-tight"
+                    className="btn-line-k w-full sm:w-[200px] flex-col leading-tight"
                   >
                     LINEで相談する
                   </a>

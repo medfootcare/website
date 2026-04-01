@@ -4,8 +4,8 @@ import { FORM_URL } from "@/constants/links";
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-[#e5eaea] pt-16 pb-12">
-      <div className="max-content-width px-12">
-        <div className="mb-10 grid grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start gap-16">
+      <div className="max-content-width px-4 md:px-12">
+        <div className="mb-10 grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-start md:gap-16">
           {/* ブランド */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* リンク */}
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid gap-8 sm:grid-cols-2 sm:gap-10">
             <div className="space-y-4">
               <h4 className="text-sm font-medium tracking-wider text-on-surface">メニュー</h4>
               <nav className="flex flex-col gap-3">

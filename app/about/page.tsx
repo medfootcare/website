@@ -62,7 +62,7 @@ export default function AboutPage() {
                     { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-[#e5eaea]">
-                      <th className="py-4 pr-8 text-left text-sm font-medium text-on-surface w-36 align-top">
+                      <th className="w-24 py-4 pr-4 text-left text-sm font-medium text-on-surface align-top sm:w-36 sm:pr-8">
                         {row.label}
                       </th>
                       <td className="py-4 text-sm text-on-surface-variant leading-relaxed">
@@ -89,8 +89,8 @@ export default function AboutPage() {
                 { year: "2025年8月", event: "施設向けサービス開始" },
                 { year: "2026年3月", event: "訪問フットケアサービス開始" },
               ].map((item, i) => (
-                <div key={i} className="flex gap-8 items-start border-b border-[#e5eaea] py-5">
-                  <span className="text-sm font-medium text-primary w-36 shrink-0">{item.year}</span>
+                <div key={i} className="flex items-start gap-4 border-b border-[#e5eaea] py-5 sm:gap-8">
+                  <span className="w-24 shrink-0 text-sm font-medium text-primary sm:w-36">{item.year}</span>
                   <span className="text-sm text-on-surface-variant leading-relaxed">{item.event}</span>
                 </div>
               ))}

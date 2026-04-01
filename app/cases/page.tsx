@@ -95,12 +95,12 @@ export default function CasesPage() {
                   {"beforeImg" in item && item.beforeImg && item.afterImg && (
                     <div className="grid grid-cols-2 gap-0">
                       <div className="relative">
-                        <span className="absolute bottom-3 left-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">BEFORE</span>
+                        <span className="absolute left-3 top-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">BEFORE</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt={`${item.title} 施術前`} className="w-full aspect-square object-cover" src={item.beforeImg} />
                       </div>
                       <div className="relative">
-                        <span className="absolute bottom-3 left-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">AFTER</span>
+                        <span className="absolute left-3 top-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">AFTER</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt={`${item.title} 施術後`} className="w-full aspect-square object-cover" src={item.afterImg} />
                       </div>
