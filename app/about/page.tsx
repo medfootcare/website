@@ -30,10 +30,12 @@ export default function AboutPage() {
               <h2 className="section-heading">概要</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-3xl mx-auto space-y-6 text-center text-on-surface-variant leading-loose">
+            <div className="max-w-3xl mx-auto space-y-6 text-center text-[14px] text-on-surface-variant leading-loose md:text-base">
               <p>
                 メディフットケアは、医師の監修のもと、<br />
-                看護師資格を持つスタッフがご自宅や施設へ訪問し、<br />
+                看護師資格を持つスタッフが
+                <br className="md:hidden" />
+                ご自宅や施設へ訪問し、<br />
                 フットケアを提供するサービスです。
               </p>
               <p>
@@ -52,7 +54,7 @@ export default function AboutPage() {
               <h2 className="section-heading">企業情報</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-sm mx-auto">
+            <div className="mx-auto w-full max-w-[20rem]">
               <table className="w-full border-collapse">
                 <tbody>
                   {[
@@ -62,7 +64,7 @@ export default function AboutPage() {
                     { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-[#e5eaea]">
-                      <th className="w-24 py-4 pr-4 text-left text-sm font-medium text-on-surface align-top sm:w-36 sm:pr-8">
+                      <th className="w-24 py-4 pr-3 text-left text-sm font-medium text-on-surface align-top md:w-36 md:pr-8">
                         {row.label}
                       </th>
                       <td className="py-4 text-sm text-on-surface-variant leading-relaxed">
@@ -83,14 +85,14 @@ export default function AboutPage() {
               <h2 className="section-heading">沿革</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-sm mx-auto space-y-0">
+            <div className="mx-auto w-full max-w-[24rem] space-y-0">
               {[
                 { year: "2025年5月", event: "メディフットケア設立" },
                 { year: "2025年8月", event: "施設向けサービス開始" },
                 { year: "2026年3月", event: "訪問フットケアサービス開始" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 border-b border-[#e5eaea] py-5 sm:gap-8">
-                  <span className="w-24 shrink-0 text-sm font-medium text-primary sm:w-36">{item.year}</span>
+                <div key={i} className="flex items-start gap-3 border-b border-[#e5eaea] py-5 md:gap-8">
+                  <span className="w-24 shrink-0 text-sm font-medium text-primary md:w-36">{item.year}</span>
                   <span className="text-sm text-on-surface-variant leading-relaxed">{item.event}</span>
                 </div>
               ))}

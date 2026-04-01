@@ -33,44 +33,74 @@ export default function ServicePage() {
             <div className="space-y-0 max-w-2xl mx-auto">
               <div className="price-card text-left">
                 <div className="space-y-0">
-                  <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                     <div className="space-y-1">
-                      <h3 className="text-base font-medium text-on-surface">ご施設ケア</h3>
-                      <p className="text-sm text-on-surface-variant">爪ケア・角質ケア・保湿を含む、基本のフットケア</p>
+                      <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h3>
+                      <p className="text-sm text-on-surface-variant break-keep">
+                        爪ケア・角質ケア・保湿を含む、
+                        <br className="md:hidden" />
+                        基本のフットケア
+                      </p>
                       <p className="text-sm text-on-surface-variant">目安：約30分</p>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    <div className="shrink-0 text-center md:text-right">
+                      <div className="flex items-end justify-center gap-2 md:block">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
+                        <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                     <div className="space-y-1">
-                      <h3 className="text-base font-medium text-on-surface">ご施設しっかりケア</h3>
-                      <p className="text-sm text-on-surface-variant">巻き爪ケアを含む、より丁寧な個別ケア</p>
+                      <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h3>
+                      <p className="text-sm text-on-surface-variant break-keep">
+                        巻き爪ケアを含む、
+                        <br className="md:hidden" />
+                        より丁寧な個別ケア
+                      </p>
                       <p className="text-sm text-on-surface-variant">目安：約60分</p>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    <div className="shrink-0 text-center md:text-right">
+                      <div className="flex items-end justify-center gap-2 md:block">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
+                        <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-3 py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div className="flex flex-col items-center gap-5 py-5 text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                     <div className="space-y-1">
-                      <h3 className="text-base font-medium text-on-surface">個人宅訪問ケア</h3>
-                      <p className="text-sm text-on-surface-variant">爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア</p>
+                      <h3 className="text-[18px] font-medium text-on-surface md:text-base">個人宅訪問ケア</h3>
+                      <p className="text-sm text-on-surface-variant break-keep">
+                        爪や足の状態に合わせて、
+                        <br className="md:hidden" />
+                        ご自宅で丁寧に行うフットケア
+                      </p>
                       <p className="text-sm text-on-surface-variant">目安：約60分</p>
                     </div>
-                    <div className="shrink-0 text-right">
-                      <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
-                      <span className="text-sm font-normal text-on-surface-variant">税込</span>
+                    <div className="shrink-0 text-center md:text-right">
+                      <div className="flex items-end justify-center gap-2 md:block">
+                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
+                        <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="pt-10 space-y-2 text-sm text-on-surface-variant">
-                <p>※ご施設ケア・ご施設しっかりケアは、複数名のご依頼があるご施設様向けの料金です。</p>
-                <p>※巻き爪ケアは、ご施設しっかりケア・個人宅訪問ケアで対応します。<br />　1趾まで料金内、2趾目からは+6,000円（税込）です。</p>
+              <div className="pt-10 space-y-3 text-[12px] text-on-surface-variant sm:text-sm">
+                <p className="flex items-start gap-1 break-keep">
+                  <span className="shrink-0">※</span>
+                  <span className="min-w-0 flex-1">ご施設ケア・ご施設しっかりケアは、複数名のご依頼があるご施設様向けの料金です。</span>
+                </p>
+                <p className="flex items-start gap-1 break-keep">
+                  <span className="shrink-0">※</span>
+                  <span className="min-w-0 flex-1">
+                    巻き爪ケアは、ご施設しっかりケア・個人宅訪問ケアで
+                    <br className="md:hidden" />
+                    対応します。
+                    <br />
+                    1趾まで料金内、2趾目からは+6,000円（税込）です。
+                  </span>
+                </p>
               </div>
             </div>
           </div>

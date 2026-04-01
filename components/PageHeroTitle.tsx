@@ -24,12 +24,12 @@ export default function PageHeroTitle({ lines, textSize = "text-[20px] md:text-[
   return (
     <h1 className="flex flex-col items-center gap-1">
       {precedingLines.map((line, i) => (
-        <span key={i} className={`${textSize} font-medium text-on-surface tracking-widest text-center`}>
+        <span key={i} className={`${textSize} font-medium text-on-surface tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
           {line}
         </span>
       ))}
       <span className="inline-flex flex-col gap-1">
-        <span className={`${textSize} font-medium text-on-surface tracking-widest text-center`}>
+        <span className={`${textSize} font-medium text-on-surface tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
           {lastLine}
         </span>
         <MarkerLine />

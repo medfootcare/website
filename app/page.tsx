@@ -17,14 +17,17 @@ export default function Home() {
 
             {/* テキストエリア */}
             <div className="py-10 md:py-12">
-              <div className="hero-cloud-card inline-block space-y-4 px-5 py-6 text-left sm:px-6 sm:py-7 md:max-w-[32rem] md:px-8 md:py-8 animate-fade-in-up">
+              <div className="hero-cloud-card inline-block space-y-4 px-5 py-6 text-left md:w-full md:max-w-[42rem] md:px-6 md:py-7 xl:max-w-[32rem] xl:px-8 xl:py-8 animate-fade-in-up">
                 {/* メインキャッチコピー */}
-                <PageHeroTitle lines={["大切な足元に", "やさしさと安心を"]} textSize="text-[28px] md:text-[36px]" />
+                <PageHeroTitle lines={["大切な足元に", "やさしさと安心を"]} textSize="text-[28px] md:text-[30px] xl:text-[36px]" />
 
                 {/* サービス名・サブテキスト */}
                 <div className="space-y-3">
                   <p className="text-base font-normal tracking-normal text-on-surface-variant text-center md:text-lg">
-                    医師・看護師による<br className="md:hidden" />訪問フットケアサービス
+                    医師・看護師による
+                    <br className="md:hidden" />
+                    <br className="hidden md:block xl:hidden" />
+                    訪問フットケアサービス
                   </p>
                 </div>
               </div>
@@ -45,13 +48,13 @@ export default function Home() {
 
           {/* 下段：CTAボタン */}
           <div className="max-content-width">
-            <div className="flex flex-col gap-4 pb-28 md:pb-32 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-4 pb-28 md:flex-row md:justify-center md:pb-32">
               {/* 個人ユーザーが多数のため個人を左（先）に配置 */}
-              <Link className="btn-primary-k w-full sm:min-w-[200px] sm:w-auto" href="/personal">
-                ご利用者様・ご家族様 ›
+              <Link className="btn-primary-k w-full md:min-w-[200px] md:w-auto" href="/personal">
+                個人単位でのご依頼を検討中の方 ›
               </Link>
-              <Link className="btn-outline-k w-full sm:min-w-[200px] sm:w-auto" href="/facility">
-                施設スタッフ様 ›
+              <Link className="btn-outline-k w-full md:min-w-[200px] md:w-auto" href="/facility">
+                施設単位でのご依頼を検討中の方 ›
               </Link>
             </div>
           </div>
@@ -87,9 +90,10 @@ export default function Home() {
                 {/* チェックリスト */}
                 <ul className="space-y-4 text-left">
                   {[
-                    "爪が分厚くなって自分では切れない",
-                    "歩くと爪があたって痛い",
-                    "靴下や布団に爪が引っかかる",
+                    "歩くと爪が痛い",
+                    "靴下や布団が爪に引っかかる",
+                    "足を少しでも綺麗にしたい",
+                    "爪が分厚くなって、自分では切れない",
                   ].map((text) => (
                     <li key={text} className="flex items-center gap-3">
                       <span
@@ -100,10 +104,7 @@ export default function Home() {
                           check
                         </span>
                       </span>
-                      <span
-                        className="text-base font-medium text-on-surface md:text-[18px]"
-                        style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}
-                      >
+                      <span className="text-base font-medium text-on-surface md:text-[18px]">
                         {text}
                       </span>
                     </li>
@@ -136,8 +137,12 @@ export default function Home() {
                 <div className="section-heading-bar"></div>
               </div>
               <div className="space-y-4 md:max-w-[760px] mx-auto">
-                <p className="text-base leading-loose text-on-surface-variant break-keep">
-                  メディフットケアは、医師・看護師が直接ご自宅や施設へ伺い、足元のケアをお届けする訪問フットケアサービスです。爪のトラブルや足の痛みでお悩みの方に、専門的なケアを提供します。
+                <p className="text-[14px] leading-loose text-on-surface-variant break-keep md:text-base">
+                  メディフットケアは、
+                  <br className="md:hidden" />
+                  医師・看護師が直接ご自宅や施設へ伺い、足元のケアをお届けする訪問フットケアサービスです。
+                  <br className="hidden md:block xl:hidden" />
+                  爪のトラブルや足の痛みでお悩みの方に、専門的なケアを提供します。
                 </p>
                 <div className="pt-2">
                   <Link
@@ -147,7 +152,7 @@ export default function Home() {
                     <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-0.5">
                       info
                     </span>
-                    概要・企業情報・沿革を見る
+                    詳細を見る
                   </Link>
                 </div>
               </div>
@@ -165,10 +170,9 @@ export default function Home() {
                 </h2>
                 <div className="section-heading-bar"></div>
               </div>
-              {/* 上段 3つ */}
-              <div className="space-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
+              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 xl:grid-cols-6 xl:gap-6">
                 {/* 特徴1 */}
-                <div className="surface-card space-y-4">
+                <div className="surface-card space-y-4 xl:col-span-2">
                   {/* アイコン2個 */}
                   <div className="flex justify-center gap-3">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -180,11 +184,13 @@ export default function Home() {
                     <span className="text-[24px] font-medium">医師・看護師による<br />チームケア</span>
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant break-keep">
-                    医師の監修のもと、看護師資格を持つスタッフが施術を行います。安心・安全なケアをお届けします。
+                    医師の監修のもと、看護師資格を持つスタッフが施術を行います。
+                    <br className="md:hidden" />
+                    安心・安全なケアをお届けします。
                   </p>
                 </div>
                 {/* 特徴2 */}
-                <div className="surface-card space-y-4">
+                <div className="surface-card space-y-4 xl:col-span-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/medifootcare.web/images/icons/wheelchair.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
@@ -197,7 +203,7 @@ export default function Home() {
                   </p>
                 </div>
                 {/* 特徴3 */}
-                <div className="surface-card space-y-4">
+                <div className="surface-card space-y-4 xl:col-span-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/medifootcare.web/images/icons/report.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
@@ -209,11 +215,8 @@ export default function Home() {
                     継続的なケアの質を維持します。
                   </p>
                 </div>
-              </div>
-              {/* 下段 2つ - 上段の間に中央揃えで配置 */}
-              <div className="space-y-4 pt-4 md:flex md:justify-center md:gap-6 md:space-y-0">
                 {/* 特徴4 */}
-                <div className="surface-card space-y-4 md:w-1/3">
+                <div className="surface-card space-y-4 xl:col-span-2 xl:col-start-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/medifootcare.web/images/icons/nail-trouble.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
@@ -225,7 +228,7 @@ export default function Home() {
                   </p>
                 </div>
                 {/* 特徴5 */}
-                <div className="surface-card space-y-4 md:w-1/3">
+                <div className="surface-card space-y-4 md:col-span-2 md:mx-auto md:w-[calc(50%-0.5rem)] xl:col-span-2 xl:mx-0 xl:w-auto">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/medifootcare.web/images/icons/equipment.png" alt="" className="mx-auto w-20 h-20 object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
@@ -233,7 +236,9 @@ export default function Home() {
                   </h3>
                   <p className="text-sm leading-loose text-on-surface-variant break-keep">
                     専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。<br />
-                    痛みが怖い方でも安心してご利用いただけます。
+                    痛みが怖い方でも安心して
+                    <br className="hidden md:block xl:hidden" />
+                    ご利用いただけます。
                   </p>
                 </div>
               </div>
@@ -286,9 +291,6 @@ export default function Home() {
                     <h3 className="mb-2 text-base font-medium tracking-wide text-on-surface">
                       変形爪のケア
                     </h3>
-                    <p className="text-sm leading-loose text-on-surface-variant">
-                      専用マシンを使用し、変形した爪を丁寧に整えました。
-                    </p>
                   </div>
                 </div>
 
@@ -324,9 +326,6 @@ export default function Home() {
                     <h3 className="mb-2 text-base font-medium tracking-wide text-on-surface">
                       巻き爪のケア
                     </h3>
-                    <p className="text-sm leading-loose text-on-surface-variant">
-                      専用の器具を使用し、巻き爪を矯正しました。
-                    </p>
                   </div>
                 </div>
 
@@ -351,27 +350,29 @@ export default function Home() {
                 <h2 className="section-heading">安心してご利用いただけます</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
+              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-1 md:space-y-0 xl:gap-6 xl:grid-cols-3">
                 {[
                   {
                     icon: "medical_information",
-                    title: "看護師資格保有",
-                    desc: <>担当スタッフは看護師資格を保有。<br />医学的根拠に基づく安全なケアを提供。</>,
+                    title: "医師・看護師のみで構成",
+                    desc: <>担当スタッフは医師免許、もしくは看護師免許を保有。<br />医学的根拠に基づく安全なケアを提供。</>,
                   },
                   {
                     icon: "sanitizer",
                     title: "衛生対策の徹底",
-                    desc: <>使用する器具はすべて消毒・滅菌処理済み。<br />グローブ着用など衛生対策を徹底しています。<br />施術時に発生する粉塵対策として、<br />専用集塵機を使用しています。</>,
+                    desc: <>使用する器具はすべて消毒・滅菌処理済み。<br />グローブ着用など衛生対策を徹底しています。<br />施術時に発生する粉塵も対策を徹底しています。</>,
                   },
                   {
                     icon: "security",
                     title: "賠償責任保険加入",
                     desc: <>万が一の際も安心。<br />賠償責任保険に加入しており、<br />安全な施術環境を整えています。</>,
                   },
-                ].map((item) => (
+                ].map((item, i) => (
                   <div
                     key={item.title}
-                    className="surface-card space-y-4"
+                    className={`surface-card space-y-4 ${
+                      i === 2 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.125rem)] xl:col-span-1 xl:mx-0 xl:w-auto" : ""
+                    }`}
                   >
                     <h3 className="text-base font-medium text-on-surface">{item.title}</h3>
                     <p className="text-sm leading-loose text-on-surface-variant break-keep">{item.desc}</p>
@@ -405,54 +406,66 @@ export default function Home() {
                 <div className="price-card text-left">
                   <div className="space-y-0">
                     {/* 料金行1 */}
-                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
-                        <h4 className="text-base font-medium text-on-surface">
+                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">
                           ご施設ケア
                         </h4>
                         <p className="text-sm text-on-surface-variant break-keep">
-                          爪ケア・角質ケア・保湿を含む、基本のフットケア
+                          爪ケア・角質ケア・保湿を含む、
+                          <br className="md:hidden" />
+                          基本のフットケア
                         </p>
                       </div>
-                      <div className="shrink-0 text-right">
-                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">
-                          ¥5,000
+                      <div className="shrink-0 text-center md:text-right">
+                        <div className="flex items-end justify-center gap-2 md:block">
+                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">
+                            ¥5,000
+                          </div>
+                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
                         </div>
-                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
                       </div>
                     </div>
                     {/* 料金行2 */}
-                    <div className="flex flex-col gap-3 py-5 border-b border-[#e5eaea] sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
-                        <h4 className="text-base font-medium text-on-surface">
+                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">
                           ご施設しっかりケア
                         </h4>
                         <p className="text-sm text-on-surface-variant break-keep">
-                          巻き爪ケアを含む、より丁寧な個別ケア
+                          巻き爪ケアを含む、
+                          <br className="md:hidden" />
+                          より丁寧な個別ケア
                         </p>
                       </div>
-                      <div className="shrink-0 text-right">
-                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">
-                          ¥10,000
+                      <div className="shrink-0 text-center md:text-right">
+                        <div className="flex items-end justify-center gap-2 md:block">
+                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">
+                            ¥10,000
+                          </div>
+                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
                         </div>
-                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
                       </div>
                     </div>
                     {/* 料金行3 */}
-                    <div className="flex flex-col gap-3 py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                    <div className="flex flex-col items-center gap-5 py-5 text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
-                        <h4 className="text-base font-medium text-on-surface">
+                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">
                           個人宅訪問ケア
                         </h4>
                         <p className="text-sm text-on-surface-variant break-keep">
-                          爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア
+                          爪や足の状態に合わせて、
+                          <br className="md:hidden" />
+                          ご自宅で丁寧に行うフットケア
                         </p>
                       </div>
-                      <div className="shrink-0 text-right">
-                        <div className="text-[24px] font-medium text-primary whitespace-nowrap">
-                          ¥12,000
+                      <div className="shrink-0 text-center md:text-right">
+                        <div className="flex items-end justify-center gap-2 md:block">
+                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">
+                            ¥12,000
+                          </div>
+                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
                         </div>
-                        <span className="text-sm font-normal text-on-surface-variant">税込</span>
                       </div>
                     </div>
                   </div>
@@ -521,10 +534,10 @@ export default function Home() {
         <section className="page-section bg-white" id="area">
           <div className="max-content-width">
             <div className="section-panel">
-              <div className="mx-auto max-w-3xl flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
+              <div className="mx-auto flex max-w-3xl flex-col gap-8 xl:flex-row xl:items-center xl:gap-12">
                 {/* 左：テキスト */}
-                <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-3">
+                <div className="flex-1 space-y-4 text-center xl:text-left">
+                  <div className="flex items-center justify-center gap-3 xl:justify-start">
                     <span className="material-symbols-outlined fill-icon text-[24px] text-primary">
                       location_on
                     </span>
@@ -532,30 +545,40 @@ export default function Home() {
                       訪問対応エリア
                     </h2>
                   </div>
-                  <p className="text-base text-on-surface-variant text-left break-keep">
-                    千葉県佐倉市を中心に以下の地域へお伺いしております。
+                  <p className="text-base text-on-surface-variant break-keep">
+                    千葉県佐倉市を中心に以下の地域へ
+                    <br />
+                    お伺いしております。
                   </p>
-                  <div className="flex flex-wrap gap-x-8 gap-y-2 pt-2">
-                    {["八千代市", "佐倉市", "四街道市", "印西市", "千葉市"].map((city) => (
+                  <div className="grid grid-cols-6 gap-x-4 gap-y-3 pt-2 text-center md:flex md:flex-nowrap md:justify-center md:gap-8 xl:justify-between xl:gap-4 xl:text-left">
+                    {[
+                      { city: "八千代市", className: "col-span-2" },
+                      { city: "佐倉市", className: "col-span-2" },
+                      { city: "四街道市", className: "col-span-2" },
+                      { city: "印西市", className: "col-span-2 col-start-2" },
+                      { city: "千葉市", className: "col-span-2 col-start-4" },
+                    ].map((item) => (
                       <span
-                        key={city}
-                        className="text-base font-medium text-primary py-2"
+                        key={item.city}
+                        className={`${item.className} rounded-md border border-primary/25 bg-[#f8fafa] py-2 text-base font-medium text-primary md:whitespace-nowrap md:rounded-none md:border-0 md:bg-transparent`}
                       >
-                        {city}
+                        {item.city}
                       </span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-3 pt-6 text-on-surface-variant">
+                  <div className="flex items-center justify-center gap-3 pt-6 text-on-surface-variant xl:justify-start">
                     <span className="material-symbols-outlined shrink-0 text-[24px]">
                       info
                     </span>
-                    <p className="whitespace-nowrap text-[13px] sm:text-sm">
-                      上記以外のエリア（近隣市区町村）もお気軽にご相談ください。
+                    <p className="text-left text-[13px] md:whitespace-nowrap md:text-sm">
+                      上記以外のエリア（近隣市区町村）も
+                      <br className="md:hidden" />
+                      お気軽にご相談ください。
                     </p>
                   </div>
                 </div>
                 {/* 右：地図 */}
-                <div className="flex shrink-0 justify-center md:justify-end">
+                <div className="hidden shrink-0 justify-center xl:flex xl:justify-end">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/medifootcare.web/images/area-map.png"
@@ -574,17 +597,17 @@ export default function Home() {
             <div className="section-panel">
               <div className="mb-8">
                 <h2 className="section-heading">
-                  お問い合わせ・お申し込み
+                  お問い合わせ
                 </h2>
                 <div className="section-heading-bar"></div>
               </div>
               <div className="space-y-4 py-5">
-                <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                <div className="flex flex-col gap-4 md:flex-row md:justify-center">
                   <a
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k w-full sm:w-[200px] flex-col leading-tight"
+                    className="btn-primary-k w-full md:w-[200px] flex-col leading-tight"
                   >
                     <span>フォームで相談する</span>
                   </a>
@@ -592,7 +615,7 @@ export default function Home() {
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k w-full sm:w-[200px] flex-col leading-tight"
+                    className="btn-line-k w-full md:w-[200px] flex-col leading-tight"
                   >
                     LINEで相談する
                   </a>
