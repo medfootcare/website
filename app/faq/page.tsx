@@ -11,7 +11,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
   return (
         <div className="overflow-hidden rounded-xl border border-[#e5eaea] bg-white">
       <button
-        className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-[#f8fafa] sm:gap-4 sm:px-6 sm:py-5"
+        className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-[#f8fafa] md:gap-4 md:px-6 md:py-5"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
@@ -27,7 +27,7 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         </span>
       </button>
       {open && (
-        <div className="px-4 py-4 sm:px-6">
+        <div className="px-4 py-4 md:px-6">
           <p className="text-base text-on-surface-variant leading-relaxed flex items-start gap-3">
             <span className="text-base font-medium text-on-surface-variant shrink-0">A.</span>
             <span className="flex-1 min-w-0">{a}</span>
@@ -124,7 +124,7 @@ export default function FaqPage() {
               {/* アンダーライン型タブ切替 */}
               <div className="mb-8 flex border-b border-[#e5eaea]">
                 <button
-                  className={`-mb-px flex-1 px-2 py-3 text-center text-xs font-medium transition-colors border-b-2 sm:text-sm ${
+                  className={`-mb-px flex-1 border-b-2 px-2 py-3 text-center text-xs font-medium transition-colors md:text-sm ${
                     tab === "personal"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"
@@ -134,7 +134,7 @@ export default function FaqPage() {
                   ご利用者様・ご家族様向け
                 </button>
                 <button
-                  className={`-mb-px flex-1 px-2 py-3 text-center text-xs font-medium transition-colors border-b-2 sm:text-sm ${
+                  className={`-mb-px flex-1 border-b-2 px-2 py-3 text-center text-xs font-medium transition-colors md:text-sm ${
                     tab === "facility"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"

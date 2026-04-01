@@ -141,7 +141,7 @@ export default function Home() {
                   メディフットケアは、
                   <br className="md:hidden" />
                   医師・看護師が直接ご自宅や施設へ伺い、足元のケアをお届けする訪問フットケアサービスです。
-                  <br className="hidden md:block xl:hidden" />
+                  <br className="hidden md:block" />
                   爪のトラブルや足の痛みでお悩みの方に、専門的なケアを提供します。
                 </p>
                 <div className="pt-2">
