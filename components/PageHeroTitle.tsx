@@ -2,9 +2,9 @@ function MarkerLine() {
   return (
     <div className="relative h-[14px] w-full" aria-hidden="true">
       {/* マーカー帯（水色、やや透過） */}
-      <div className="absolute top-[2px] left-0 right-0 h-[8px] bg-[#aad8d3]/70 rounded-sm" />
+      <div className="absolute top-[2px] left-0 right-0 h-[8px] bg-[#93C5FD]/50 rounded-sm" />
       {/* 細いダーク線（マーカー帯の下端に重なる） */}
-      <div className="absolute top-[8px] left-0 right-0 h-px bg-[#444]" />
+      <div className="absolute top-[8px] left-0 right-0 h-px bg-[#334155]" />
     </div>
   );
 }
@@ -24,12 +24,12 @@ export default function PageHeroTitle({ lines, textSize = "text-[20px] md:text-[
   return (
     <h1 className="flex flex-col items-center gap-1">
       {precedingLines.map((line, i) => (
-        <span key={i} className={`${textSize} font-medium text-on-surface tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
+        <span key={i} className={`${textSize} font-bold text-[#020617] tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
           {line}
         </span>
       ))}
       <span className="inline-flex flex-col gap-1">
-        <span className={`${textSize} font-medium text-on-surface tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
+        <span className={`${textSize} font-bold text-[#020617] tracking-[0.04em] md:tracking-[0.02em] xl:tracking-widest text-center`}>
           {lastLine}
         </span>
         <MarkerLine />

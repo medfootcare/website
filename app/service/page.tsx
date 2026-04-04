@@ -15,7 +15,7 @@ export default function ServicePage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="py-10 flex justify-center">
               <PageHeroTitle lines="料金" />
@@ -33,7 +33,7 @@ export default function ServicePage() {
             <div className="space-y-0 max-w-2xl mx-auto">
               <div className="price-card text-left">
                 <div className="space-y-0">
-                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
+                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                     <div className="space-y-1">
                       <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h3>
                       <p className="text-sm text-on-surface-variant break-keep">
@@ -50,7 +50,7 @@ export default function ServicePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
+                  <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                     <div className="space-y-1">
                       <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h3>
                       <p className="text-sm text-on-surface-variant break-keep">

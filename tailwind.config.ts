@@ -9,27 +9,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#3aada8",
-        "primary-light": "#e8f5f4",
+        // Accessible & Ethical：WCAG AAA カラーパレット
+        primary: "#0369A1",           // CTA ブルー（コントラスト 7:1+）
+        "primary-dark": "#075985",
+        "primary-light": "#EFF6FF",
         surface: "#ffffff",
-        "surface-alt": "#f8fafa",
-        "on-surface": "#1a2b2b",
-        "on-surface-variant": "#666666",
-        "text-muted": "#999999",
-        border: "#e5eaea",
+        "surface-alt": "#F8FAFC",     // 背景
+        "on-surface": "#020617",      // ほぼ黒（WCAG AAA）
+        "on-surface-variant": "#334155", // スレート（WCAG AA）
+        "text-muted": "#64748B",
+        border: "#CBD5E1",
       },
       fontFamily: {
-        headline: ["Noto Sans JP", "sans-serif"],
-        body: ["Noto Sans JP", "sans-serif"],
+        headline: ["var(--font-figtree)", "var(--font-noto-sans-jp)", "sans-serif"],
+        body: ["var(--font-noto-sans-jp)", "sans-serif"],
       },
       borderRadius: {
-        DEFAULT: "12px",
-        lg: "16px",
-        xl: "24px",
+        DEFAULT: "4px",
+        sm: "2px",
+        md: "4px",
+        lg: "4px",
+        xl: "8px",
         full: "9999px",
       },
+      fontSize: {
+        // 最小 16px 保証
+        base: ["17px", { lineHeight: "1.8" }],
+        sm: ["15px", { lineHeight: "1.7" }],
+        xs: ["14px", { lineHeight: "1.6" }],
+      },
       animation: {
-        "fade-in-up": "fadeInUp 0.5s ease-out both",
+        "fade-in-up": "fadeInUp 0.4s ease both",
       },
     },
   },

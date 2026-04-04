@@ -74,7 +74,7 @@ export default function CasesPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="py-10 flex justify-center">
               <PageHeroTitle lines="症例・お悩み" />
@@ -115,7 +115,7 @@ export default function CasesPage() {
                     </div>
 
                     {/* 原因・状態・ケア */}
-                    <div className="divide-y divide-[#e5eaea]">
+                    <div className="divide-y divide-[#CBD5E1]">
                       <div className="py-4">
                         <p className="text-xs font-medium text-primary tracking-widest mb-1">主な原因</p>
                         <p className="text-sm text-on-surface-variant">{item.cause}</p>

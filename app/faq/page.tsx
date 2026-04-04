@@ -9,9 +9,9 @@ import PageHeroTitle from "@/components/PageHeroTitle";
 function AccordionItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-        <div className="overflow-hidden rounded-xl border border-[#e5eaea] bg-white">
+        <div className="overflow-hidden rounded-sm border-2 border-[#CBD5E1] bg-white">
       <button
-        className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-[#f8fafa] md:gap-4 md:px-6 md:py-5"
+        className="flex w-full items-start justify-between gap-3 px-4 py-4 text-left transition-colors hover:bg-[#F8FAFC] md:gap-4 md:px-6 md:py-5"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
@@ -109,7 +109,7 @@ export default function FaqPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="py-10 flex justify-center">
               <PageHeroTitle lines="よくある質問" />
@@ -122,7 +122,7 @@ export default function FaqPage() {
           <div className="max-content-width">
             <div className="max-w-3xl mx-auto">
               {/* アンダーライン型タブ切替 */}
-              <div className="mb-8 flex border-b border-[#e5eaea]">
+              <div className="mb-8 flex border-b border-[#CBD5E1]">
                 <button
                   className={`-mb-px flex-1 border-b-2 px-2 py-3 text-center text-xs font-medium transition-colors md:text-sm ${
                     tab === "personal"

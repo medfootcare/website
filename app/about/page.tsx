@@ -15,7 +15,7 @@ export default function AboutPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="py-10 flex justify-center w-full">
               <PageHeroTitle lines="メディフットケアとは？" />
@@ -48,7 +48,7 @@ export default function AboutPage() {
         </section>
 
         {/* ===== 企業情報 ===== */}
-        <section className="page-section bg-[#f8fafa]">
+        <section className="page-section bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="mb-8 text-center">
               <h2 className="section-heading">企業情報</h2>
@@ -63,7 +63,7 @@ export default function AboutPage() {
                     { label: "設立", value: "2025年5月" },
                     { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
-                    <tr key={row.label} className="border-b border-[#e5eaea]">
+                    <tr key={row.label} className="border-b border-[#CBD5E1]">
                       <th className="w-24 py-4 pr-3 text-left text-sm font-medium text-on-surface align-top md:w-36 md:pr-8">
                         {row.label}
                       </th>
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 { year: "2025年8月", event: "施設向けサービス開始" },
                 { year: "2026年3月", event: "訪問フットケアサービス開始" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 border-b border-[#e5eaea] py-5 md:gap-8">
+                <div key={i} className="flex items-start gap-3 border-b border-[#CBD5E1] py-5 md:gap-8">
                   <span className="w-24 shrink-0 text-sm font-medium text-primary md:w-36">{item.year}</span>
                   <span className="text-sm text-on-surface-variant leading-relaxed">{item.event}</span>
                 </div>

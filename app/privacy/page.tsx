@@ -15,7 +15,7 @@ export default function PrivacyPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="py-10 flex justify-center">
               <PageHeroTitle lines="プライバシーポリシー" />

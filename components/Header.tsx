@@ -71,13 +71,13 @@ export default function Header() {
 
       {/* ドロップダウン小窓 */}
       {open && (
-        <div className="absolute right-4 top-full z-50 mt-2 w-[calc(100vw-2rem)] max-w-56 rounded-2xl border border-gray-200/60 bg-white/95 shadow-lg backdrop-blur-md md:right-6">
+        <div className="absolute right-4 top-full z-50 mt-2 w-[calc(100vw-2rem)] max-w-56 rounded-sm border-2 border-[#CBD5E1] bg-white shadow-lg md:right-6">
           <nav className="flex flex-col gap-1 px-4 py-3">
             {NAV_LINKS.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="nav-link py-2.5 border-b border-gray-100 last:border-b-0 text-sm"
+                className="nav-link py-2.5 border-b border-[#CBD5E1] last:border-b-0 text-sm"
                 onClick={() => setOpen(false)}
               >
                 {label}

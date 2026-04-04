@@ -1,21 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ===== スキップリンク（キーボードナビ用） ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #0369A1;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 html,
 body {
-  background: #ffffff;
+  background: #F8FAFC;
   overflow-x: hidden;
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #1a2b2b;
-  font-size: 16px;
-  line-height: 1.75;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  color: #020617;
+  font-size: 17px;         /* 16px+ 必須 */
+  line-height: 1.8;
   letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-figtree), var(--font-noto-sans-jp), sans-serif;
 }
 
 .material-symbols-outlined {
@@ -26,48 +46,46 @@ body {
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* コンテンツ最大幅 */
+/* ===== レイアウト ===== */
 .max-content-width {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ヘッダー：クリーンな白ベース */
+/* ===== ヘッダー ===== */
 .glass-header {
   background-color: #ffffff;
-  border-bottom: 1px solid #e5eaea;
+  border-bottom: 2px solid #CBD5E1;
 }
 
-/* ナビリンク：休止時グレー → ホバーで濃色 */
+/* ===== ナビリンク ===== */
 .nav-link {
   position: relative;
-  color: #666666;
-  font-size: 14px;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 500;
   transition: color 0.15s ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background-color: transparent;
-  transition: background-color 0.15s ease;
+  padding: 4px 2px;
 }
 
 .nav-link:hover {
-  color: #1a2b2b;
+  color: #020617;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-.nav-link:hover::after,
-.nav-link:focus-visible::after {
-  background-color: #3aada8;
+.nav-link:focus-visible {
+  outline: 4px solid #0369A1;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
-/* ボタン共通：角丸12px・単一スタイル */
+.nav-link::after {
+  content: none;
+}
+
+/* ===== ボタン：WCAG AAA・48px タッチターゲット ===== */
 .btn-primary-k,
 .btn-outline-k,
 .btn-line-k {
@@ -75,122 +93,245 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 44px;
-  padding: 10px 24px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
+  min-height: 52px;          /* 44px 以上必須 */
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.4;
-  transition: background-color 0.15s ease;
-  border: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+  letter-spacing: 0.03em;
 }
 
+/* プライマリ：青 on 白（コントラスト 7:1+） */
 .btn-primary-k {
-  background: #3aada8;
+  background: #0369A1;
   color: #ffffff;
-  border: 1px solid #3aada8;
+  border: 3px solid #0369A1;
 }
 
 .btn-primary-k:hover {
-  background: #319b96;
-  color: #ffffff;
+  background: #075985;
+  border-color: #075985;
 }
 
+/* アウトライン */
 .btn-outline-k {
   background: #ffffff;
-  color: #3aada8;
-  border: 1px solid #3aada8;
+  color: #020617;
+  border: 3px solid #020617;
 }
 
 .btn-outline-k:hover {
-  background: #e8f5f4;
-  color: #3aada8;
+  background: #F1F5F9;
 }
 
-/* LINEブランドカラー */
+/* LINE */
 .btn-line-k {
   background: #ffffff;
-  color: #06C755;
-  border: 1px solid #06C755;
+  color: #15803D;
+  border: 3px solid #15803D;
 }
 
 .btn-line-k:hover {
-  background: #e8f9ee;
-  color: #06C755;
+  background: #F0FDF4;
 }
 
+/* ===== フォーカスリング：4px solid（WCAG AAA）===== */
 .btn-primary-k:focus-visible,
-.btn-outline-k:focus-visible,
-.nav-link:focus-visible {
-  outline: 2px solid rgba(58, 173, 168, 0.35);
-  outline-offset: 2px;
+.btn-outline-k:focus-visible {
+  outline: 4px solid #0369A1;
+  outline-offset: 4px;
 }
 
 .btn-line-k:focus-visible {
-  outline: 2px solid rgba(6, 199, 85, 0.35);
-  outline-offset: 2px;
+  outline: 4px solid #15803D;
+  outline-offset: 4px;
 }
 
-/* セクション見出し：中央揃え・短いティールバー */
+/* ===== セクション見出し ===== */
 .section-heading {
-  font-size: 22px;
-  font-weight: 500;
-  color: #1a2b2b;
+  font-size: 26px;
+  font-weight: 700;
+  color: #020617;
   text-align: center;
   display: block;
-  line-height: 1.5;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
 }
 
 .section-heading::after {
   content: '';
   display: block;
-  width: 40px;
-  height: 3px;
-  margin: 12px auto 0;
-  background: linear-gradient(to right, #f9a8b4, #fbd4b4);
-  border-radius: 9999px;
-  transition: width 0.3s ease;
-}
-
-.section-heading:hover::after {
-  width: 64px;
+  width: 48px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: #0369A1;
+  border-radius: 0;
 }
 
 .section-heading-bar {
   display: none;
 }
 
+/* ===== 白帯セクション内の見出し ===== */
+.section-heading-white {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.section-heading-white::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+}
+
 /* ページヘッダー用アクセントバー */
 .header-accent-bar {
   display: block;
-  width: 64px;
-  height: 2px;
+  width: 48px;
+  height: 4px;
   margin: -1rem auto 0;
-  background: #3aada8;
+  background: #0369A1;
 }
 
-/* 許容する微細な影（cases等で使用） */
-.shadow-card {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+/* ===== カード：高コントラストボーダー ===== */
+.surface-card,
+.surface-card-soft {
+  background: #ffffff;
+  border: 2px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 1.5rem;
 }
 
+.surface-card:hover {
+  border-color: #0369A1;
+  transform: none;
+  box-shadow: none;
+}
+
+.step-card {
+  background: #ffffff;
+  padding: 1.25rem 1.5rem;
+}
+
+.qa-card {
+  background: #ffffff;
+  border: 2px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 1.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.qa-card:hover {
+  border-color: #0369A1;
+}
+
+.price-card {
+  background: #ffffff;
+  border: 2px solid #CBD5E1;
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+/* ===== バッジ ===== */
+.soft-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  border: 2px solid #BFDBFE;
+  color: #1D4ED8;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+/* 信頼バッジ */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  border: 2px solid #BFDBFE;
+  color: #1E40AF;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.text-link-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0369A1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transition: color 0.15s ease;
+  padding: 4px 2px;
+}
+
+.text-link-inline:hover {
+  color: #075985;
+}
+
+.text-link-inline:focus-visible {
+  outline: 4px solid #0369A1;
+  outline-offset: 4px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+/* ===== ヒーロー：カードなし・フラット ===== */
 .hero-cloud-card {
   position: relative;
   display: inline-block;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  isolation: isolate;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .hero-cloud-card::before {
   content: none;
 }
 
+/* ===== 特徴番号バッジ ===== */
+.feature-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #020617;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 @layer components {
-  /* セクション余白：PC基準 px-12(48px) py-20(80px) */
   .page-section {
-    @apply px-4 py-14 md:px-12 md:py-20;
+    @apply px-4 py-16 md:px-12 md:py-24;  /* 余白を広めに */
   }
 
   .section-panel {
@@ -200,46 +341,20 @@ body {
   .section-panel-hero {
     @apply px-0 py-0 text-center;
   }
-
-  /* カード：白背景・薄ボーダー・角丸12px */
-  .surface-card,
-  .surface-card-soft {
-    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-6;
-  }
-
-  .step-card {
-    @apply bg-white px-6 py-5;
-  }
-
-  .qa-card {
-    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-5;
-  }
-
-  .price-card {
-    @apply bg-white border border-[#e5eaea] rounded-xl px-6 py-6;
-  }
-
-  /* バッジ：ティール薄背景 */
-  .soft-badge {
-    @apply inline-flex items-center gap-2 bg-[#e8f5f4] border border-primary px-4 py-2 text-sm font-medium text-primary rounded-xl;
-  }
-
-  .text-link-inline {
-    @apply inline-flex items-center gap-2 text-sm font-medium text-primary transition-opacity hover:opacity-75;
-  }
 }
 
 @media (min-width: 768px) {
-  .section-heading {
-    font-size: 24px;
+  .section-heading,
+  .section-heading-white {
+    font-size: 28px;
   }
 }
 
-/* ヒーロー入場アニメーション */
+/* ===== アニメーション：必要最低限 ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -247,12 +362,22 @@ body {
   }
 }
 
-/* カードホバー：浮き上がり */
-.surface-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease both;
 }
 
-.surface-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.stagger-1 { animation: fadeInUp 0.4s 0.05s ease both; }
+.stagger-2 { animation: fadeInUp 0.4s 0.1s ease both; }
+.stagger-3 { animation: fadeInUp 0.4s 0.15s ease both; }
+.stagger-4 { animation: fadeInUp 0.4s 0.2s ease both; }
+.stagger-5 { animation: fadeInUp 0.4s 0.25s ease both; }
+
+/* ===== prefers-reduced-motion：すべてのアニメ無効 ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  .animate-fade-in-up,
+  .stagger-1, .stagger-2, .stagger-3, .stagger-4, .stagger-5 {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
 }

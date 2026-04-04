@@ -3,7 +3,7 @@ import { FORM_URL } from "@/constants/links";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[#e5eaea] pt-16 pb-12">
+    <footer className="bg-white border-t border-[#CBD5E1] pt-16 pb-12">
       <div className="max-content-width px-4 md:px-12">
         <div className="mb-10 grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] md:items-start md:gap-1 xl:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] xl:gap-16">
           {/* ブランド */}
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* コピーライト */}
-        <div className="border-t border-[#e5eaea] pt-6">
+        <div className="border-t border-[#CBD5E1] pt-6">
           <p className="text-center text-sm text-on-surface-variant md:text-left">
             © 2026 メディフットケア. All rights reserved.
           </p>

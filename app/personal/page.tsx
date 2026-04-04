@@ -17,7 +17,7 @@ export default function PersonalPage() {
 
       <main className="pt-24">
         {/* ===== ページヘッダー ===== */}
-        <section className="page-section border-b border-[#e5eaea] bg-gradient-to-b from-[#f0f9f8] to-white">
+        <section className="page-section border-b border-[#CBD5E1] bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="section-panel-hero space-y-6 py-10 text-center flex flex-col items-center">
               <PageHeroTitle lines={["ご自宅・ご本人への", "訪問フットケア"]} />
@@ -77,7 +77,7 @@ export default function PersonalPage() {
         </section>
 
         {/* ===== ご利用の流れ ===== */}
-        <section className="page-section bg-[#f8fafa]">
+        <section className="page-section bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
@@ -175,7 +175,7 @@ export default function PersonalPage() {
         </section>
 
         {/* ===== 料金の目安 ===== */}
-        <section className="page-section bg-[#f8fafa]">
+        <section className="page-section bg-[#F8FAFC]">
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
@@ -186,7 +186,7 @@ export default function PersonalPage() {
                 <div className="price-card text-left">
                   <div className="space-y-0">
                     {/* 料金行1 */}
-                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
+                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
                         <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h4>
                         <p className="text-sm text-on-surface-variant break-keep">
@@ -203,7 +203,7 @@ export default function PersonalPage() {
                       </div>
                     </div>
                     {/* 料金行2 */}
-                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#e5eaea] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
+                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
                         <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h4>
                         <p className="text-sm text-on-surface-variant break-keep">
@@ -259,7 +259,7 @@ export default function PersonalPage() {
                 <h2 className="section-heading">お問い合わせ</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="mx-auto max-w-xl space-y-6 rounded-2xl bg-[#e8f5f3] px-5 py-6 text-center md:px-8 md:py-8">
+              <div className="mx-auto max-w-xl space-y-6 rounded-sm border-2 border-[#CBD5E1] bg-[#EFF6FF] px-5 py-6 text-center md:px-8 md:py-8">
                 <div className="space-y-3">
                   <h3 className="break-keep text-lg font-medium text-on-surface md:text-[20px]">はじめての方もお気軽にどうぞ</h3>
                   <p className="break-keep text-sm leading-loose text-on-surface-variant">
