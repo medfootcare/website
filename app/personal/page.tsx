@@ -101,19 +101,19 @@ export default function PersonalPage() {
                   {
                     step: "03",
                     title: "日程調整",
-                    desc: <>ご希望の日時・場所をお伺いし、<br className="md:hidden" />訪問日を決定します。</>,
+                    desc: <>ご希望の日時・場所をお伺いし、<br />訪問日を決定します。</>,
                     icon: "calendar_month",
                   },
                   {
                     step: "04",
                     title: "訪問・施術",
-                    desc: <>担当スタッフがご自宅へお伺いし、<br className="md:hidden" /><br className="hidden md:block lg:hidden" />丁寧に施術を行います（30〜60分）。</>,
+                    desc: <>担当スタッフがご自宅へお伺いし、<br />丁寧に施術を行います（30〜60分）。</>,
                     icon: "home_health",
                   },
                   {
                     step: "05",
                     title: "お会計",
-                    desc: <>施術後に現地でお支払いいただきます。<br className="md:hidden" /><br className="hidden md:block lg:hidden" />領収書を発行いたします。</>,
+                    desc: <>施術後に現地でお支払いいただきます。<br />領収書を発行いたします。</>,
                     icon: "payments",
                   },
                 ].map((item) => (
