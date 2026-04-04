@@ -48,7 +48,7 @@ export default function PersonalPage() {
                   { key: "self-nail", text: "自分では爪が切れなくなってきた" },
                   { key: "painful-walk", text: "巻き爪が痛くて歩くのが辛い" },
                   { key: "no-hospital", text: <>病院に行くほどではないが、<br className="md:hidden" />足のケアをしてほしい</> },
-                  { key: "dementia", text: "認知症があり、安全に爪切りができるか不安" },
+                  { key: "dementia", text: <>認知症があり、<br className="md:hidden" />安全に爪切りができるか不安</> },
                   { key: "hard-to-go-out", text: "外出が難しいが、ケアを受けたい" },
                 ].map((item, i) => (
                   <div
