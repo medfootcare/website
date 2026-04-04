@@ -44,21 +44,21 @@ export default function PersonalPage() {
               </div>
               <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 max-w-5xl mx-auto">
                 {[
-                  "親の爪が分厚くなって、切り方が分からなくなった",
-                  "自分では爪が切れなくなってきた",
-                  "巻き爪が痛くて歩くのが辛い",
-                  "病院に行くほどではないが、足のケアをしてほしい",
-                  "認知症があり、安全に爪切りができるか不安",
-                  "外出が難しいが、ケアを受けたい",
-                ].map((text, i) => (
+                  { key: "family-nail", text: <>親の爪が分厚くなって、<br className="md:hidden" />切り方が分からなくなった</> },
+                  { key: "self-nail", text: "自分では爪が切れなくなってきた" },
+                  { key: "painful-walk", text: "巻き爪が痛くて歩くのが辛い" },
+                  { key: "no-hospital", text: <>病院に行くほどではないが、<br className="md:hidden" />足のケアをしてほしい</> },
+                  { key: "dementia", text: "認知症があり、安全に爪切りができるか不安" },
+                  { key: "hard-to-go-out", text: "外出が難しいが、ケアを受けたい" },
+                ].map((item, i) => (
                   <div
-                    key={i}
+                    key={item.key}
                     className="surface-card-soft flex items-center gap-4 text-left md:min-h-[112px] md:items-center md:text-left"
                   >
                     <span className="material-symbols-outlined text-primary text-2xl shrink-0 fill-icon">
                       check_circle
                     </span>
-                    <p className="copy-body-lg min-w-0 break-keep text-on-surface">{text}</p>
+                    <p className="copy-body-lg min-w-0 break-keep text-on-surface">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -95,13 +95,13 @@ export default function PersonalPage() {
                   {
                     step: "02",
                     title: "ヒアリング",
-                    desc: <>足の状態やご要望、ご自宅の環境などをお伺いします。<br />不安なことも何でもお聞かせください。</>,
+                    desc: <>足の状態やご要望、<br className="md:hidden" />ご自宅の環境などをお伺いします。<br />不安なことも何でもお聞かせください。</>,
                     icon: "record_voice_over",
                   },
                   {
                     step: "03",
                     title: "日程調整",
-                    desc: "ご希望の日時・場所をお伺いし、訪問日を決定します。",
+                    desc: <>ご希望の日時・場所をお伺いし、<br className="md:hidden" />訪問日を決定します。</>,
                     icon: "calendar_month",
                   },
                   {
@@ -113,7 +113,7 @@ export default function PersonalPage() {
                   {
                     step: "05",
                     title: "お会計",
-                    desc: <>施術後に現地でお支払いいただきます。<br className="hidden md:block lg:hidden" />領収書を発行いたします。</>,
+                    desc: <>施術後に現地でお支払いいただきます。<br className="md:hidden" /><br className="hidden md:block lg:hidden" />領収書を発行いたします。</>,
                     icon: "payments",
                   },
                 ].map((item) => (
@@ -263,7 +263,8 @@ export default function PersonalPage() {
                 <div className="space-y-3">
                   <h3 className="break-keep text-lg font-medium text-on-surface md:text-[20px]">はじめての方もお気軽にどうぞ</h3>
                   <p className="copy-note break-keep text-on-surface-variant">
-                    「こんな状態でも大丈夫？」「どんなことをするの？」<br />
+                    「こんな状態でも大丈夫？」<br />
+                    「どんなことをするの？」<br />
                     そんな疑問だけでも、まずはご相談ください。
                   </p>
                 </div>

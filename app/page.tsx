@@ -594,9 +594,42 @@ export default function Home() {
               <div className="max-w-2xl mx-auto">
                 <div className="price-card" role="table" aria-label="料金一覧">
                   {[
-                    { name: "ご施設ケア", desc: "爪ケア・角質ケア・保湿を含む、基本のフットケア", price: "¥5,000", border: true },
-                    { name: "ご施設しっかりケア", desc: "巻き爪ケアを含む、より丁寧な個別ケア", price: "¥10,000", border: true },
-                    { name: "個人宅訪問ケア", desc: "爪や足の状態に合わせて、ご自宅で丁寧に行うフットケア", price: "¥12,000", border: false },
+                    {
+                      name: "ご施設ケア",
+                      desc: (
+                        <>
+                          爪ケア・角質ケア・保湿を含む、
+                          <br className="md:hidden" />
+                          基本のフットケア
+                        </>
+                      ),
+                      price: "¥5,000",
+                      border: true,
+                    },
+                    {
+                      name: "ご施設しっかりケア",
+                      desc: (
+                        <>
+                          巻き爪ケアを含む、
+                          <br className="md:hidden" />
+                          より丁寧な個別ケア
+                        </>
+                      ),
+                      price: "¥10,000",
+                      border: true,
+                    },
+                    {
+                      name: "個人宅訪問ケア",
+                      desc: (
+                        <>
+                          爪や足の状態に合わせて、
+                          <br className="md:hidden" />
+                          ご自宅で丁寧に行うフットケア
+                        </>
+                      ),
+                      price: "¥12,000",
+                      border: false,
+                    },
                   ].map((row) => (
                     <div
                       key={row.name}
@@ -751,7 +784,9 @@ export default function Home() {
                 お問い合わせ
               </h2>
               <p className="text-[16px] text-white/90 mb-8 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                ご不明点・ご相談はお気軽にどうぞ。無料でご相談いただけます。
+                ご不明点・ご相談はお気軽にどうぞ。
+                <br className="md:hidden" />
+                無料でご相談いただけます。
               </p>
               <div className="flex flex-col gap-4 md:flex-row md:justify-center">
                 <a
