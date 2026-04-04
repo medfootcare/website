@@ -27,7 +27,7 @@ export default function Header() {
             alt="メディフットケア"
             className="h-8 w-auto md:h-9"
           />
-          <span className="truncate text-sm font-medium tracking-tight text-on-surface md:text-base">
+          <span className="truncate text-[15px] font-medium tracking-tight text-on-surface md:text-base">
             メディフットケア
           </span>
         </Link>
@@ -77,7 +77,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className="nav-link py-2.5 border-b border-[#CBD5E1] last:border-b-0 text-sm"
+                className="nav-link py-2.5 border-b border-[#CBD5E1] last:border-b-0 text-[15px]"
                 onClick={() => setOpen(false)}
               >
                 {label}
@@ -86,7 +86,7 @@ export default function Header() {
           </nav>
           <div className="flex flex-col gap-2 px-4 pb-4">
             <a
-              className="btn-primary-k w-full text-center text-sm py-2.5"
+              className="btn-primary-k w-full text-center text-[15px] py-2.5"
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function Header() {
               お問い合わせ
             </a>
             <a
-              className="btn-line-k w-full text-center text-sm py-2.5"
+              className="btn-line-k w-full whitespace-nowrap px-4 text-center text-[15px] py-2.5"
               href={LINE_URL}
               target="_blank"
               rel="noopener noreferrer"

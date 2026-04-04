@@ -21,20 +21,20 @@ export default function Home() {
           className="page-section !py-0 bg-white"
           aria-labelledby="hero-heading"
         >
-          <div className="section-panel-hero max-content-width pt-12 pb-16 md:grid md:grid-cols-2 md:items-center md:gap-12 md:pt-16 md:pb-20">
+          <div className="section-panel-hero max-content-width pt-12 pb-16 md:pt-16 md:pb-20 xl:grid xl:grid-cols-2 xl:items-center xl:gap-12">
 
             {/* テキストエリア */}
             <div className="animate-fade-in-up">
 
               {/* ブランドラベル */}
-              <p className="font-mono text-[11px] tracking-[0.28em] text-[#9CA3AF] mb-6 uppercase select-none">
-                MEDI&nbsp;&nbsp;FOOT&nbsp;&nbsp;CARE
+              <p className="mb-6 font-mono text-[15px] tracking-[0.12em] text-[#9CA3AF] uppercase select-none md:text-[11px] md:tracking-[0.18em]">
+                MEDIFOOTCARE
               </p>
 
               {/* メイン見出し：超大・ボールド */}
               <h1
                 id="hero-heading"
-                className="text-[38px] font-bold leading-[1.25] tracking-[-0.01em] text-[#111827] mb-6 break-keep md:text-[52px] xl:text-[60px]"
+                className="text-[38px] font-bold leading-[1.25] tracking-[-0.01em] text-[#111827] mb-6 break-keep md:text-[46px] xl:text-[60px]"
                 style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}
               >
                 大切な足元に
@@ -44,11 +44,13 @@ export default function Home() {
 
               {/* サブテキスト */}
               <p className="text-[17px] text-[#6B7280] mb-8 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                医師・看護師による訪問フットケアサービス
+                医師・看護師による
+                <br className="hidden max-[344px]:block" />
+                訪問フットケアサービス
               </p>
 
               {/* CTAボタン */}
-              <div className="flex flex-col gap-3 md:flex-row">
+              <div className="flex flex-col items-center gap-3 md:flex-row md:justify-center xl:justify-start">
                 <Link
                   className="btn-primary-k w-full whitespace-nowrap md:w-auto"
                   href="/personal"
@@ -61,14 +63,14 @@ export default function Home() {
                   href="/facility"
                   aria-label="施設でのご依頼について詳しく見る"
                 >
-                  施設でのご依頼を検討中の方 ›
+                  施設への導入を検討中の方 ›
                 </Link>
               </div>
             </div>
 
             {/* ヒーロー画像 */}
-            <div className="w-full overflow-hidden mt-10 md:mt-0 stagger-3">
-              <div className="w-full max-w-[480px] mx-auto md:max-w-full">
+            <div className="w-full overflow-hidden mt-10 xl:mt-0 stagger-3">
+              <div className="w-full max-w-[480px] mx-auto xl:max-w-full">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   alt="利用者と医療・介護スタッフが笑顔で手をつなぐイメージ"
@@ -107,7 +109,7 @@ export default function Home() {
                           check
                         </span>
                       </span>
-                      <span className="text-[17px] font-medium text-[#020617] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                      <span className="text-[15px] font-normal text-[#020617] break-keep md:text-[17px] md:font-medium" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                         {text}
                       </span>
                     </li>
@@ -136,10 +138,19 @@ export default function Home() {
                 <h2 id="about-heading" className="section-heading">メディフットケアとは？</h2>
               </div>
               <div className="md:max-w-[720px] mx-auto">
-                <p className="text-[17px] leading-loose text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                  メディフットケアは、医師・看護師が直接ご自宅や施設へ伺い、
-                  足元のケアをお届けする訪問フットケアサービスです。
-                  爪のトラブルや足の痛みでお悩みの方に、専門的なケアを提供します。
+                <p className="copy-body text-[#334155] break-keep md:text-[17px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                  メディフットケアは、
+                  <br className="md:hidden" />
+                  医師・看護師が直接ご自宅や施設へ伺い、
+                  <br className="md:hidden" />
+                  足元のケアをお届けする
+                  <br className="md:hidden" />
+                  訪問フットケアサービスです。
+                  <br className="md:hidden" />
+                  <br className="md:hidden" />
+                  爪のトラブルや足の痛みでお悩みの方に、
+                  <br className="md:hidden" />
+                  専門的なケアを提供します。
                 </p>
                 <div className="mt-5">
                   <Link className="text-link-inline group" href="/about">
@@ -154,13 +165,17 @@ export default function Home() {
 
         {/* ===== 5つの特徴 ===== */}
         <section className="page-section bg-[#F8FAFC]" aria-labelledby="features-heading">
-          <div className="max-content-width">
+          <div className="mx-auto max-w-[1240px]">
             <div className="section-panel">
               <div className="mb-10">
-                <h2 id="features-heading" className="section-heading">メディフットケアの5つの特徴</h2>
+                <h2 id="features-heading" className="section-heading">
+                  メディフットケアの
+                  <br className="md:hidden" />
+                  5つの特徴
+                </h2>
               </div>
-              {/* 上段3枚 */}
-              <div className="space-y-3 md:grid md:grid-cols-3 md:gap-5 md:space-y-0">
+              {/* スマホ・タブレット：2 / 2 / 1 */}
+              <div className="space-y-3 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 xl:hidden">
                 {[
                   {
                     num: 1,
@@ -169,69 +184,261 @@ export default function Home() {
                       { src: "/medifootcare.web/images/icons/nurse.png", alt: "看護師のアイコン" },
                     ],
                     title: "医師・看護師によるチームケア",
-                    desc: "医師の監修のもと、看護師資格を持つスタッフが施術を行います。安心・安全なケアをお届けします。",
+                    desc: (
+                      <>
+                        医師の監修のもと、
+                        <br className="md:hidden" />
+                        看護師資格を持つスタッフが
+                        <br className="lg:hidden" />
+                        施術を行います。
+                        <br className="lg:hidden" />
+                        安心・安全なケアをお届けします。
+                      </>
+                    ),
                   },
                   {
                     num: 2,
                     icons: [{ src: "/medifootcare.web/images/icons/wheelchair.png", alt: "" }],
                     title: "ベッド・車椅子でも施術可能",
-                    desc: "外出が難しい方も安心。ベッドや車椅子に座ったままの状態で、ご自宅や施設でケアを受けられます。",
-                  },
-                  {
-                    num: 4,
-                    icons: [{ src: "/medifootcare.web/images/icons/nail-trouble.png", alt: "" }],
-                    title: "巻き爪・分厚い爪など幅広い爪トラブルに対応",
-                    desc: "巻き爪・肥厚爪・変形爪など、さまざまな爪のお悩みに対応。専門的な知識と技術で丁寧にケアします。",
+                    desc: (
+                      <>
+                        外出が難しい方も安心。
+                        <br className="md:hidden" />
+                        ベッドや車椅子に座ったままの状態で、
+                        <br className="md:hidden" />
+                        ご自宅や施設でケアを受けられます。
+                      </>
+                    ),
                   },
                 ].map((item, i) => (
-                  <div key={item.num} className={`surface-card stagger-${i + 1} text-center`}>
+                  <div key={item.num} className={`surface-card stagger-${i + 1} h-full text-center`}>
                     <div className="flex justify-center gap-2 mb-4" aria-hidden="true">
                       {item.icons.map((icon) => (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img key={icon.src} src={icon.src} alt={icon.alt} className="w-12 h-12 object-contain" />
+                        <img key={icon.src} src={icon.src} alt={icon.alt} className="w-16 h-16 object-contain" />
                       ))}
                     </div>
                     <h3 className="text-[18px] font-bold text-[#020617] mb-3 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                       {item.title}
                     </h3>
-                    <p className="text-[15px] leading-loose text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                    <p className="copy-body text-[#334155] break-keep max-[344px]:text-[13px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                       {item.desc}
                     </p>
                   </div>
                 ))}
-              </div>
-
-              {/* 下段2枚：中央寄せ */}
-              <div className="space-y-3 mt-3 md:grid md:grid-cols-2 md:gap-5 md:space-y-0 md:mt-5 md:max-w-[calc(66.67%-0.833rem)] md:mx-auto">
                 {[
+                  {
+                    num: 4,
+                    icons: [{ src: "/medifootcare.web/images/icons/nail-trouble.png", alt: "" }],
+                    title: (
+                      <>
+                        <span className="whitespace-nowrap">巻き爪・分厚い爪など</span>
+                        <br />
+                        幅広い爪トラブルに対応
+                      </>
+                    ),
+                    desc: (
+                      <>
+                        巻き爪・肥厚爪・変形爪など、
+                        <br className="md:hidden" />
+                        さまざまな爪のお悩みに対応。
+                        <br className="md:hidden" />
+                        専門的な知識と技術で
+                        <br className="hidden md:block lg:hidden" />
+                        丁寧にケアします。
+                      </>
+                    ),
+                  },
                   {
                     num: 3,
                     icons: [{ src: "/medifootcare.web/images/icons/report.png", alt: "" }],
                     title: "毎回ケアごとに報告書を作成",
-                    desc: "施術内容や爪の状態を毎回記録し、ご家族や施設スタッフへご報告。継続的なケアの質を維持します。",
+                    desc: (
+                      <>
+                        施術内容や爪の状態を毎回記録し、
+                        <br className="md:hidden" />
+                        ご家族や施設スタッフへご報告。
+                        <br className="md:hidden" />
+                        継続的なケアの質を維持します。
+                      </>
+                    ),
                   },
-                  {
-                    num: 5,
-                    icons: [{ src: "/medifootcare.web/images/icons/equipment.png", alt: "" }],
-                    title: "専用機器を使用した痛みの少ないケア",
-                    desc: "専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。痛みが怖い方でも安心してご利用いただけます。",
-                  },
-                ].map((item, i) => (
-                  <div key={item.num} className={`surface-card stagger-${i + 4} text-center`}>
+                ].map((item) => (
+                  <div key={item.num} className="surface-card h-full text-center">
                     <div className="flex justify-center gap-2 mb-4" aria-hidden="true">
                       {item.icons.map((icon) => (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img key={icon.src} src={icon.src} alt={icon.alt} className="w-12 h-12 object-contain" />
+                        <img key={icon.src} src={icon.src} alt={icon.alt} className="w-16 h-16 object-contain" />
                       ))}
                     </div>
                     <h3 className="text-[18px] font-bold text-[#020617] mb-3 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                       {item.title}
                     </h3>
-                    <p className="text-[15px] leading-loose text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                    <p className="copy-body text-[#334155] break-keep max-[344px]:text-[13px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                       {item.desc}
                     </p>
                   </div>
                 ))}
+                <div className="md:col-span-2 md:flex md:justify-center">
+                  {[
+                    {
+                      num: 5,
+                      icons: [{ src: "/medifootcare.web/images/icons/equipment.png", alt: "" }],
+                      title: (
+                        <>
+                          専用機器を使用した
+                          <br className="lg:hidden" />
+                          痛みの少ないケア
+                        </>
+                      ),
+                      desc: (
+                        <>
+                          専用マシンや器具を使用し、
+                          <br className="md:hidden" />
+                          振動や刺激を最小限に抑えた施術。
+                          <br className="md:hidden" />
+                          痛みが怖い方でも安心して
+                          <br className="lg:hidden" />
+                          ご利用いただけます。
+                        </>
+                      ),
+                    },
+                  ].map((item) => (
+                    <div key={item.num} className="surface-card h-full text-center md:w-[calc(50%-0.5rem)]">
+                      <div className="flex justify-center gap-2 mb-4" aria-hidden="true">
+                        {item.icons.map((icon) => (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img key={icon.src} src={icon.src} alt={icon.alt} className="w-16 h-16 object-contain" />
+                        ))}
+                      </div>
+                      <h3 className="text-[18px] font-bold text-[#020617] mb-3 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.title}
+                      </h3>
+                      <p className="copy-body text-[#334155] break-keep max-[344px]:text-[13px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* PC：3 / 2 */}
+              <div className="hidden xl:block">
+                <div className="grid grid-cols-3 gap-4">
+                  {[
+                    {
+                      num: 1,
+                      icons: [
+                        { src: "/medifootcare.web/images/icons/doctor.png", alt: "医師のアイコン" },
+                        { src: "/medifootcare.web/images/icons/nurse.png", alt: "看護師のアイコン" },
+                      ],
+                      title: "医師・看護師によるチームケア",
+                      desc: (
+                        <>
+                          医師の監修のもと、看護師資格を持つスタッフが
+                          <br className="md:hidden" />
+                          施術を行います。
+                          <br className="md:hidden" />
+                          安心・安全なケアをお届けします。
+                        </>
+                      ),
+                    },
+                    {
+                      num: 2,
+                      icons: [{ src: "/medifootcare.web/images/icons/wheelchair.png", alt: "" }],
+                      title: "ベッド・車椅子でも施術可能",
+                      desc: (
+                        <>
+                          外出が難しい方も安心。
+                          <br className="md:hidden" />
+                          ベッドや車椅子に座ったままの状態で、
+                          <br className="md:hidden" />
+                          ご自宅や施設でケアを受けられます。
+                        </>
+                      ),
+                    },
+                    {
+                      num: 4,
+                      icons: [{ src: "/medifootcare.web/images/icons/nail-trouble.png", alt: "" }],
+                    title: (
+                      <>
+                        <span className="whitespace-nowrap">巻き爪・分厚い爪など</span>
+                        <br />
+                        幅広い爪トラブルに対応
+                      </>
+                    ),
+                      desc: (
+                        <>
+                          巻き爪・肥厚爪・変形爪など、
+                          <br className="md:hidden" />
+                          さまざまな爪のお悩みに対応。
+                          <br className="md:hidden" />
+                          専門的な知識と技術で
+                          <br className="hidden md:block lg:hidden" />
+                          丁寧にケアします。
+                        </>
+                      ),
+                    },
+                  ].map((item, i) => (
+                    <div key={item.num} className={`surface-card stagger-${i + 1} text-center`}>
+                      <div className="flex justify-center gap-2 mb-4" aria-hidden="true">
+                        {item.icons.map((icon) => (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img key={icon.src} src={icon.src} alt={icon.alt} className="w-16 h-16 object-contain" />
+                        ))}
+                      </div>
+                      <h3 className="text-[18px] font-bold text-[#020617] mb-3 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.title}
+                      </h3>
+                      <p className="copy-body text-[#334155] break-keep max-[344px]:text-[13px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 mx-auto grid max-w-[calc(68%-0.5rem)] grid-cols-2 gap-4">
+                  {[
+                    {
+                      num: 3,
+                      icons: [{ src: "/medifootcare.web/images/icons/report.png", alt: "" }],
+                      title: "毎回ケアごとに報告書を作成",
+                      desc: "施術内容や爪の状態を毎回記録し、ご家族や施設スタッフへご報告。継続的なケアの質を維持します。",
+                    },
+                    {
+                      num: 5,
+                      icons: [{ src: "/medifootcare.web/images/icons/equipment.png", alt: "" }],
+                      title: (
+                        <>
+                          専用機器を使用した
+                          <br className="md:hidden" />
+                          痛みの少ないケア
+                        </>
+                      ),
+                      desc: (
+                        <>
+                          専用マシンや器具を使用し、振動や刺激を最小限に抑えた施術。痛みが怖い方でも安心して
+                          <br className="md:hidden" />
+                          ご利用いただけます。
+                        </>
+                      ),
+                    },
+                  ].map((item, i) => (
+                    <div key={item.num} className={`surface-card stagger-${i + 4} text-center`}>
+                      <div className="flex justify-center gap-2 mb-4" aria-hidden="true">
+                        {item.icons.map((icon) => (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img key={icon.src} src={icon.src} alt={icon.alt} className="w-16 h-16 object-contain" />
+                        ))}
+                      </div>
+                      <h3 className="text-[18px] font-bold text-[#020617] mb-3 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.title}
+                      </h3>
+                      <p className="copy-body text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -263,15 +470,15 @@ export default function Home() {
                 ].map((c) => (
                   <div key={c.title} className="bg-white border-2 border-[#CBD5E1] overflow-hidden">
                     <div className="grid grid-cols-2">
-                      <div className="relative">
-                        <span className="absolute left-0 top-0 z-10 text-white text-[11px] tracking-widest px-3 py-1.5 bg-[#334155] font-bold">
+                      <div className="flex flex-col">
+                        <span className="bg-[#64748B] px-3 py-1.5 text-center text-[15px] font-bold tracking-widest text-white md:text-[11px]">
                           BEFORE
                         </span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt={c.beforeAlt} className="w-full aspect-[4/3] object-cover object-top" src={c.beforeSrc} />
                       </div>
-                      <div className="relative">
-                        <span className="absolute left-0 top-0 z-10 text-white text-[11px] tracking-widest px-3 py-1.5 bg-[#0369A1] font-bold">
+                      <div className="flex flex-col">
+                        <span className="bg-[#0369A1] px-3 py-1.5 text-center text-[15px] font-bold tracking-widest text-white md:text-[11px]">
                           AFTER
                         </span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -296,27 +503,55 @@ export default function Home() {
 
         {/* ===== 安心ポイント：ダークネイビー帯 ===== */}
         <section className="page-section bg-[#0C4A6E]" aria-labelledby="safety-heading">
-          <div className="max-content-width">
+          <div className="mx-auto max-w-[1240px]">
             <div className="section-panel">
               <div className="mb-10">
                 <h2 id="safety-heading" className="section-heading-white">安心してご利用いただけます</h2>
               </div>
-              <div className="space-y-3 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 xl:gap-5 xl:grid-cols-3">
+              <div className="space-y-3 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 xl:grid-cols-3 xl:gap-4">
                 {[
                   {
                     icon: "medical_information",
                     title: "医師・看護師のみで構成",
-                    desc: "担当スタッフは医師免許、もしくは看護師免許を保有。医学的根拠に基づく安全なケアを提供します。",
+                    desc: (
+                      <>
+                        担当スタッフは医師免許、
+                        <br className="md:hidden" />
+                        もしくは看護師免許を保有。
+                        <br className="md:hidden" />
+                        医学的根拠に基づく安全なケアを
+                        <br className="lg:hidden" />
+                        提供します。
+                      </>
+                    ),
                   },
                   {
                     icon: "sanitizer",
                     title: "衛生対策の徹底",
-                    desc: "使用する器具はすべて消毒・滅菌処理済み。グローブ着用など衛生対策を徹底。施術時の粉塵対策も実施しています。",
+                    desc: (
+                      <>
+                        使用する器具はすべて
+                        <br className="md:hidden" />
+                        消毒・滅菌処理済み。
+                        <br className="md:hidden" />
+                        グローブ着用など衛生対策を徹底。
+                        <br className="md:hidden" />
+                        施術時の粉塵対策も実施しています。
+                      </>
+                    ),
                   },
                   {
                     icon: "security",
                     title: "賠償責任保険加入",
-                    desc: "万が一の際も安心。賠償責任保険に加入しており、安全な施術環境を整えています。",
+                    desc: (
+                      <>
+                        万が一の際も安心。
+                        <br className="md:hidden" />
+                        賠償責任保険に加入しており、
+                        <br className="md:hidden" />
+                        安全な施術環境を整えています。
+                      </>
+                    ),
                   },
                 ].map((item, i) => (
                   <div
@@ -325,7 +560,7 @@ export default function Home() {
                       i === 2 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.5rem)] xl:col-span-1 xl:mx-0 xl:w-auto" : ""
                     }`}
                   >
-                    <div className="flex items-center gap-3 mb-4">
+                    <div className="mb-4 flex items-center justify-center gap-3 xl:justify-start">
                       <span className="flex shrink-0 items-center justify-center w-10 h-10 bg-white/20">
                         <span className="material-symbols-outlined fill-icon text-[22px] text-white" aria-hidden="true">
                           {item.icon}
@@ -333,7 +568,7 @@ export default function Home() {
                       </span>
                       <h3 className="text-[17px] font-bold text-white break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>{item.title}</h3>
                     </div>
-                    <p className="text-[15px] leading-loose text-white/80 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>{item.desc}</p>
+                    <p className="copy-body text-center text-white/80 break-keep xl:text-left" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -374,7 +609,7 @@ export default function Home() {
                         <h4 className="text-[18px] font-bold text-[#020617] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                           {row.name}
                         </h4>
-                        <p className="text-[15px] text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                        <p className="copy-body-lg text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
                           {row.desc}
                         </p>
                       </div>
@@ -383,7 +618,7 @@ export default function Home() {
                           <div className="text-[28px] font-bold text-[#0369A1] whitespace-nowrap font-headline">
                             {row.price}
                           </div>
-                          <span className="mb-1 text-[15px] text-[#334155] md:mb-0">税込</span>
+                          <span className="copy-body-lg mb-1 text-[#334155] md:mb-0">税込</span>
                         </div>
                       </div>
                     </div>
@@ -425,17 +660,17 @@ export default function Home() {
                   <div key={i} className={`qa-card stagger-${i + 1}`}>
                     <p className="mb-3 flex items-start gap-3 font-bold text-[#020617]">
                       <span
-                        className="shrink-0 flex items-center justify-center w-7 h-7 bg-[#0369A1] text-white text-[13px] font-bold font-headline"
+                        className="flex h-7 w-7 shrink-0 items-center justify-center bg-[#0369A1] text-[15px] font-bold text-white font-headline md:text-[13px]"
                         aria-label="質問"
                       >Q</span>
-                      <span className="flex-1 min-w-0 text-[17px] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>{item.q}</span>
+                      <span className="flex-1 min-w-0 break-normal text-[17px] md:break-keep" style={{ wordBreak: "normal", overflowWrap: "break-word" }}>{item.q}</span>
                     </p>
-                    <p className="flex items-start gap-3 text-[15px] leading-loose text-[#334155]">
+                    <p className="copy-body-lg flex items-start gap-3 text-[#334155]">
                       <span
-                        className="shrink-0 flex items-center justify-center w-7 h-7 border-2 border-[#0369A1] text-[#0369A1] text-[13px] font-bold font-headline"
+                        className="flex h-7 w-7 shrink-0 items-center justify-center border-2 border-[#0369A1] text-[15px] font-bold text-[#0369A1] font-headline md:text-[13px]"
                         aria-label="回答"
                       >A</span>
-                      <span className="flex-1 min-w-0 break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>{item.a}</span>
+                      <span className="flex-1 min-w-0 break-normal md:break-keep" style={{ wordBreak: "normal", overflowWrap: "break-word" }}>{item.a}</span>
                     </p>
                   </div>
                 ))}
@@ -460,8 +695,10 @@ export default function Home() {
                     <span className="material-symbols-outlined fill-icon text-[24px] text-[#0369A1]" aria-hidden="true">location_on</span>
                     <h2 id="area-heading" className="text-[24px] font-bold text-[#020617]">訪問対応エリア</h2>
                   </div>
-                  <p className="text-[17px] text-[#334155] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                    千葉県佐倉市を中心に以下の地域へお伺いしております。
+                  <p className="copy-body text-[#334155] break-keep md:text-[17px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                    千葉県佐倉市を中心に以下の地域へ
+                    <br className="md:hidden" />
+                    お伺いしております。
                   </p>
                   <div
                     className="grid grid-cols-6 gap-x-3 gap-y-2 pt-2 text-center md:flex md:flex-nowrap md:justify-center md:gap-6 xl:justify-between xl:gap-3 xl:text-left"
@@ -486,8 +723,10 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-center gap-2 pt-4 text-[#334155] xl:justify-start">
                     <span className="material-symbols-outlined shrink-0 text-[22px]" aria-hidden="true">info</span>
-                    <p className="text-left text-[15px] break-keep" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                      上記以外のエリア（近隣市区町村）もお気軽にご相談ください。
+                    <p className="copy-body-lg text-left break-keep xl:whitespace-nowrap" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                      上記以外のエリア（近隣市区町村）も
+                      <br className="md:hidden" />
+                      お気軽にご相談ください。
                     </p>
                   </div>
                 </div>
@@ -496,7 +735,7 @@ export default function Home() {
                   <img
                     src="/medifootcare.web/images/area-map.png"
                     alt="訪問対応エリアのマップ。佐倉市を中心に千葉県内5市を示している。"
-                    className="h-auto w-full max-w-[300px]"
+                    className="h-auto w-full max-w-[300px] rounded-[40px] border-2 border-[#CBD5E1]"
                   />
                 </div>
               </div>
@@ -520,7 +759,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="フォームで相談する（新しいタブで開きます）"
-                  className="inline-flex items-center justify-center min-h-[52px] px-10 font-bold text-[16px] tracking-wide border-3 border-white bg-white text-[#0369A1] hover:bg-transparent hover:text-white transition-colors duration-150 cursor-pointer w-full md:w-auto border-[3px] rounded-sm"
+                  className="inline-flex items-center justify-center min-h-[52px] whitespace-nowrap px-10 font-bold text-[16px] tracking-wide border-3 border-white bg-white text-[#0369A1] hover:bg-transparent hover:text-white transition-colors duration-150 cursor-pointer w-full md:min-w-[260px] md:w-auto border-[3px] rounded-sm"
                 >
                   フォームで相談する
                 </a>
@@ -529,7 +768,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LINEで相談する（新しいタブで開きます）"
-                  className="inline-flex items-center justify-center min-h-[52px] px-10 font-bold text-[16px] tracking-wide border-[3px] border-white text-white hover:bg-white hover:text-[#0369A1] transition-colors duration-150 cursor-pointer w-full md:w-auto rounded-sm"
+                  className="inline-flex items-center justify-center min-h-[52px] whitespace-nowrap px-10 font-bold text-[16px] tracking-wide border-[3px] border-white text-white hover:bg-white hover:text-[#0369A1] transition-colors duration-150 cursor-pointer w-full md:min-w-[260px] md:w-auto rounded-sm"
                 >
                   LINEで相談する
                 </a>

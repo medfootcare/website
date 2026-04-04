@@ -94,13 +94,13 @@ export default function CasesPage() {
                   {/* Before/After 画像（ある場合のみ） */}
                   {"beforeImg" in item && item.beforeImg && item.afterImg && (
                     <div className="grid grid-cols-2 gap-0">
-                      <div className="relative">
-                        <span className="absolute left-3 top-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">BEFORE</span>
+                      <div className="flex flex-col">
+                        <span className="bg-[#64748B] px-3 py-1.5 text-center text-[15px] font-bold tracking-widest text-white md:text-[10px]">BEFORE</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt={`${item.title} 施術前`} className="w-full aspect-square object-cover" src={item.beforeImg} />
                       </div>
-                      <div className="relative">
-                        <span className="absolute left-3 top-3 z-10 border border-white/80 text-white text-[10px] tracking-widest px-2 py-0.5 bg-black/25 font-light">AFTER</span>
+                      <div className="flex flex-col">
+                        <span className="bg-[#0369A1] px-3 py-1.5 text-center text-[15px] font-bold tracking-widest text-white md:text-[10px]">AFTER</span>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img alt={`${item.title} 施術後`} className="w-full aspect-square object-cover" src={item.afterImg} />
                       </div>
@@ -111,22 +111,22 @@ export default function CasesPage() {
                     {/* タイトル */}
                     <div>
                       <h3 className="text-base font-medium text-on-surface">{item.title}</h3>
-                      <p className="text-sm text-on-surface-variant">{item.subtitle}</p>
+                      <p className="copy-note text-on-surface-variant">{item.subtitle}</p>
                     </div>
 
                     {/* 原因・状態・ケア */}
                     <div className="divide-y divide-[#CBD5E1]">
                       <div className="py-4">
-                        <p className="text-xs font-medium text-primary tracking-widest mb-1">主な原因</p>
-                        <p className="text-sm text-on-surface-variant">{item.cause}</p>
+                        <p className="mb-1 text-[15px] font-medium text-primary tracking-widest md:text-xs">主な原因</p>
+                        <p className="copy-note text-on-surface-variant">{item.cause}</p>
                       </div>
                       <div className="py-4">
-                        <p className="text-xs font-medium text-primary tracking-widest mb-1">状態</p>
-                        <p className="text-sm text-on-surface-variant">{item.state}</p>
+                        <p className="mb-1 text-[15px] font-medium text-primary tracking-widest md:text-xs">状態</p>
+                        <p className="copy-note text-on-surface-variant">{item.state}</p>
                       </div>
                       <div className="py-4">
-                        <p className="text-xs font-medium text-primary tracking-widest mb-1">ケアの概要</p>
-                        <p className="text-sm text-on-surface-variant">{item.care}</p>
+                        <p className="mb-1 text-[15px] font-medium text-primary tracking-widest md:text-xs">ケアの概要</p>
+                        <p className="copy-note text-on-surface-variant">{item.care}</p>
                       </div>
                     </div>
                   </div>

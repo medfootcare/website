@@ -21,7 +21,7 @@ export default function PersonalPage() {
           <div className="max-content-width">
             <div className="section-panel-hero space-y-6 py-10 text-center flex flex-col items-center">
               <PageHeroTitle lines={["ご自宅・ご本人への", "訪問フットケア"]} />
-              <p className="text-base leading-loose text-on-surface-variant">
+              <p className="copy-body-lg text-on-surface-variant">
                 看護師が直接ご自宅へ伺い、
                 <br className="md:hidden" />
                 安心・丁寧なフットケアをお届けします。
@@ -53,12 +53,12 @@ export default function PersonalPage() {
                 ].map((text, i) => (
                   <div
                     key={i}
-                    className="surface-card-soft flex items-center gap-4 text-left md:flex-col md:items-center md:text-center lg:flex-row lg:items-start lg:text-left"
+                    className="surface-card-soft flex items-center gap-4 text-left md:min-h-[112px] md:items-center md:text-left"
                   >
                     <span className="material-symbols-outlined text-primary text-2xl shrink-0 fill-icon">
                       check_circle
                     </span>
-                    <p className="min-w-0 break-keep text-base leading-loose text-on-surface">{text}</p>
+                    <p className="copy-body-lg min-w-0 break-keep text-on-surface">{text}</p>
                   </div>
                 ))}
               </div>
@@ -89,7 +89,7 @@ export default function PersonalPage() {
                   {
                     step: "01",
                     title: "お問い合わせ",
-                    desc: <>フォームまたはLINEでお気軽にご連絡ください。<br />2営業日以内にご返信します。</>,
+                    desc: <>フォームまたはLINEで<br className="md:hidden" />お気軽にご連絡ください。<br />2営業日以内にご返信します。</>,
                     icon: "mail",
                   },
                   {
@@ -107,13 +107,13 @@ export default function PersonalPage() {
                   {
                     step: "04",
                     title: "訪問・施術",
-                    desc: "担当スタッフがご自宅へお伺いし、丁寧に施術を行います（30〜60分）。",
+                    desc: <>担当スタッフがご自宅へお伺いし、<br className="md:hidden" /><br className="hidden md:block lg:hidden" />丁寧に施術を行います（30〜60分）。</>,
                     icon: "home_health",
                   },
                   {
                     step: "05",
                     title: "お会計",
-                    desc: "施術後に現地でお支払いいただきます。領収書を発行いたします。",
+                    desc: <>施術後に現地でお支払いいただきます。<br className="hidden md:block lg:hidden" />領収書を発行いたします。</>,
                     icon: "payments",
                   },
                 ].map((item) => (
@@ -121,9 +121,9 @@ export default function PersonalPage() {
                     key={item.step}
                     className="step-card border-l-2 border-primary pl-4 transition-transform duration-200 hover:translate-x-1"
                   >
-                    <p className="mb-1 text-sm font-medium tracking-wide text-primary">STEP {item.step}</p>
+                    <p className="mb-1 text-[15px] font-medium tracking-wide text-primary md:text-sm">STEP {item.step}</p>
                     <h3 className="mb-2 text-base font-medium text-on-surface">{item.title}</h3>
-                    <p className="break-keep text-sm leading-loose text-on-surface-variant">{item.desc}</p>
+                    <p className="copy-note break-keep text-on-surface-variant">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -151,12 +151,12 @@ export default function PersonalPage() {
                   },
                 ].map((item, i) => (
                   <div key={i} className="qa-card">
-                    <p className="mb-2 flex items-start gap-3 text-sm font-medium text-on-surface">
-                      <span className="shrink-0 text-sm font-medium text-primary">Q.</span>
+                    <p className="copy-note mb-2 flex items-start gap-3 font-medium text-on-surface">
+                      <span className="copy-note shrink-0 font-medium text-primary">Q.</span>
                       <span className="flex-1 min-w-0">{item.q}</span>
                     </p>
-                    <p className="flex items-start gap-3 text-base leading-relaxed text-on-surface-variant">
-                      <span className="shrink-0 text-base font-medium text-on-surface-variant">A.</span>
+                    <p className="copy-body-lg flex items-start gap-3 leading-relaxed text-on-surface-variant">
+                      <span className="copy-body-lg shrink-0 font-medium text-on-surface-variant">A.</span>
                       <span className="flex-1 min-w-0">{item.a}</span>
                     </p>
                   </div>
@@ -189,7 +189,7 @@ export default function PersonalPage() {
                     <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
                         <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h4>
-                        <p className="text-sm text-on-surface-variant break-keep">
+                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
                           爪ケア・角質ケア・保湿を含む、
                           <br className="md:hidden" />
                           基本のフットケア
@@ -198,7 +198,7 @@ export default function PersonalPage() {
                       <div className="shrink-0 text-center md:text-right">
                         <div className="flex items-end justify-center gap-2 md:block">
                           <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
-                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
                         </div>
                       </div>
                     </div>
@@ -206,7 +206,7 @@ export default function PersonalPage() {
                     <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
                         <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h4>
-                        <p className="text-sm text-on-surface-variant break-keep">
+                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
                           巻き爪ケアを含む、
                           <br className="md:hidden" />
                           より丁寧な個別ケア
@@ -215,7 +215,7 @@ export default function PersonalPage() {
                       <div className="shrink-0 text-center md:text-right">
                         <div className="flex items-end justify-center gap-2 md:block">
                           <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
-                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
                         </div>
                       </div>
                     </div>
@@ -223,7 +223,7 @@ export default function PersonalPage() {
                     <div className="flex flex-col items-center gap-5 py-5 text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
                       <div className="space-y-1">
                         <h4 className="text-[18px] font-medium text-on-surface md:text-base">個人宅訪問ケア</h4>
-                        <p className="text-sm text-on-surface-variant break-keep">
+                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
                           爪や足の状態に合わせて、
                           <br className="md:hidden" />
                           ご自宅で丁寧に行うフットケア
@@ -232,7 +232,7 @@ export default function PersonalPage() {
                       <div className="shrink-0 text-center md:text-right">
                         <div className="flex items-end justify-center gap-2 md:block">
                           <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
-                          <span className="mb-1 text-sm font-normal text-on-surface-variant md:mb-0">税込</span>
+                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
                         </div>
                       </div>
                     </div>
@@ -262,13 +262,9 @@ export default function PersonalPage() {
               <div className="mx-auto max-w-xl space-y-6 rounded-sm border-2 border-[#CBD5E1] bg-[#EFF6FF] px-5 py-6 text-center md:px-8 md:py-8">
                 <div className="space-y-3">
                   <h3 className="break-keep text-lg font-medium text-on-surface md:text-[20px]">はじめての方もお気軽にどうぞ</h3>
-                  <p className="break-keep text-sm leading-loose text-on-surface-variant">
+                  <p className="copy-note break-keep text-on-surface-variant">
                     「こんな状態でも大丈夫？」「どんなことをするの？」<br />
                     そんな疑問だけでも、まずはご相談ください。
-                  </p>
-                  <p className="break-keep text-sm font-medium text-on-surface">
-                    ご本人・ご家族<br />
-                    どちらからのご連絡も歓迎しています。
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 md:flex-row md:justify-center">
@@ -276,7 +272,7 @@ export default function PersonalPage() {
                     href={FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary-k w-full md:w-[200px] flex-col leading-tight"
+                    className="btn-primary-k w-full whitespace-nowrap md:w-[220px]"
                   >
                     <span>フォームで相談する</span>
                   </a>
@@ -284,7 +280,7 @@ export default function PersonalPage() {
                     href={LINE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-line-k w-full md:w-[200px] flex-col leading-tight"
+                    className="btn-line-k w-full whitespace-nowrap md:w-[220px]"
                   >
                     LINEで相談する
                   </a>

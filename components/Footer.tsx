@@ -19,7 +19,7 @@ export default function Footer() {
                 メディフットケア
               </span>
             </Link>
-            <p className="mx-auto max-w-sm text-sm leading-loose text-on-surface-variant md:mx-0">
+            <p className="mx-auto max-w-sm text-[15px] leading-loose text-on-surface-variant md:mx-0">
               爪の変形や足のお悩みに対して、
               <br />
               医師・看護師のみで構成されたチームで、
@@ -30,37 +30,43 @@ export default function Footer() {
 
           {/* リンク */}
           <div className="grid gap-8 text-center md:grid-cols-2 md:gap-1 md:text-left xl:gap-10">
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium tracking-wider text-on-surface">メニュー</h4>
-              <nav className="flex flex-col gap-3 items-center md:items-start">
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/personal">
+            <div className="space-y-3">
+              <h4 className="inline-flex flex-col items-center gap-2 text-[15px] font-medium tracking-[0.18em] text-[#0369A1] md:items-start">
+                <span>メニュー</span>
+                <span className="h-[3px] w-full bg-[#0369A1]" aria-hidden="true"></span>
+              </h4>
+              <nav className="flex flex-col gap-0 items-center md:items-start md:gap-3">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/personal">
                   ご利用者様・ご家族様へ
                 </Link>
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/facility">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/facility">
                   施設スタッフ様へ
                 </Link>
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/service">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/service">
                   料金
                 </Link>
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/cases">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/cases">
                   症例・お悩み
                 </Link>
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/faq">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/faq">
                   よくある質問
                 </Link>
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/about">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/about">
                   メディフットケアとは？
                 </Link>
               </nav>
             </div>
-            <div className="space-y-4">
-              <h4 className="text-sm font-medium tracking-wider text-on-surface">サポート</h4>
-              <nav className="flex flex-col gap-3 items-center md:items-start">
-                <Link className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm" href="/privacy">
+            <div className="space-y-3">
+              <h4 className="inline-flex flex-col items-center gap-2 text-[15px] font-medium tracking-[0.18em] text-[#0369A1] md:items-start">
+                <span>サポート</span>
+                <span className="h-[3px] w-full bg-[#0369A1]" aria-hidden="true"></span>
+              </h4>
+              <nav className="flex flex-col gap-0 items-center md:items-start md:gap-3">
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/privacy">
                   個人情報保護方針
                 </Link>
                 <a
-                  className="nav-link text-sm text-on-surface-variant hover:text-primary transition-colors md:text-[13px] xl:text-sm"
+                  className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm"
                   href={FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -74,7 +80,7 @@ export default function Footer() {
 
         {/* コピーライト */}
         <div className="border-t border-[#CBD5E1] pt-6">
-          <p className="text-center text-sm text-on-surface-variant md:text-left">
+          <p className="text-center text-[15px] text-on-surface-variant md:text-left">
             © 2026 メディフットケア. All rights reserved.
           </p>
         </div>

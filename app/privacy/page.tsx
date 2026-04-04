@@ -28,7 +28,7 @@ export default function PrivacyPage() {
           <div className="max-content-width">
             <div className="max-w-3xl mx-auto space-y-10">
               <div className="space-y-4">
-                <p className="text-sm text-on-surface-variant leading-loose">
+                <p className="copy-note text-on-surface-variant">
                   メディフットケア（以下「当サービス」）は、利用者様の個人情報の保護を重要な責務と認識し、
                   以下の方針に基づき適切に取り扱います。
                 </p>
@@ -70,11 +70,11 @@ export default function PrivacyPage() {
               ].map((section) => (
                 <div key={section.title} className="space-y-3">
                   <h2 className="text-base font-medium text-on-surface">{section.title}</h2>
-                  <p className="text-sm text-on-surface-variant leading-loose">{section.body}</p>
+                  <p className="copy-note text-on-surface-variant">{section.body}</p>
                 </div>
               ))}
 
-              <p className="text-sm text-on-surface-variant">制定日：2026年3月</p>
+              <p className="copy-note text-on-surface-variant">制定日：2026年3月</p>
             </div>
           </div>
         </section>

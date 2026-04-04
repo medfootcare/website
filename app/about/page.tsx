@@ -30,7 +30,7 @@ export default function AboutPage() {
               <h2 className="section-heading">概要</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="max-w-3xl mx-auto space-y-6 text-center text-[14px] text-on-surface-variant leading-loose md:text-base">
+            <div className="copy-body max-w-3xl mx-auto space-y-6 text-center text-on-surface-variant max-[344px]:text-[14px] md:text-base">
               <p>
                 メディフットケアは、医師の監修のもと、<br />
                 看護師資格を持つスタッフが
@@ -64,10 +64,10 @@ export default function AboutPage() {
                     { label: "代表者", value: "小西 克哉" },
                   ].map((row) => (
                     <tr key={row.label} className="border-b border-[#CBD5E1]">
-                      <th className="w-24 py-4 pr-3 text-left text-sm font-medium text-on-surface align-top md:w-36 md:pr-8">
+                      <th className="w-24 py-4 pr-3 text-left text-[15px] font-medium text-on-surface align-top md:w-36 md:pr-8">
                         {row.label}
                       </th>
-                      <td className="py-4 text-sm text-on-surface-variant leading-relaxed">
+                      <td className="copy-note py-4 text-on-surface-variant leading-relaxed">
                         {row.value}
                       </td>
                     </tr>
@@ -89,11 +89,11 @@ export default function AboutPage() {
               {[
                 { year: "2025年5月", event: "メディフットケア設立" },
                 { year: "2025年8月", event: "施設向けサービス開始" },
-                { year: "2026年3月", event: "訪問フットケアサービス開始" },
+                { year: "2026年3月", event: "個人向けサービス開始" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 border-b border-[#CBD5E1] py-5 md:gap-8">
-                  <span className="w-24 shrink-0 text-sm font-medium text-primary md:w-36">{item.year}</span>
-                  <span className="text-sm text-on-surface-variant leading-relaxed">{item.event}</span>
+                  <span className="w-24 shrink-0 text-[15px] font-medium text-primary md:w-36">{item.year}</span>
+                  <span className="copy-note text-on-surface-variant leading-relaxed">{item.event}</span>
                 </div>
               ))}
             </div>

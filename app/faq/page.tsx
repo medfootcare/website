@@ -16,8 +16,8 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
         aria-expanded={open}
       >
         <p className="font-medium text-on-surface flex items-start gap-3 flex-1">
-          <span className="text-primary font-medium text-base shrink-0">Q.</span>
-          <span>{q}</span>
+          <span className="shrink-0 text-[15px] font-medium text-primary md:text-base">Q.</span>
+          <span className="break-normal md:break-keep">{q}</span>
         </p>
         <span
           className="material-symbols-outlined text-primary shrink-0 mt-0.5 transition-transform duration-300"
@@ -28,9 +28,9 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
       </button>
       {open && (
         <div className="px-4 py-4 md:px-6">
-          <p className="text-base text-on-surface-variant leading-relaxed flex items-start gap-3">
-            <span className="text-base font-medium text-on-surface-variant shrink-0">A.</span>
-            <span className="flex-1 min-w-0">{a}</span>
+          <p className="copy-body-lg flex items-start gap-3 leading-relaxed text-on-surface-variant">
+            <span className="copy-body-lg shrink-0 font-medium text-on-surface-variant">A.</span>
+            <span className="flex-1 min-w-0 break-normal md:break-keep">{a}</span>
           </p>
         </div>
       )}
@@ -124,7 +124,7 @@ export default function FaqPage() {
               {/* アンダーライン型タブ切替 */}
               <div className="mb-8 flex border-b border-[#CBD5E1]">
                 <button
-                  className={`-mb-px flex-1 border-b-2 px-2 py-3 text-center text-xs font-medium transition-colors md:text-sm ${
+                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-1 py-3 text-center text-[14px] font-medium transition-colors md:text-sm ${
                     tab === "personal"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"
@@ -134,7 +134,7 @@ export default function FaqPage() {
                   ご利用者様・ご家族様向け
                 </button>
                 <button
-                  className={`-mb-px flex-1 border-b-2 px-2 py-3 text-center text-xs font-medium transition-colors md:text-sm ${
+                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-1 py-3 text-center text-[14px] font-medium transition-colors md:text-sm ${
                     tab === "facility"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"
