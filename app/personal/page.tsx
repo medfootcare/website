@@ -1,9 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import type { Metadata } from "next";
-import { FORM_URL, LINE_URL } from "@/constants/links";
+import PricingTable from "@/components/PricingTable";
 import PageHeroTitle from "@/components/PageHeroTitle";
+import InlineIconLink from "@/components/InlineIconLink";
+import StaticFaqList from "@/components/StaticFaqList";
+import ContactCtaCard from "@/components/ContactCtaCard";
+import { sharedPricingItems } from "@/data/pricing";
+import { personalFamilyFaqItems } from "@/data/faqs";
 
 export const metadata: Metadata = {
   title: "ご利用者様・ご家族様へ | メディフットケア",
@@ -58,7 +62,7 @@ export default function PersonalPage() {
                     <span className="material-symbols-outlined text-primary text-2xl shrink-0 fill-icon">
                       check_circle
                     </span>
-                    <p className="min-w-0 break-keep text-[15px] leading-loose text-on-surface max-[430px]:text-[13px] mobile-narrow:text-[13px] xl:text-base">{item.text}</p>
+                    <p className="min-w-0 break-keep text-[15px] leading-loose text-on-surface mobile-wide:text-[13px] mobile-narrow:text-[13px] xl:text-base">{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -66,7 +70,7 @@ export default function PersonalPage() {
               <div className="mt-8 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/medifootcare.web/images/personal-home-visit.png"
+                  src="/images/personal-home-visit.png"
                   alt=""
                   className="h-auto w-full max-w-64 object-contain"
                   aria-hidden="true"
@@ -139,36 +143,11 @@ export default function PersonalPage() {
                 <h2 className="section-heading">ご家族の方へ</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="mx-auto max-w-2xl space-y-4 text-left">
-                {[
-                  {
-                    q: "立ち会いは必要ですか？",
-                    a: "立ち会いは任意です。ご本人の意思確認ができれば、ご家族の立ち会いがなくても施術を行います。初回は立ち会っていただくと安心です。",
-                  },
-                  {
-                    q: "家族の代わりに申し込みできますか？",
-                    a: "はい、ご家族からのお申し込みも承っております。「親の爪が心配で…」といったご相談もお気軽にどうぞ。",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="qa-card">
-                    <p className="copy-note mb-2 flex items-start gap-3 font-medium text-on-surface">
-                      <span className="copy-note shrink-0 font-medium text-primary">Q.</span>
-                      <span className="flex-1 min-w-0">{item.q}</span>
-                    </p>
-                    <p className="copy-body-lg flex items-start gap-3 leading-relaxed text-on-surface-variant">
-                      <span className="copy-body-lg shrink-0 font-medium text-on-surface-variant">A.</span>
-                      <span className="flex-1 min-w-0">{item.a}</span>
-                    </p>
-                  </div>
-                ))}
-              </div>
+              <StaticFaqList items={personalFamilyFaqItems} />
               <div className="mt-6">
-                <Link className="text-link-inline group" href="/faq">
-                  <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-0.5">
-                    quiz
-                  </span>
+                <InlineIconLink href="/faq" icon="quiz">
                   よくある質問をもっと見る
-                </Link>
+                </InlineIconLink>
               </div>
             </div>
           </div>
@@ -182,70 +161,13 @@ export default function PersonalPage() {
                 <h2 className="section-heading">料金案内</h2>
                 <div className="section-heading-bar mb-4"></div>
               </div>
-              <div className="space-y-0 max-w-2xl mx-auto">
-                <div className="price-card text-left">
-                  <div className="space-y-0">
-                    {/* 料金行1 */}
-                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
-                      <div className="space-y-1">
-                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h4>
-                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
-                          爪ケア・角質ケア・保湿を含む、
-                          <br className="md:hidden" />
-                          基本のフットケア
-                        </p>
-                      </div>
-                      <div className="shrink-0 text-center md:text-right">
-                        <div className="flex items-end justify-center gap-2 md:block">
-                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥5,000</div>
-                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* 料金行2 */}
-                    <div className="flex flex-col items-center gap-5 py-5 border-b border-[#CBD5E1] text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
-                      <div className="space-y-1">
-                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h4>
-                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
-                          巻き爪ケアを含む、
-                          <br className="md:hidden" />
-                          より丁寧な個別ケア
-                        </p>
-                      </div>
-                      <div className="shrink-0 text-center md:text-right">
-                        <div className="flex items-end justify-center gap-2 md:block">
-                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥10,000</div>
-                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
-                        </div>
-                      </div>
-                    </div>
-                    {/* 料金行3 */}
-                    <div className="flex flex-col items-center gap-5 py-5 text-center md:flex-row md:items-start md:justify-between md:gap-6 md:text-left">
-                      <div className="space-y-1">
-                        <h4 className="text-[18px] font-medium text-on-surface md:text-base">個人宅訪問ケア</h4>
-                        <p className="text-[15px] text-on-surface-variant break-keep md:text-sm">
-                          爪や足の状態に合わせて、
-                          <br className="md:hidden" />
-                          ご自宅で丁寧に行うフットケア
-                        </p>
-                      </div>
-                      <div className="shrink-0 text-center md:text-right">
-                        <div className="flex items-end justify-center gap-2 md:block">
-                          <div className="text-[24px] font-medium text-primary whitespace-nowrap">¥12,000</div>
-                          <span className="mb-1 text-[15px] font-normal text-on-surface-variant md:mb-0 md:text-sm">税込</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="max-w-2xl mx-auto">
+                <PricingTable items={sharedPricingItems} />
               </div>
               <div className="mt-6">
-                <Link className="text-link-inline group" href="/service">
-                  <span className="material-symbols-outlined text-2xl transition-transform group-hover:translate-x-0.5">
-                    payments
-                  </span>
+                <InlineIconLink href="/service" icon="payments">
                   料金プランを詳しく見る
-                </Link>
+                </InlineIconLink>
               </div>
             </div>
           </div>
@@ -259,34 +181,16 @@ export default function PersonalPage() {
                 <h2 className="section-heading">お問い合わせ</h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="mx-auto max-w-xl space-y-6 rounded-sm border-2 border-[#CBD5E1] bg-[#EFF6FF] px-5 py-6 text-center md:px-8 md:py-8">
-                <div className="space-y-3">
-                  <h3 className="break-keep text-lg font-medium text-on-surface md:text-[20px]">はじめての方もお気軽にどうぞ</h3>
-                  <p className="copy-note break-keep text-on-surface-variant">
+              <ContactCtaCard
+                title="はじめての方もお気軽にどうぞ"
+                description={
+                  <>
                     「こんな状態でも大丈夫？」<br />
                     「どんなことをするの？」<br />
                     そんな疑問だけでも、まずはご相談ください。
-                  </p>
-                </div>
-                <div className="flex flex-col gap-4 md:flex-row md:justify-center">
-                  <a
-                    href={FORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary-k w-full whitespace-nowrap md:w-[220px]"
-                  >
-                    <span>フォームで相談する</span>
-                  </a>
-                  <a
-                    href={LINE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-line-k w-full whitespace-nowrap md:w-[220px]"
-                  >
-                    LINEで相談する
-                  </a>
-                </div>
-              </div>
+                  </>
+                }
+              />
             </div>
           </div>
         </section>

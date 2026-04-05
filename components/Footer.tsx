@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center justify-center gap-3 md:justify-start">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/medifootcare.web/images/logo.png"
+                src="/images/logo.png"
                 alt="メディフットケア"
                 className="h-10 w-auto"
               />

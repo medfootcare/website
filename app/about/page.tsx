@@ -30,7 +30,7 @@ export default function AboutPage() {
               <h2 className="section-heading">概要</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="copy-body max-w-3xl mx-auto space-y-6 text-center text-on-surface-variant max-[413px]:text-[12px] md:text-base">
+            <div className="copy-body max-w-3xl mx-auto space-y-6 text-center text-on-surface-variant mobile:text-[12px] md:text-base">
               <p>
                 メディフットケアは、医師の監修のもと、<br />
                 看護師資格を持つスタッフが
