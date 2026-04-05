@@ -18,7 +18,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/images/logo.png",
+    icon: "/medifootcare.web/images/logo.png",
   },
   title: "メディフットケア",
   description:

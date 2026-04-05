@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex min-w-0 items-center gap-2 shrink-0 md:gap-3" onClick={() => setOpen(false)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo.png"
+            src="/medifootcare.web/images/logo.png"
             alt="メディフットケア"
             className="h-8 w-auto md:h-9"
           />

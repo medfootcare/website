@@ -16,8 +16,8 @@ const cases = [
     state: "爪が異常に厚く、硬くなっている状態。自分では切れない・切ると痛いことが多い。",
     care: "専用の電動マシンで安全に削り、正常な厚さに整えます。定期的なケアで再発を防ぎます。",
     icon: "layers",
-    beforeImg: "/images/case_hikotsume_before.png",
-    afterImg: "/images/case_hikotsume_after.png",
+    beforeImg: "/medifootcare.web/images/case_hikotsume_before.png",
+    afterImg: "/medifootcare.web/images/case_hikotsume_after.png",
   },
   {
     title: "巻き爪",
@@ -26,8 +26,8 @@ const cases = [
     state: "爪の端が皮膚に食い込み、歩くたびに痛みが生じる。炎症を起こすこともある。",
     care: "爪に負担をかけず巻きを緩和するケアを行います。重症の場合は医療機関をご案内します。",
     icon: "rotate_right",
-    beforeImg: "/images/case_makizume_before.jpg",
-    afterImg: "/images/case_makizume_after.jpg",
+    beforeImg: "/medifootcare.web/images/case_makizume_before.jpg",
+    afterImg: "/medifootcare.web/images/case_makizume_after.jpg",
   },
   {
     title: "変形した爪",
@@ -36,8 +36,8 @@ const cases = [
     state: "爪の形が本来の形から変形してしまっている状態。放置するとさらに悪化する場合がある。",
     care: "状態に合わせた整え方を行い、これ以上悪化しないよう定期的にケアします。",
     icon: "transform",
-    beforeImg: "/images/case_henkei_before.png",
-    afterImg: "/images/case_henkei_after.png",
+    beforeImg: "/medifootcare.web/images/case_henkei_before.png",
+    afterImg: "/medifootcare.web/images/case_henkei_after.png",
   },
   {
     title: "魚の目（鶏眼）",
@@ -46,8 +46,8 @@ const cases = [
     state: "タコと似ているが中心に「芯」があり、歩くたびに強い痛みを感じる。",
     care: "芯の部分に注意しながら丁寧に除去します。状態によっては皮膚科への受診を勧める場合もあります。",
     icon: "gps_fixed",
-    beforeImg: "/images/case_uonome_before.png",
-    afterImg: "/images/case_uonome_after.png",
+    beforeImg: "/medifootcare.web/images/case_uonome_before.png",
+    afterImg: "/medifootcare.web/images/case_uonome_after.png",
   },
   {
     title: "タコ（胼胝）",

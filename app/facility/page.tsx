@@ -46,7 +46,7 @@ export default function FacilityPage() {
               <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0">
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">利用者様の満足度向上</span>
                   </h3>
@@ -56,7 +56,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">スタッフの負担軽減</span>
                   </h3>
@@ -74,7 +74,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">記録提供</span>
                   </h3>
@@ -84,7 +84,7 @@ export default function FacilityPage() {
                 </div>
                 <div className="surface-card space-y-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
+                  <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
                     <span className="text-[24px] font-medium">定期訪問で継続ケア</span>
                   </h3>
@@ -101,7 +101,7 @@ export default function FacilityPage() {
               <div className="mt-8 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/facility-patient-team.png"
+                  src="/medifootcare.web/images/facility-patient-team.png"
                   alt="スタッフと患者さんのイラスト"
                   className="w-full max-w-72"
                 />
