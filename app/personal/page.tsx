@@ -42,23 +42,23 @@ export default function PersonalPage() {
                 </h2>
                 <div className="section-heading-bar"></div>
               </div>
-              <div className="space-y-4 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 max-w-5xl mx-auto">
+              <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-6 xl:space-y-0 max-w-5xl mx-auto">
                 {[
-                  { key: "family-nail", text: <>親の爪が分厚くなって、<br className="md:hidden" />切り方が分からなくなった</> },
-                  { key: "self-nail", text: "自分では爪が切れなくなってきた" },
                   { key: "painful-walk", text: "巻き爪が痛くて歩くのが辛い" },
-                  { key: "no-hospital", text: <>病院に行くほどではないが、<br className="md:hidden" />足のケアをしてほしい</> },
-                  { key: "dementia", text: <><span className="block md:inline">認知症があり、</span>安全に爪切りができるか不安</> },
+                  { key: "self-nail", text: "自分では爪が切れなくなってきた" },
+                  { key: "family-nail", text: <><span className="block mobile-wide:hidden">親の爪が分厚くなって、切り方が分からなくなった</span><span className="hidden mobile-wide:block">親の爪が分厚くなって、<br />切り方が分からなくなった</span></> },
+                  { key: "no-hospital", text: <><span className="block mobile-wide:hidden">病院に行くほどではないが、足のケアをしてほしい</span><span className="hidden mobile-wide:block">病院に行くほどではないが、<br />足のケアをしてほしい</span></> },
+                  { key: "dementia", text: <><span className="block mobile-wide:hidden">認知症があり、安全に爪切りができるか不安</span><span className="hidden mobile-wide:block">認知症があり、<br />安全に爪切りができるか不安</span></> },
                   { key: "hard-to-go-out", text: "外出が難しいが、ケアを受けたい" },
                 ].map((item, i) => (
                   <div
                     key={item.key}
-                    className="surface-card-soft flex items-center gap-4 text-left md:min-h-[112px] md:items-center md:text-left"
+                    className="surface-card-soft flex items-center gap-4 text-left xl:min-h-[112px] xl:items-center xl:text-left"
                   >
                     <span className="material-symbols-outlined text-primary text-2xl shrink-0 fill-icon">
                       check_circle
                     </span>
-                    <p className="copy-body-lg min-w-0 break-keep text-on-surface">{item.text}</p>
+                    <p className="min-w-0 break-keep text-[15px] leading-loose text-on-surface max-[430px]:text-[13px] mobile-narrow:text-[13px] xl:text-base">{item.text}</p>
                   </div>
                 ))}
               </div>

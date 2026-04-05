@@ -49,6 +49,22 @@ medifootcare/
 - CSS
 - JavaScript
 
+## レスポンシブ運用
+
+スマホ向けの調整は、端末名ではなく幅ベースで次の3段階に統一します。
+
+- `mobile`: `412px` 以下
+- `mobile-narrow`: `344px` 以下
+- `mobile-mini`: `320px` 以下
+
+### Tailwindの使い方
+
+- 通常のスマホ調整は `mobile:` を使う
+- 狭いスマホだけの文字サイズや改行調整は `mobile-narrow:` を使う
+- 最小幅の救済だけ `mobile-mini:` を使う
+- `max-[344px]` のような都度書きは増やさず、上記の名前付きスクリーンを優先する
+- タブレットは `md:`、PCは `xl:` を使い、既存の基準は変更しない
+
 ## 開発補助
 
 🤖 Built with [Claude Code](https://claude.com/claude-code)

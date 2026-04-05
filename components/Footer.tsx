@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* コピーライト */}
         <div className="border-t border-[#CBD5E1] pt-6">
-          <p className="text-center text-[15px] text-on-surface-variant md:text-left">
+          <p className="text-center text-[15px] tracking-normal text-on-surface-variant mobile-narrow:text-[9px] mobile-narrow:whitespace-nowrap mobile-mini:text-[10px]">
             © 2026 メディフットケア. All rights reserved.
           </p>
         </div>

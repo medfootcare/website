@@ -124,7 +124,7 @@ export default function FaqPage() {
               {/* アンダーライン型タブ切替 */}
               <div className="mb-8 flex border-b border-[#CBD5E1]">
                 <button
-                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-1 py-3 text-center text-[14px] font-medium transition-colors md:text-sm ${
+                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-0.5 py-3 text-center text-[14px] font-medium transition-colors mobile-narrow:text-[12px] mobile-mini:text-[11px] md:text-sm ${
                     tab === "personal"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"
@@ -134,7 +134,7 @@ export default function FaqPage() {
                   ご利用者様・ご家族様向け
                 </button>
                 <button
-                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-1 py-3 text-center text-[14px] font-medium transition-colors md:text-sm ${
+                  className={`-mb-px flex-1 whitespace-nowrap border-b-2 px-0.5 py-3 text-center text-[14px] font-medium transition-colors mobile-narrow:text-[12px] mobile-mini:text-[11px] md:text-sm ${
                     tab === "facility"
                       ? "border-primary text-primary"
                       : "border-transparent text-on-surface-variant hover:text-on-surface"

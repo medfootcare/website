@@ -8,6 +8,12 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        "mobile-wide": { max: "460px" },
+        mobile: { max: "412px" },
+        "mobile-narrow": { max: "344px" },
+        "mobile-mini": { max: "320px" },
+      },
       colors: {
         // Accessible & Ethical：WCAG AAA カラーパレット
         primary: "#0369A1",           // CTA ブルー（コントラスト 7:1+）

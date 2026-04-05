@@ -38,10 +38,10 @@ export default function ServicePage() {
                       <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設ケア</h3>
                       <p className="copy-note text-on-surface-variant break-keep">
                         爪ケア・角質ケア・保湿を含む、
-                        <br className="md:hidden" />
+                        <br className="xl:hidden" />
                         基本のフットケア
                       </p>
-                      <p className="copy-note text-on-surface-variant">目安：約30分</p>
+                      <p className="copy-note inline-block border-b border-[#CBD5E1] pb-0.5 text-on-surface-variant">目安：約30分</p>
                     </div>
                     <div className="shrink-0 text-center md:text-right">
                       <div className="flex items-end justify-center gap-2 md:block">
@@ -55,10 +55,10 @@ export default function ServicePage() {
                       <h3 className="text-[18px] font-medium text-on-surface md:text-base">ご施設しっかりケア</h3>
                       <p className="copy-note text-on-surface-variant break-keep">
                         巻き爪ケアを含む、
-                        <br className="md:hidden" />
+                        <br className="xl:hidden" />
                         より丁寧な個別ケア
                       </p>
-                      <p className="copy-note text-on-surface-variant">目安：約60分</p>
+                      <p className="copy-note inline-block border-b border-[#CBD5E1] pb-0.5 text-on-surface-variant">目安：約60分</p>
                     </div>
                     <div className="shrink-0 text-center md:text-right">
                       <div className="flex items-end justify-center gap-2 md:block">
@@ -72,10 +72,10 @@ export default function ServicePage() {
                       <h3 className="text-[18px] font-medium text-on-surface md:text-base">個人宅訪問ケア</h3>
                       <p className="copy-note text-on-surface-variant break-keep">
                         爪や足の状態に合わせて、
-                        <br className="md:hidden" />
+                        <br className="xl:hidden" />
                         ご自宅で丁寧に行うフットケア
                       </p>
-                      <p className="copy-note text-on-surface-variant">目安：約60分</p>
+                      <p className="copy-note inline-block border-b border-[#CBD5E1] pb-0.5 text-on-surface-variant">目安：約60分</p>
                     </div>
                     <div className="shrink-0 text-center md:text-right">
                       <div className="flex items-end justify-center gap-2 md:block">

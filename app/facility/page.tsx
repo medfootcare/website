@@ -63,6 +63,8 @@ export default function FacilityPage() {
                     難易度が高い業務。<br />
                     専門家に委託することで、
                     <br className="md:hidden" />
+                    <br className="hidden md:block xl:hidden" />
+                    <br className="hidden xl:block" />
                     スタッフが本来のケアに集中できます。
                   </p>
                 </div>
@@ -70,7 +72,7 @@ export default function FacilityPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/medifootcare.web/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
-                    <span className="text-[24px] font-medium">安全・安心の記録提供</span>
+                    <span className="text-[24px] font-medium">記録提供</span>
                   </h3>
                   <p className="copy-note break-keep text-on-surface-variant">
                     施術後に記録をご提供します。<br />施設のフォーマットへの対応も可能です。
@@ -83,7 +85,7 @@ export default function FacilityPage() {
                     <span className="text-[24px] font-medium">定期訪問で継続ケア</span>
                   </h3>
                   <p className="copy-note break-keep text-on-surface-variant">
-                    月1回など、ご希望の頻度で定期訪問します。<br />
+                    ご希望の頻度で定期訪問します。<br />
                     曜日・時間帯は施設のスケジュールに
                     <br className="md:hidden" />
                     <br className="hidden md:block xl:hidden" />
@@ -135,7 +137,7 @@ export default function FacilityPage() {
                   {
                     step: "04",
                     title: "定期訪問開始",
-                    desc: <>ご希望のスケジュールで定期訪問を<br className="hidden max-[344px]:block" />開始します。<br />施術記録を毎回ご提供します。</>,
+                    desc: <>ご希望のスケジュールで定期訪問を<br className="hidden mobile-narrow:block" />開始します。<br />施術記録を毎回ご提供します。</>,
                     icon: "event_repeat",
                   },
                 ].map((item) => (

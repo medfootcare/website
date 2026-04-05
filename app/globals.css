@@ -380,6 +380,50 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 412px) {
+  body {
+    font-size: 14px;
+  }
+
+  .nav-link,
+  .btn-primary-k,
+  .btn-outline-k,
+  .btn-line-k,
+  .feature-number,
+  .copy-body,
+  .copy-body-lg,
+  .copy-note {
+    font-size: 13px;
+  }
+
+  .section-heading,
+  .section-heading-white {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 13px;
+  }
+
+  .nav-link,
+  .btn-primary-k,
+  .btn-outline-k,
+  .btn-line-k,
+  .feature-number,
+  .copy-body,
+  .copy-body-lg,
+  .copy-note {
+    font-size: 12px;
+  }
+
+  .section-heading,
+  .section-heading-white {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 17px;
