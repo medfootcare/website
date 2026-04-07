@@ -6,6 +6,7 @@ import PageHeroTitle from "@/components/PageHeroTitle";
 export const metadata: Metadata = {
   title: "症例・お悩み | メディフットケア",
   description: "肥厚爪・巻き爪・変形した爪・角質・タコ・魚の目など、よくある症例とケア方法をご紹介します。",
+  alternates: { canonical: "/cases" },
 };
 
 const cases = [

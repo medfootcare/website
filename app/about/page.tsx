@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "メディフットケアとは？ | メディフットケア",
   description: "メディフットケアの概要・企業情報・沿革をご紹介します。",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

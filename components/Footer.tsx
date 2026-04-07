@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* リンク */}
-          <div className="grid gap-8 text-center md:grid-cols-2 md:gap-1 md:text-left xl:gap-10">
+          <div className="grid gap-8 text-center md:grid-cols-[1fr_auto] md:gap-1 md:text-left xl:gap-10">
             <div className="space-y-3">
               <h4 className="inline-flex flex-col items-center gap-2 text-[15px] font-medium tracking-[0.18em] text-[#0369A1] md:items-start">
                 <span>メニュー</span>
@@ -64,6 +64,9 @@ export default function Footer() {
               <nav className="flex flex-col gap-0 items-center md:items-start md:gap-3">
                 <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm" href="/privacy">
                   個人情報保護方針
+                </Link>
+                <Link className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm whitespace-nowrap" href="/commercial-transaction">
+                  特定商取引法に基づく表記
                 </Link>
                 <a
                   className="nav-link py-0.5 leading-tight text-[15px] text-on-surface-variant hover:text-primary transition-colors md:py-1 md:text-[13px] xl:text-sm"

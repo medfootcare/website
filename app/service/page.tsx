@@ -8,6 +8,7 @@ import { servicePricingItems } from "@/data/pricing";
 export const metadata: Metadata = {
   title: "料金 | メディフットケア",
   description: "メディフットケアの料金一覧のご案内。足爪ケア・角質ケア・巻き爪ケアなど。",
+  alternates: { canonical: "/service" },
 };
 
 export default function ServicePage() {

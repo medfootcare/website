@@ -12,6 +12,7 @@ import { personalFamilyFaqItems } from "@/data/faqs";
 export const metadata: Metadata = {
   title: "ご利用者様・ご家族様へ | メディフットケア",
   description: "ご自宅へ訪問する訪問フットケアのご案内。ご利用の流れ・料金・安心ポイントをご説明します。",
+  alternates: { canonical: "/personal" },
 };
 
 export default function PersonalPage() {

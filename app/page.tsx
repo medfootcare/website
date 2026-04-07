@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +10,15 @@ import { FORM_URL, LINE_URL } from "@/constants/links";
 import { sharedPricingItems } from "@/data/pricing";
 import { homeFaqItems } from "@/data/faqs";
 import { KEEP_ALL_STYLE } from "@/lib/textStyles";
+
+export const metadata: Metadata = {
+  title: "メディフットケア | 高齢者専門の訪問フットケアサービス",
+  description:
+    "メディフットケアは、施設・ご自宅に伺う高齢者専門のフットケアサービスです。巻き爪・肥厚爪・角質ケアをプロのスタッフが丁寧にケアします。千葉県八千代市・佐倉市・四街道市・印西市・千葉市対応。",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

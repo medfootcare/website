@@ -12,6 +12,7 @@ import { facilityVisitFaqItems } from "@/data/faqs";
 export const metadata: Metadata = {
   title: "施設スタッフ様へ | メディフットケア",
   description: "有料老人ホーム・特養・サ高住への訪問フットケアサービス。体験会から始められます。",
+  alternates: { canonical: "/facility" },
 };
 
 export default function FacilityPage() {
