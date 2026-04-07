@@ -4,35 +4,53 @@
 
 ## URL
 
-https://xiaosenai8.github.io/medifootcare.web/
+https://medifootcare.jp/
 
 ## フォルダ構成
 
 ```
-medifootcare/
-├── index.html              # トップページ
-├── html/
-│   ├── faq.html            # よくある質問
-│   ├── contact.html        # お問い合わせ
-│   ├── privacy.html        # プライバシーポリシー
-│   ├── thank-you.html      # フォーム送信完了
-│   ├── personal/           # 個人向けページ
-│   │   ├── services.html   # サービス紹介
-│   │   ├── flow.html       # ご利用の流れ
-│   │   ├── pricing.html    # 料金案内
-│   │   ├── cases.html      # よくある症例・お悩み
-│   │   ├── family.html     # ご家族向け説明
-│   │   └── apply.html      # 依頼フォーム
-│   └── facility/           # 施設向けページ
-│       ├── services.html   # サービス紹介
-│       ├── flow.html       # 導入の流れ
-│       ├── trial.html      # 体験会について
-│       └── apply.html      # 依頼・体験会申込みフォーム
-├── css/
-│   └── style.css           # スタイルシート
-├── js/
-│   └── main.js             # JavaScript
-└── images/                 # 画像素材
+medifootcare.web/
+├── app/                          # Next.js App Router
+│   ├── layout.tsx                # 共通レイアウト（メタデータ・JSON-LD）
+│   ├── page.tsx                  # トップページ
+│   ├── globals.css               # グローバルスタイル
+│   ├── about/page.tsx            # メディフットケアとは？
+│   ├── cases/page.tsx            # 症例・お悩み
+│   ├── commercial-transaction/page.tsx  # 特定商取引法に基づく表記
+│   ├── facility/page.tsx         # 施設スタッフ様へ
+│   ├── faq/
+│   │   ├── layout.tsx            # FAQメタデータ・JSON-LD
+│   │   └── page.tsx              # よくある質問
+│   ├── personal/page.tsx         # ご利用者様・ご家族様へ
+│   ├── privacy/page.tsx          # プライバシーポリシー
+│   └── service/page.tsx          # 料金
+├── components/                   # 共通コンポーネント
+│   ├── ContactButtons.tsx        # お問い合わせボタン
+│   ├── ContactCtaCard.tsx        # CTAカード
+│   ├── Footer.tsx                # フッター
+│   ├── Header.tsx                # ヘッダー
+│   ├── InlineIconLink.tsx        # アイコン付きリンク
+│   ├── PageHeroTitle.tsx         # ページタイトル
+│   ├── PricingTable.tsx          # 料金テーブル
+│   └── StaticFaqList.tsx         # FAQ一覧
+├── constants/
+│   └── links.ts                  # 外部リンク定数
+├── data/
+│   ├── faqs.ts                   # FAQ データ
+│   └── pricing.tsx               # 料金データ
+├── lib/
+│   └── textStyles.ts             # テキストスタイル定義
+├── public/
+│   ├── images/                   # 画像素材
+│   │   ├── logo.png              # サービスロゴ
+│   │   └── ogp.png               # OGP画像
+│   ├── robots.txt                # クローラー設定
+│   └── sitemap.xml               # サイトマップ
+├── CNAME                         # カスタムドメイン設定
+├── next.config.ts                # Next.js設定
+├── tailwind.config.ts            # Tailwind CSS設定
+├── tsconfig.json                 # TypeScript設定
+└── package.json
 ```
 
 ## 素材・クレジット
@@ -43,28 +61,61 @@ medifootcare/
 | `images/nurse-illustration.png` | フットケアスタッフイラスト | [看護師イラスト素材](https://kango.mynavi.jp/contents/nurseplus/illustration/) |
 | `images/area-map.png` | 千葉県マップ | [千葉県マップ for PowerPoint](https://power-point-design.com/ppt-design/chiba-for-powerpoint/) |
 
+## 開発の始め方
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動（http://localhost:3000）
+npm run dev
+
+# ビルド（静的HTML出力 → out/ ディレクトリ）
+npm run build
+
+# Lint
+npm run lint
+```
+
+## デプロイ
+
+GitHub Pages を使用しています。`main` ブランチにpushすると、GitHub Actions が自動でビルド・デプロイします。
+
+1. `main` にpush
+2. `.github/workflows/deploy.yml` が実行される
+3. `npm run build` で静的HTMLを生成（`out/`）
+4. GitHub Pages にデプロイ
+
 ## 使用技術
 
-- HTML
-- CSS
-- JavaScript
+- [Next.js](https://nextjs.org/) 15 (App Router / Static Export)
+- [React](https://react.dev/) 19
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) 4
 
 ## レスポンシブ運用
 
-スマホ向けの調整は、端末名ではなく幅ベースで次の3段階に統一します。
+スマホ向けの調整は、端末名ではなく幅ベースで次の4段階に統一します。
 
-- `mobile`: `412px` 以下
-- `mobile-narrow`: `344px` 以下
-- `mobile-mini`: `320px` 以下
+| スクリーン名 | 最大幅 | 用途 |
+|---|---|---|
+| `mobile-wide` | `460px` | やや狭い画面向けの調整 |
+| `mobile` | `412px` | 通常のスマホ調整 |
+| `mobile-narrow` | `344px` | 狭いスマホの文字サイズ・改行調整 |
+| `mobile-mini` | `320px` | 最小幅の救済 |
 
 ### Tailwindの使い方
 
-- 通常のスマホ調整は `mobile:` を使う
-- 狭いスマホだけの文字サイズや改行調整は `mobile-narrow:` を使う
-- 最小幅の救済だけ `mobile-mini:` を使う
-- `max-[344px]` のような都度書きは増やさず、上記の名前付きスクリーンを優先する
+- `max-[XXXpx]` のような都度書きは増やさず、上記の名前付きスクリーンを優先する
 - タブレットは `md:`、PCは `xl:` を使い、既存の基準は変更しない
+
+## SEO対応
+
+- **メタデータ**: 全ページにtitle・description・canonical URLを設定
+- **OGP / Twitter Card**: SNS共有時のサムネイル画像・タイトル・説明文を設定
+- **構造化データ（JSON-LD）**: LocalBusiness（全ページ）、FAQPage（よくある質問）
+- **sitemap.xml / robots.txt**: 検索エンジン向けのクロール設定
 
 ## 開発補助
 
-🤖 Built with [Claude Code](https://claude.com/claude-code)
+🤖 Built with [Claude Code](https://claude.com/claude-code) and [Codex](https://openai.com/index/codex/)
