@@ -19,8 +19,9 @@ medifootcare.web/
 │   ├── commercial-transaction/page.tsx  # 特定商取引法に基づく表記
 │   ├── facility/page.tsx         # 施設スタッフ様へ
 │   ├── faq/
-│   │   ├── layout.tsx            # FAQメタデータ・JSON-LD
-│   │   └── page.tsx              # よくある質問
+│   │   ├── page.tsx              # よくある質問（準備中表示）
+│   │   ├── FaqSwitch.tsx         # プレビュー切替
+│   │   └── FaqContent.tsx        # FAQ本体コンテンツ
 │   ├── personal/page.tsx         # ご利用者様・ご家族様へ
 │   ├── privacy/page.tsx          # プライバシーポリシー
 │   └── service/page.tsx          # 料金
@@ -77,6 +78,13 @@ npm run build
 npm run lint
 ```
 
+## カスタムドメイン
+
+- 本番URL: https://medifootcare.jp/
+- GitHub Pages のカスタムドメイン機能で配信
+- `basePath` は未設定（ルート `/` で配信）
+- 画像等のアセットパスはすべて `/images/...` のように絶対パスで指定
+
 ## デプロイ
 
 GitHub Pages を使用しています。`main` ブランチにpushすると、GitHub Actions が自動でビルド・デプロイします。
@@ -84,7 +92,7 @@ GitHub Pages を使用しています。`main` ブランチにpushすると、Gi
 1. `main` にpush
 2. `.github/workflows/deploy.yml` が実行される
 3. `npm run build` で静的HTMLを生成（`out/`）
-4. GitHub Pages にデプロイ
+4. GitHub Pages にデプロイ（カスタムドメイン medifootcare.jp で配信）
 
 ## 使用技術
 
@@ -101,6 +109,7 @@ GitHub Pages を使用しています。`main` ブランチにpushすると、Gi
 |---|---|---|
 | `mobile-wide` | `460px` | やや狭い画面向けの調整 |
 | `mobile` | `412px` | 通常のスマホ調整 |
+| `mobile-small` | `360px` | 小型スマホの改行調整 |
 | `mobile-narrow` | `344px` | 狭いスマホの文字サイズ・改行調整 |
 | `mobile-mini` | `320px` | 最小幅の救済 |
 

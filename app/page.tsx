@@ -92,7 +92,7 @@ export default function Home() {
                 <img
                   alt="利用者と医療・介護スタッフが笑顔で手をつなぐイメージ"
                   className="w-full h-full object-contain"
-                  src="/medifootcare.web/images/hero-care-team.png"
+                  src="/images/hero-care-team.png"
                 />
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 <div className="w-full max-w-72 overflow-hidden" style={{ height: "200px" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/medifootcare.web/images/nayami-illustration.png"
+                    src="/images/nayami-illustration.png"
                     alt="足元のお悩みを抱えている方のイラスト"
                     className="w-full"
                     style={{ marginTop: "-12%", marginBottom: "-20%" }}
@@ -193,8 +193,8 @@ export default function Home() {
                   {
                     num: 1,
                     icons: [
-                      { src: "/medifootcare.web/images/icons/doctor.png", alt: "医師のアイコン" },
-                      { src: "/medifootcare.web/images/icons/nurse.png", alt: "看護師のアイコン" },
+                      { src: "/images/icons/doctor.png", alt: "医師のアイコン" },
+                      { src: "/images/icons/nurse.png", alt: "看護師のアイコン" },
                     ],
                     title: (
                       <>
@@ -220,7 +220,7 @@ export default function Home() {
                   },
                   {
                     num: 2,
-                    icons: [{ src: "/medifootcare.web/images/icons/wheelchair.png", alt: "" }],
+                    icons: [{ src: "/images/icons/wheelchair.png", alt: "" }],
                     title: (<>ベッド・車椅子でも<br className="hidden mobile-mini:block" />施術可能</>),
                     desc: (
                       <>
@@ -250,7 +250,7 @@ export default function Home() {
                 {[
                   {
                     num: 4,
-                    icons: [{ src: "/medifootcare.web/images/icons/nail-trouble.png", alt: "" }],
+                    icons: [{ src: "/images/icons/nail-trouble.png", alt: "" }],
                     title: (
                       <>
                         <span className="whitespace-nowrap">巻き爪・分厚い爪など</span>
@@ -272,7 +272,7 @@ export default function Home() {
                   },
                   {
                     num: 3,
-                    icons: [{ src: "/medifootcare.web/images/icons/report.png", alt: "" }],
+                    icons: [{ src: "/images/icons/report.png", alt: "" }],
                     title: (<>毎回ケアごとに<br className="hidden mobile-mini:block" />報告書を作成</>),
                     desc: (
                       <>
@@ -306,7 +306,7 @@ export default function Home() {
                   {[
                     {
                       num: 5,
-                      icons: [{ src: "/medifootcare.web/images/icons/equipment.png", alt: "" }],
+                      icons: [{ src: "/images/icons/equipment.png", alt: "" }],
                       title: (
                         <>
                           専用機器を使用した
@@ -356,8 +356,8 @@ export default function Home() {
                     {
                       num: 1,
                       icons: [
-                        { src: "/medifootcare.web/images/icons/doctor.png", alt: "医師のアイコン" },
-                        { src: "/medifootcare.web/images/icons/nurse.png", alt: "看護師のアイコン" },
+                        { src: "/images/icons/doctor.png", alt: "医師のアイコン" },
+                        { src: "/images/icons/nurse.png", alt: "看護師のアイコン" },
                       ],
                       title: "医師・看護師によるチームケア",
                       desc: (
@@ -372,7 +372,7 @@ export default function Home() {
                     },
                     {
                       num: 2,
-                      icons: [{ src: "/medifootcare.web/images/icons/wheelchair.png", alt: "" }],
+                      icons: [{ src: "/images/icons/wheelchair.png", alt: "" }],
                       title: "ベッド・車椅子でも施術可能",
                       desc: (
                         <>
@@ -384,7 +384,7 @@ export default function Home() {
                     },
                     {
                       num: 4,
-                      icons: [{ src: "/medifootcare.web/images/icons/nail-trouble.png", alt: "" }],
+                      icons: [{ src: "/images/icons/nail-trouble.png", alt: "" }],
                     title: (
                       <>
                         <span className="whitespace-nowrap">巻き爪・分厚い爪など</span>
@@ -424,7 +424,7 @@ export default function Home() {
                   {[
                     {
                       num: 3,
-                      icons: [{ src: "/medifootcare.web/images/icons/report.png", alt: "" }],
+                      icons: [{ src: "/images/icons/report.png", alt: "" }],
                       title: "毎回ケアごとに報告書を作成",
                       desc: (
                         <>
@@ -438,7 +438,7 @@ export default function Home() {
                     },
                     {
                       num: 5,
-                      icons: [{ src: "/medifootcare.web/images/icons/equipment.png", alt: "" }],
+                      icons: [{ src: "/images/icons/equipment.png", alt: "" }],
                       title: (
                         <>
                           専用機器を使用した
@@ -490,15 +490,15 @@ export default function Home() {
               <div className="space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0">
                 {[
                   {
-                    beforeSrc: "/medifootcare.web/images/case_henkei_before.png",
-                    afterSrc: "/medifootcare.web/images/case_henkei_after.png",
+                    beforeSrc: "/images/case_henkei_before.png",
+                    afterSrc: "/images/case_henkei_after.png",
                     beforeAlt: "変形爪 施術前の写真",
                     afterAlt: "変形爪 施術後の写真",
                     title: "変形爪のケア",
                   },
                   {
-                    beforeSrc: "/medifootcare.web/images/case_makizume_before.jpg",
-                    afterSrc: "/medifootcare.web/images/case_makizume_after.jpg",
+                    beforeSrc: "/images/case_makizume_before.jpg",
+                    afterSrc: "/images/case_makizume_after.jpg",
                     beforeAlt: "巻き爪 施術前の写真",
                     afterAlt: "巻き爪 施術後の写真",
                     title: "巻き爪のケア",
@@ -583,7 +583,7 @@ export default function Home() {
               <div className="mt-10 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/medifootcare.web/images/nurse-illustration.png"
+                  src="/images/nurse-illustration.png"
                   alt="看護師のイラスト"
                   className="w-full max-w-40 opacity-90"
                 />
@@ -676,7 +676,7 @@ export default function Home() {
                 <div className="hidden shrink-0 justify-center xl:flex xl:justify-end">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/medifootcare.web/images/area-map.png"
+                    src="/images/area-map.png"
                     alt="訪問対応エリアのマップ。佐倉市を中心に千葉県内5市を示している。"
                     className="h-auto w-full max-w-[300px] rounded-[40px] border-2 border-[#CBD5E1]"
                   />

@@ -19,7 +19,7 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   metadataBase: new URL("https://medifootcare.jp"),
   icons: {
-    icon: "/medifootcare.web/images/logo.png",
+    icon: "/images/logo.png",
   },
   title: "メディフットケア",
   description:

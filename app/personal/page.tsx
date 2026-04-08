@@ -70,7 +70,7 @@ export default function PersonalPage() {
               <div className="mt-8 flex justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/medifootcare.web/images/personal-home-visit.png"
+                  src="/images/personal-home-visit.png"
                   alt=""
                   className="h-auto w-full max-w-64 object-contain"
                   aria-hidden="true"
