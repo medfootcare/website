@@ -24,7 +24,7 @@ const transactionItems = [
   { label: "サイトURL", content: "https://medifootcare.jp" },
   {
     label: "サービス料金",
-    content: "各サービスページに記載の金額（税込）",
+    content: "料金ページに記載の金額（税込）",
   },
   {
     label: "サービス料金以外にかかる費用",
@@ -32,7 +32,7 @@ const transactionItems = [
   },
   {
     label: "支払方法",
-    content: "クレジットカード決済・銀行振込・PayPay・Apple Pay・Google Pay",
+    content: "クレジットカード・銀行振込・PayPay・コンビニ決済・Link",
   },
   {
     label: "支払時期",
@@ -44,7 +44,15 @@ const transactionItems = [
   },
   {
     label: "キャンセル・返金について",
-    content: "施術前日までのキャンセルは無料。当日キャンセルは料金の50%をいただきます。",
+    content: "施術前日までのキャンセルは無料。\n当日キャンセルは料金の50%をいただきます。",
+  },
+  {
+    label: "返品・交換について",
+    content: "サービスの性質上、施術完了後の返品・交換はお受けできません。",
+  },
+  {
+    label: "申込みの有効期限",
+    content: "特にありません。",
   },
 ];
 
