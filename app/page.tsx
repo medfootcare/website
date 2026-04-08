@@ -51,12 +51,12 @@ export default function Home() {
               {/* メイン見出し：超大・ボールド */}
               <h1
                 id="hero-heading"
-                className="text-[38px] font-bold leading-[1.25] tracking-[-0.01em] text-[#111827] mb-6 break-keep mobile-mini:text-[32px] md:text-[46px] xl:text-[60px]"
+                className="text-[38px] font-bold leading-[1.25] tracking-[-0.01em] text-[#111827] mb-6 break-keep mobile:text-[32px] mobile-mini:text-[28px] md:text-[46px] xl:text-[60px]"
                 style={KEEP_ALL_STYLE}
               >
                 大切な足元に
                 <br />
-                やさしさと安心を
+                確かな技術と安心を
               </h1>
 
               {/* サブテキスト */}
@@ -156,22 +156,14 @@ export default function Home() {
               </div>
               <div className="md:max-w-[720px] mx-auto">
                 <p className="copy-body text-[#334155] break-keep md:text-[17px]" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
-                  メディフットケアは、
-                  <br className="md:hidden" />
-                  医師・看護師が直接ご自宅や施設へ伺い、
-                  <br className="md:hidden" />
-                  <br className="hidden md:block xl:hidden" />
-                  <br className="hidden xl:block" />
-                  足元のケアをお届けする
-                  <br className="md:hidden" />
-                  訪問フットケアサービスです。
-                  <br className="md:hidden" />
-                  <br className="hidden md:block xl:hidden" />
-                  <br className="md:hidden" />
-                  <br className="hidden xl:block" />
-                  爪のトラブルや足の痛みでお悩みの方に、
-                  <br className="md:hidden" />
-                  専門的なケアを提供します。
+                  医師・看護師による<br className="md:hidden" />訪問フットケアサービスです。
+                </p>
+                <p className="copy-body text-[#334155] break-keep md:text-[17px] mt-6" style={{ wordBreak: "keep-all", overflowWrap: "break-word" }}>
+                  爪の変形や足のお悩みに対して、
+                  <br />
+                  医師・看護師のみで構成されたチームで、
+                  <br />
+                  確かな技術と安心をお届けします。
                 </p>
                 <div className="mt-5">
                   <Link className="text-link-inline group" href="/about">
@@ -217,7 +209,7 @@ export default function Home() {
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
                         看護師資格を持つスタッフが
-                        <br className="hidden mobile-narrow:block" />
+                        <br className="hidden mobile-small:block" />
                         <br className="hidden md:block xl:hidden" />
                         施術を行います。
                         <br className="md:hidden" />
@@ -229,16 +221,13 @@ export default function Home() {
                   {
                     num: 2,
                     icons: [{ src: "/medifootcare.web/images/icons/wheelchair.png", alt: "" }],
-                    title: "ベッド・車椅子でも施術可能",
+                    title: (<>ベッド・車椅子でも<br className="hidden mobile-mini:block" />施術可能</>),
                     desc: (
                       <>
-                        外出が難しい方も安心。
+                        ベッドや車椅子に座ったままの状態で
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
-                        ベッドや車椅子に座ったままの状態で、
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        ご自宅や施設でケアを受けられます。
+                        居室や浴室などご希望の場所で<br />ケアをうけられます。
                       </>
                     ),
                   },
@@ -274,23 +263,23 @@ export default function Home() {
                         巻き爪・肥厚爪・変形爪など、
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
-                        さまざまな爪のお悩みに対応。
+                        様々な爪のお悩みに対応しています。
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
-                        専門的な知識と技術で丁寧にケアします。
+                        専門的な知識と技術で丁寧に<br className="hidden mobile-small:block md:block lg:hidden" />ケアを行います。
                       </>
                     ),
                   },
                   {
                     num: 3,
                     icons: [{ src: "/medifootcare.web/images/icons/report.png", alt: "" }],
-                    title: "毎回ケアごとに報告書を作成",
+                    title: (<>毎回ケアごとに<br className="hidden mobile-mini:block" />報告書を作成</>),
                     desc: (
                       <>
                         施術内容や爪の状態を毎回記録し、
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
-                        ご家族や施設スタッフへご報告。
+                        ご家族や施設スタッフへ<br className="hidden mobile-mini:block" />ご報告します。
                         <br className="md:hidden" />
                         <br className="hidden md:block xl:hidden" />
                         継続的なケアの質を維持します。
@@ -331,7 +320,7 @@ export default function Home() {
                           専用マシンや器具を使用し、
                           <br className="md:hidden" />
                           <br className="hidden md:block xl:hidden" />
-                          振動や刺激を最小限に抑えた施術。
+                          痛みを感じないようにケアを行います。
                           <br className="md:hidden" />
                           <br className="hidden md:block xl:hidden" />
                           痛みが怖い方でも安心して
@@ -387,11 +376,9 @@ export default function Home() {
                       title: "ベッド・車椅子でも施術可能",
                       desc: (
                         <>
-                          外出が難しい方も安心。
-                          <br />
                           ベッドや車椅子に座ったままの状態で、
                           <br />
-                          ご自宅や施設でケアを受けられます。
+                          居室や浴室などご希望の場所で<br />ケアをうけられます。
                         </>
                       ),
                     },
@@ -409,10 +396,10 @@ export default function Home() {
                         <>
                           巻き爪・肥厚爪・変形爪など、
                           <br />
-                          さまざまな爪のお悩みに対応。
+                          様々な爪のお悩みに対応しています。
                           <br />
                           専門的な知識と技術で
-                          丁寧にケアします。
+                          丁寧にケアを行います。
                         </>
                       ),
                     },
@@ -443,7 +430,7 @@ export default function Home() {
                         <>
                           施術内容や爪の状態を毎回記録し、
                           <br />
-                          ご家族や施設スタッフへご報告。
+                          ご家族や施設スタッフへご報告します。
                           <br />
                           継続的なケアの質を維持します。
                         </>
@@ -463,7 +450,7 @@ export default function Home() {
                         <>
                           専用マシンや器具を使用し、
                           <br />
-                          振動や刺激を最小限に抑えた施術。
+                          痛みを感じないようにケアを行います。
                           <br />
                           痛みが怖い方でも安心して
                           <br />
@@ -562,57 +549,17 @@ export default function Home() {
                   {
                     icon: "medical_information",
                     title: "医師・看護師のみで構成",
-                    desc: (
-                      <>
-                        担当スタッフは医師免許、
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        もしくは看護師免許を保有。
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        医学的根拠に基づく安全なケアを
-                        <br className="hidden mobile:block md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        提供します。
-                      </>
-                    ),
+                    desc: "担当スタッフは医師免許、もしくは看護師免許を保有。医学的根拠に基づく安全なケアを提供します。",
                   },
                   {
                     icon: "sanitizer",
                     title: "衛生対策の徹底",
-                    desc: (
-                      <>
-                        使用する器具はすべて消毒済み。
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        グローブ着用など衛生対策を徹底。
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        施術時の粉塵対策も実施しています。
-                      </>
-                    ),
+                    desc: "使用する器具はすべて消毒済み。グローブ着用など衛生対策を徹底。施術時の粉塵対策も実施しています。",
                   },
                   {
                     icon: "security",
                     title: "賠償責任保険加入",
-                    desc: (
-                      <>
-                        万が一の際も安心。
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        賠償責任保険に加入しており、
-                        <br className="md:hidden" />
-                        <br className="hidden md:block xl:hidden" />
-                        <br className="hidden xl:block" />
-                        安全な施術環境を整えています。
-                      </>
-                    ),
+                    desc: "万が一の際も安心。賠償責任保険に加入しており、安全な施術環境を整えています。",
                   },
                 ].map((item, i) => (
                   <div
@@ -621,15 +568,15 @@ export default function Home() {
                       i === 2 ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.5rem)] xl:col-span-1 xl:mx-0 xl:w-auto" : ""
                     }`}
                   >
-                    <div className="mb-4 flex items-center justify-center gap-3">
+                    <div className="mb-4 flex items-center gap-3">
                       <span className="flex shrink-0 items-center justify-center w-10 h-10 bg-white/20">
                         <span className="material-symbols-outlined fill-icon text-[22px] text-white" aria-hidden="true">
                           {item.icon}
                         </span>
                       </span>
-                      <h3 className="text-[17px] font-bold text-white break-keep mobile-narrow:text-[15px]" style={KEEP_ALL_STYLE}>{item.title}</h3>
+                      <h3 className="text-[17px] font-bold text-white mobile-narrow:text-[15px]">{item.title}</h3>
                     </div>
-                    <p className="copy-body text-center text-white/80 break-keep mobile-narrow:text-[12px]" style={KEEP_ALL_STYLE}>{item.desc}</p>
+                    <p className="copy-body text-left text-white/80 mobile-narrow:text-[12px]">{item.desc}</p>
                   </div>
                 ))}
               </div>

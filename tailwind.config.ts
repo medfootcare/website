@@ -11,6 +11,7 @@ const config: Config = {
       screens: {
         "mobile-wide": { max: "460px" },
         mobile: { max: "412px" },
+        "mobile-small": { max: "360px" },
         "mobile-narrow": { max: "344px" },
         "mobile-mini": { max: "320px" },
       },

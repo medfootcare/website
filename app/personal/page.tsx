@@ -50,11 +50,10 @@ export default function PersonalPage() {
               <div className="space-y-4 xl:grid xl:grid-cols-2 xl:gap-6 xl:space-y-0 max-w-5xl mx-auto">
                 {[
                   { key: "painful-walk", text: "巻き爪が痛くて歩くのが辛い" },
-                  { key: "self-nail", text: "自分では爪が切れなくなってきた" },
-                  { key: "family-nail", text: <><span className="block mobile-wide:hidden">親の爪が分厚くなって、切り方が分からなくなった</span><span className="hidden mobile-wide:block">親の爪が分厚くなって、<br />切り方が分からなくなった</span></> },
-                  { key: "no-hospital", text: <><span className="block mobile-wide:hidden">病院に行くほどではないが、足のケアをしてほしい</span><span className="hidden mobile-wide:block">病院に行くほどではないが、<br />足のケアをしてほしい</span></> },
+                  { key: "self-nail", text: "自分では爪が切れなくて困っている" },
+                  { key: "family-nail", text: <><span className="block mobile-wide:hidden">親の爪が分厚くなっているが、切り方が分からない</span><span className="hidden mobile-wide:block">親の爪が分厚くなっているが、<br />切り方が分からない</span></> },
+                  { key: "no-hospital", text: <><span className="block mobile-wide:hidden">足のケアをうけたいが、なかなか病院にいけない</span><span className="hidden mobile-wide:block">足のケアをうけたいが、<br />なかなか病院にいけない</span></> },
                   { key: "dementia", text: <><span className="block mobile-wide:hidden">認知症があり、安全に爪切りができるか不安</span><span className="hidden mobile-wide:block">認知症があり、<br />安全に爪切りができるか不安</span></> },
-                  { key: "hard-to-go-out", text: "外出が難しいが、ケアを受けたい" },
                 ].map((item, i) => (
                   <div
                     key={item.key}
@@ -112,13 +111,19 @@ export default function PersonalPage() {
                   {
                     step: "04",
                     title: "訪問・施術",
-                    desc: <>担当スタッフがご自宅へお伺いし、<br />丁寧に施術を行います（30〜60分）。</>,
+                    desc: <>担当スタッフがご自宅へお伺いし、<br />丁寧に施術を行います。</>,
                     icon: "home_health",
                   },
                   {
                     step: "05",
+                    title: "報告書作成",
+                    desc: <>施術後にケア内容、施術の様子を<br />報告書でご報告します。</>,
+                    icon: "description",
+                  },
+                  {
+                    step: "06",
                     title: "お会計",
-                    desc: <>施術後に現地でお支払いいただきます。<br />領収書を発行いたします。</>,
+                    desc: <>お振込・現金・カード支払いに<br />対応しています。</>,
                     icon: "payments",
                   },
                 ].map((item) => (
@@ -141,7 +146,7 @@ export default function PersonalPage() {
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
-                <h2 className="section-heading">ご家族の方へ</h2>
+                <h2 className="section-heading">よくある質問</h2>
                 <div className="section-heading-bar"></div>
               </div>
               <StaticFaqList items={personalFamilyFaqItems} />

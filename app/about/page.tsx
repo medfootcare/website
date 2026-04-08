@@ -33,16 +33,17 @@ export default function AboutPage() {
             </div>
             <div className="copy-body max-w-3xl mx-auto space-y-6 text-center text-on-surface-variant mobile:text-[12px] md:text-base">
               <p>
-                メディフットケアは、医師の監修のもと、<br />
-                看護師資格を持つスタッフが
-                <br className="md:hidden" />
-                ご自宅や施設へ訪問し、<br />
-                フットケアを提供するサービスです。
+                医師・看護師による<br className="md:hidden" />訪問フットケアサービスです。
               </p>
               <p>
-                自分で爪のケアが難しくなった方、<br />
-                巻き爪・肥厚爪などのトラブルを抱える方に、<br />
-                専門的かつ安心・安全なケアをお届けします。
+                皮膚科診療の現場で、<br />
+                「十分な時間をかけて足や爪のケアを<br className="md:hidden" />行うことが難しい」<br />
+                と感じたことをきっかけに始まりました。
+              </p>
+              <p>
+                爪の変形や足のお悩みに対して、<br />
+                医師・看護師のみで構成されたチームで、<br />
+                確かな技術と安心をお届けします。
               </p>
             </div>
           </div>
@@ -86,17 +87,25 @@ export default function AboutPage() {
               <h2 className="section-heading">沿革</h2>
               <div className="section-heading-bar"></div>
             </div>
-            <div className="mx-auto w-full max-w-[24rem] space-y-0">
-              {[
-                { year: "2025年5月", event: "メディフットケア設立" },
-                { year: "2025年8月", event: "施設向けサービス開始" },
-                { year: "2026年3月", event: "個人向けサービス開始" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 border-b border-[#CBD5E1] py-5 md:gap-8">
-                  <span className="w-24 shrink-0 text-[15px] font-medium text-primary md:w-36">{item.year}</span>
-                  <span className="copy-note text-on-surface-variant leading-relaxed">{item.event}</span>
-                </div>
-              ))}
+            <div className="mx-auto w-full max-w-[20rem]">
+              <table className="w-full border-collapse">
+                <tbody>
+                  {[
+                    { label: "2025年5月", value: "メディフットケア設立" },
+                    { label: "2025年8月", value: "施設向けサービス開始" },
+                    { label: "2026年3月", value: "個人向けサービス開始" },
+                  ].map((row) => (
+                    <tr key={row.label} className="border-b border-[#CBD5E1]">
+                      <th className="w-24 py-4 pr-3 text-left text-[15px] font-medium text-on-surface align-top md:w-36 md:pr-8">
+                        {row.label}
+                      </th>
+                      <td className="copy-note py-4 text-on-surface-variant leading-relaxed">
+                        {row.value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
