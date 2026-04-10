@@ -53,7 +53,8 @@ export default function PersonalPage() {
                   { key: "self-nail", text: "自分では爪が切れなくて困っている" },
                   { key: "family-nail", text: <><span className="block mobile-wide:hidden">親の爪が分厚くなっているが、切り方が分からない</span><span className="hidden mobile-wide:block">親の爪が分厚くなっているが、<br />切り方が分からない</span></> },
                   { key: "no-hospital", text: <><span className="block mobile-wide:hidden">足のケアをうけたいが、なかなか病院にいけない</span><span className="hidden mobile-wide:block">足のケアをうけたいが、<br />なかなか病院にいけない</span></> },
-                  { key: "dementia", text: <><span className="block mobile-wide:hidden">認知症があり、安全に爪切りができるか不安</span><span className="hidden mobile-wide:block">認知症があり、<br />安全に爪切りができるか不安</span></> },
+                  { key: "corns", text: "魚の目が痛い" },
+                  { key: "consult", text: <><span className="block mobile-wide:hidden">定期的に専門家に爪について相談したい</span><span className="hidden mobile-wide:block">定期的に専門家に爪について<br />相談したい</span></> },
                 ].map((item, i) => (
                   <div
                     key={item.key}
