@@ -11,7 +11,7 @@ import { facilityVisitFaqItems } from "@/data/faqs";
 
 export const metadata: Metadata = {
   title: "施設スタッフ様へ | メディフットケア",
-  description: "有料老人ホーム・特養・サ高住への訪問フットケアサービス。体験会から始められます。",
+  description: "介護付き有料老人・特養・グループホームへの訪問フットケアサービス。体験会から始められます。",
   alternates: { canonical: "/facility" },
 };
 
@@ -27,8 +27,8 @@ export default function FacilityPage() {
             <div className="section-panel-hero space-y-6 py-10 text-center flex flex-col items-center">
               <PageHeroTitle lines={["施設への", "訪問フットケアサービス"]} />
               <p className="copy-body-lg text-on-surface-variant break-keep">
-                有料老人ホーム・特養・サ高住など、<br className="md:hidden" />
-                施設への定期訪問に対応しています。
+                介護付き有料老人、特養、グループホームなど、<br className="md:hidden" />
+                ご施設への定期訪問に対応しています。
                 <br />
                 まずは体験会からお気軽にどうぞ。
               </p>
@@ -59,18 +59,11 @@ export default function FacilityPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/icons/care-heart.png" alt="" className="w-14 h-14 mx-auto object-contain" aria-hidden="true" />
                   <h3 className="break-keep text-primary">
-                    <span className="text-[24px] font-medium">スタッフの負担軽減</span>
+                    <span className="text-[24px] font-medium">スタッフ様の負担軽減</span>
                   </h3>
                   <p className="copy-note break-keep text-on-surface-variant">
-                    爪切りはスタッフにとっても
-                    <br className="md:hidden" />
-                    <br className="hidden md:block xl:hidden" />
-                    難易度が高い業務。<br />
-                    専門家に委託することで、
-                    <br className="md:hidden" />
-                    <br className="hidden md:block xl:hidden" />
-                    <br className="hidden xl:block" />
-                    スタッフが本来のケアに集中できます。
+                    爪切りは施設のスタッフ様にとっても<br className="xl:hidden" />難易度が高い業務。<br />
+                    専門家に委託することで、<br className="xl:hidden" />業務を効率化することができます。
                   </p>
                 </div>
                 <div className="surface-card space-y-4">
@@ -80,7 +73,7 @@ export default function FacilityPage() {
                     <span className="text-[24px] font-medium">記録提供</span>
                   </h3>
                   <p className="copy-note break-keep text-on-surface-variant">
-                    施術後に記録をご提供します。<br />施設のフォーマットへの対応も可能です。
+                    施術後に記録をご提供します。<br />ご利用者様の状態を<br className="xl:hidden" />ご施設でも把握していただけます。
                   </p>
                 </div>
                 <div className="surface-card space-y-4">
@@ -91,7 +84,7 @@ export default function FacilityPage() {
                   </h3>
                   <p className="copy-note break-keep text-on-surface-variant">
                     ご希望の頻度で定期訪問します。<br />
-                    曜日・時間帯は施設のスケジュールに
+                    曜日・時間帯はご施設のスケジュールに
                     <br className="md:hidden" />
                     <br className="hidden md:block xl:hidden" />
                     合わせて調整できます。
@@ -135,12 +128,6 @@ export default function FacilityPage() {
                   },
                   {
                     step: "03",
-                    title: "契約",
-                    desc: "ご提案内容にご納得いただけましたら、\n契約書を締結します。\n同意書の雛形もご提供します。",
-                    icon: "contract",
-                  },
-                  {
-                    step: "04",
                     title: "定期訪問開始",
                     desc: <>ご希望のスケジュールで定期訪問を<br className="hidden mobile-narrow:block" />開始します。<br />施術記録を毎回ご提供します。</>,
                     icon: "event_repeat",
@@ -165,7 +152,7 @@ export default function FacilityPage() {
           <div className="max-content-width">
             <div className="section-panel">
               <div className="mb-8">
-                <h2 className="section-heading">継続訪問について</h2>
+                <h2 className="section-heading">よくあるご質問</h2>
                 <div className="section-heading-bar"></div>
               </div>
               <StaticFaqList items={facilityVisitFaqItems} />
